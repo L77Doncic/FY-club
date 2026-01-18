@@ -1,0 +1,81 @@
+{
+    "2016": [
+        {
+            "img": "images/tec2016_1.jpg",
+            "description": "飞扬的团宠。香草，喵~",
+            "time": "2017"
+        },
+        {
+            "img": "images/tec2016_2.jpg",
+            "description": "这是什么鬼？",
+            "time": "2017.6"
+        },
+        {
+            "img": "images/tec2016_3.jpg",
+            "description": "部分玩家沉迷于低头玩手机。",
+            "time": "2017.6"
+        },
+        {
+            "img": "images/tec2016_4.jpg",
+            "description": "因为我可爱，所以要多多上镜。",
+            "time": "2017.6"
+        },
+        {
+            "img": "images/tec2016_5.jpg",
+            "description": "华西大修，乒乓球台上手忙脚乱。",
+            "time": "2017.6"
+        },
+        {
+            "img": "images/tec2016_6.jpg",
+            "description": "退休的熊老板亲自上阵。",
+            "time": "2017.6"
+        }
+    ],
+    "2015": [
+        {
+            "img": "images/tec2015_1.jpg",
+            "description": "神他妈的合照。许曼、飞扬、田定、于宏洋",
+            "time": "2016.9"
+        },
+        {
+            "img": "images/tec2015_2.jpg",
+            "description": "美女你谁？",
+            "time": "2016.9"
+        },
+        {
+            "img": "images/tec2015_3.jpg",
+            "description": "棒棒糖",
+            "time": "2016.9"
+        },
+        {
+            "img": "images/tec2015_4.jpg",
+            "description": "会员大会上面坐在地上吃东西的楠哥",
+            "time": "2016.9"
+        },
+        {
+            "img": "images/tec2015_5.jpg",
+            "description": "会员大会上的来占位置的刘裕拯",
+            "time": "2016.9"
+        },
+        {
+            "img": "images/tec2015_6.jpg",
+            "description": "楠家师门",
+            "time": "2016.9"
+        },
+        {
+            "img": "images/tec2015_7.jpg",
+            "description": "一抬相机他妈的全转过去了",
+            "time": "2016.9"
+        },
+        {
+            "img": "images/tec2015_8.jpg",
+            "description": "四月大修上的一排技术员",
+            "time": "2016.4"
+        },
+        {
+            "img": "images/tec2015_9.jpg",
+            "description": "发呆的熊老板",
+            "time": "2016.6"
+        }
+    ]
+}
