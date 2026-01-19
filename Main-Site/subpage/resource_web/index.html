@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="shortcut icon" href="../../Main-Site/favicon.ico">
+    <title>资源网站</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <!-- 自定义样式 -->
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        body {
+            background-color: #1e252e;
+            color: #e2e8f0;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* 动画效果 */
+        .animate-in {
+            animation: fadeInSlide 0.7s ease-out forwards;
+        }
+        @keyframes fadeInSlide {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#4FD1C5",
+                        "background-dark": "#1e252e",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "system-ui", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="antialiased">
+    <div id="app" class="min-h-screen bg-[#1e252e] text-slate-200 p-8 lg:p-16 selection:bg-primary selection:text-background-dark">
+        <div class="max-w-6xl mx-auto">
+            <!-- 新增：左上角返回按钮 - 修复路径问题 -->
+            <div class="fixed top-8 left-8 z-10">
+                <!-- 方案1：相对路径（推荐）- 向上返回两级目录到 Main-Site 根目录 -->
+                <a href="../../index.html" class="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors duration-200">
+                    <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                    <span class="text-base font-medium">返回主页</span>
+                </a>
+                
+                <!-- 方案2：绝对文件路径（备用，需根据你的实际路径修改）
+                <a href="file:///C:/Users/Camellia/Desktop/FY-club/Main-Site/index.html" class="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors duration-200">
+                    <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                    <span class="text-base font-medium">返回主页</span>
+                </a>
+                -->
+            </div>
+            
+            <!-- 头部区域 -->
+            <header class="mb-12 pt-8"> <!-- 增加顶部内边距，避免返回按钮遮挡 -->
+                <div class="border-t border-slate-700 w-full mb-6 opacity-50"></div>
+                <div class="flex flex-col space-y-4">
+                    <p id="current-date" class="text-slate-400 text-base font-medium tracking-widest uppercase"></p>
+                    <h1 id="greeting" class="text-6xl md:text-7xl font-bold tracking-tight text-white animate-in fade-in slide-in-from-left duration-700"></h1>
+                </div>
+            </header>
+
+            <!-- 主要内容 -->
+            <main>
+                <div id="resource-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-12"></div>
+            </main>
+
+            <!-- 页脚：已删除左下角设置符号 -->
+            <footer class="mt-20 flex justify-between items-center text-slate-500 text-xs">
+                <div></div> <!-- 空div保持布局结构 -->
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // 时间工具函数
+        const getGreeting = (date) => {
+            const hours = date.getHours();
+            
+            if (hours >= 6 && hours < 10) return "早上好！";
+            if (hours >= 10 && hours < 11) return "上午好！";
+            if (hours >= 11 && hours < 13) return "中午好！";
+            if (hours >= 13 && hours < 18) return "下午好！";
+            if (hours >= 18 && hours < 23) return "晚上好！";
+            return "别熬夜！";
+        };
+
+        const formatDate = (date) => {
+            const weekdays = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+            const months = [
+                "一月", "二月", "三月", "四月", "五月", "六月",
+                "七月", "八月", "九月", "十月", "十一月", "十二月"
+            ];
+            
+            const dayName = weekdays[date.getDay()];
+            const monthName = months[date.getMonth()];
+            const day = date.getDate();
+            const year = date.getFullYear();
+            
+            return `${dayName}，${monthName} ${day} ${year}`;
+        };
+
+        // 资源分类常量
+        const RESOURCE_CATEGORIES = [
+            {
+                title: "学校相关",
+                links: [
+                    { title: "四川大学图书馆", url: "https://lib.scu.edu.cn/", icon: "account_balance" },
+                    { title: "四川大学图书馆校外访问系统", url: "https://lib.scu.edu.cn:8888/xw.html", icon: "language" },
+                    { title: "四川大学学生邮箱", url: "https://mail.scu.edu.cn/", icon: "email" },
+                    { title: "四川大学正版化服务平台", url: "https://soft.scu.edu.cn/index.html", icon: "file_download" },
+                    { title: "四川大学教务处", url: "http://jwc.scu.edu.cn/", icon: "workspace_premium" },
+                    { title: "四川大学教务管理系统学生端", url: "http://zhjw.scu.edu.cn/login?errorCode=invalidSession", icon: "workspace_premium" },
+                    { title: "四川大学财务处综合信息门户", url: "https://fdinfo.scu.edu.cn/WFManager/login.jsp", icon: "payments" },
+                    { title: "四川大学研究生管理平台", url: "https://ehall.scu.edu.cn/gsapp/sys/yjsemaphome/portal/index.do", icon: "settings" },
+                ]
+            },
+            {
+                title: "通用学术资源",
+                links: [
+                    { title: "Google Scholar", url: "https://scholar.google.com/" },
+                    { title: "Web of Science", url: "https://www.webofscience.com/" },
+                    { title: "Semantic Scholar", url: "https://www.semanticscholar.org/" },
+                    { title: "IEEE Xplore", url: "https://ieeexplore.ieee.org/" },
+                    { title: "ACM Digital Library", url: "https://dl.acm.org/" },
+                    { title: "DBLP 计算机索引", url: "https://dblp.org/" },
+                    { title: "Paper With Code", url: "https://paperswithcode.com/" },
+                    { title: "SCIHUB", url: "https://www.sci-hub.st/" },
+                    { title: "中国知网 (CNKI)", url: "https://www.cnki.net/" },
+                    { title: "CCF 推荐目录", url: "https://www.ccf.org.cn/Academic_Evaluation/By_category/" },
+                ]
+            },
+            {
+                title: "学术工具",
+                links: [
+                    { title: "Connected Papers", url: "https://www.connectedpapers.com/" },
+                    { title: "DeepL 翻译", url: "https://www.deepl.com/translator" },
+                    { title: "Draw.io 在线绘图", url: "https://app.diagrams.net/" },
+                    { title: "Mendeley", url: "https://www.mendeley.com/" },
+                    { title: "Notion", url: "https://www.notion.so/" },
+                    { title: "Overleaf", url: "https://www.overleaf.com/" },
+                    { title: "Visual CSL Editor", url: "https://editor.citationstyles.org/" },
+                    { title: "Zotero", url: "https://www.zotero.org/" },
+                    { title: "坚果云", url: "https://www.jianguoyun.com/" },
+                    { title: "知云文献翻译", url: "https://www.zhiyunwenxian.cn/" },
+                    { title: "沉浸式翻译", url: "https://app.immersivetranslate.cn/" },
+                    { title: "doi Foundation", url: "https://dx.doi.org/" },
+                    { title: "SimpleTex（公式识别）", url: "https://simpletex.net/ai/latex_ocr" },
+                ]
+            },
+            {
+                title: "电脑/手机官方服务",
+                links: [
+                    { title: "Apple 支持", url: "https://support.apple.com/zh-cn", icon: "devices" },
+                    { title: "戴尔 Dell 服务", url: "https://www.dell.com/support/home/zh-cn", icon: "laptop" },
+                    { title: "联想 Lenovo 服务", url: "https://support.lenovo.com.cn/", icon: "desktop_windows" },
+                    { title: "华为服务与支持", url: "https://consumer.huawei.com/cn/support/", icon: "devices" },
+                    { title: "荣耀 Honor 支持", url: "https://www.hihonor.com/cn/support/", icon: "devices" },
+                    { title: "小米服务中心", url: "https://www.mi.com/service", icon: "devices" },
+                    { title: "OPPO 服务", url: "https://support.oppo.com/cn/", icon: "smartphone" },
+                    { title: "VIVO 服务", url: "https://www.vivo.com.cn/service", icon: "smartphone" },
+                    { title: "三星 Samsung 支持", url: "https://www.samsung.com/cn/support/", icon: "smartphone" },
+                    { title: "机械革命 Mechrevo", url: "https://www.mechrevo.com/cn/service", icon: "precision_manufacturing" },
+                    { title: "华硕 ASUS 支持", url: "https://www.asus.com.cn/support/", icon: "memory" },
+                    { title: "惠普 HP 支持", url: "https://support.hp.com/cn-zh", icon: "print" },
+                    { title: "微软 Microsoft 服务", url: "https://support.microsoft.com/zh-cn", icon: "window" },
+                ]
+            },
+            {
+                title: "可视化学术资源",
+                links: [
+                    { title: "Adobe 配色工具", url: "https://color.adobe.com/" },
+                    { title: "ChinaVis 会议主页", url: "http://www.chinavis.org/" },
+                    { title: "ColorBrewer 配色", url: "https://colorbrewer2.org/" },
+                    { title: "VIS 会议主页", url: "https://ieeevis.org/" },
+                    { title: "Vega & Vega-lite", url: "https://vega.github.io/vega-lite/" },
+                ]
+            },
+            {
+                title: "设计工具",
+                links: [
+                    { title: "可画", url: "https://www.canva.cn/" },
+                    { title: "秀米", url: "https://xiumi.us/#/" },
+                    { title: "阿里巴巴矢量图标库", url: "https://www.iconfont.cn/" },
+                    { title: "Stitch（网页设计工具）", url: "https://stitch.withgoogle.com/" },
+                    { title: "pixabay（免费图库）", url: "https://pixabay.com/" },
+                    { title: "pexels（免费图库）", url: "https://www.pexels.com/zh-cn/" },
+                    { title: "mixkit", url: "https://mixkit.co/" },
+                    { title: "artlist", url: "https://artlist.io/" },
+                    { title: "爱给网", url: "https://www.aigei.com/" },
+                    { title: "Epidemic Sound", url: "https://www.epidemicsound.com/" },
+                    { title: "菜鸟图库.视频", url: "https://www.sucai999.com/video.html?v=NTYxMjky" },
+                    { title: "DesignEvo（logo设计）", url: "https://www.designevo.com/cn/" },
+                    { title: "影视飓风", url: "https://www.ysjf.com/home" },
+                ]
+            },
+            {
+                title: "相关教程",
+                links: [
+                    { title: "Pandas 官方文档", url: "https://pandas.pydata.org/docs/" },
+                    { title: "Python 官方文档", url: "https://docs.python.org/zh-cn/3/" },
+                    { title: "Vue3 文档", url: "https://cn.vuejs.org/" },
+                    { title: "D3.js 官方文档", url: "https://d3js.org/" },
+                    { title: "Echarts 官方文档", url: "https://echarts.apache.org/" },
+                    { title: "MDN SVG 参考", url: "https://developer.mozilla.org/zh-CN/docs/Web/SVG" },
+                    { title: "MDN Javascript 参考", url: "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" },
+                ]
+            }
+        ];
+
+        // 核心业务逻辑
+        document.addEventListener('DOMContentLoaded', () => {
+            // 初始化时间和问候语
+            updateDateTime();
+            // 每分钟更新一次时间
+            setInterval(updateDateTime, 60000);
+            // 渲染资源列表
+            renderResourceCategories();
+        });
+
+        // 更新日期和问候语
+        function updateDateTime() {
+            const now = new Date();
+            const dateElement = document.getElementById('current-date');
+            const greetingElement = document.getElementById('greeting');
+            
+            if (dateElement) dateElement.textContent = formatDate(now);
+            if (greetingElement) greetingElement.textContent = getGreeting(now);
+        }
+
+        // 渲染资源分类列表
+        function renderResourceCategories() {
+            const container = document.getElementById('resource-container');
+            if (!container) return;
+
+            // 清空容器
+            container.innerHTML = '';
+
+            // 遍历每个分类
+            RESOURCE_CATEGORIES.forEach((category, index) => {
+                // 创建分类容器
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'flex flex-col';
+                
+                // 创建分类标题 - 调大：text-base → text-lg
+                const title = document.createElement('h3');
+                title.className = 'text-primary font-bold mb-6 text-lg tracking-wide';
+                title.textContent = category.title;
+                categoryDiv.appendChild(title);
+                
+                // 创建链接列表
+                const list = document.createElement('ul');
+                list.className = 'space-y-3';
+                
+                // 遍历每个链接
+                category.links.forEach((link, linkIndex) => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'flex items-center group';
+                    
+                    // 如果有图标，调整图标大小：text-[18px] → text-[20px]
+                    if (link.icon) {
+                        const icon = document.createElement('span');
+                        icon.className = 'material-symbols-outlined text-[20px] text-slate-500 mr-2 group-hover:text-primary transition-colors';
+                        icon.textContent = link.icon;
+                        listItem.appendChild(icon);
+                    }
+                    
+                    // 创建链接 - 调大：text-sm → text-base
+                    const anchor = document.createElement('a');
+                    anchor.href = link.url;
+                    anchor.target = '_blank';
+                    anchor.rel = 'noopener noreferrer';
+                    anchor.className = 'text-base text-slate-300 hover:text-primary hover:underline underline-offset-4 decoration-primary transition-all duration-200';
+                    anchor.textContent = link.title;
+                    listItem.appendChild(anchor);
+                    
+                    list.appendChild(listItem);
+                });
+                
+                categoryDiv.appendChild(list);
+                container.appendChild(categoryDiv);
+            });
+        }
+    </script>
+</body>
+</html>
