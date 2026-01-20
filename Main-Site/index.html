@@ -108,6 +108,22 @@
                 opacity: 1;
             }
         }
+
+        /* 部门版块自定义居中样式 */
+        .centered-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .member-link {
+            text-decoration: none !important;
+            color: inherit;
+            display: block;
+            transition: transform 0.3s;
+        }
+        .member-link:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body>
@@ -242,12 +258,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <!--
-                            <li class="active"><a href="#slider">欢迎</a>
-                            </li>-->
                             <li><a href="#about">首页</a>
                             </li>
-                            <!--<li><a href="#services">社团</a></li>-->
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">部门 <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -363,6 +375,7 @@
             </div>
         </section>
 
+        <!-- 特点版块 -->
         <section id="features">
             <div class="container">
                 <div class="row">
@@ -373,7 +386,7 @@
                         <h1>川大最专业的技术社团之一<span></span>
                         </h1>
                         <div class="media media-circle">
-                            <a class="pull-left" href="">
+                            <a class="pull-left" href="javascript:void(0)" onclick="return false">
                                 <i class="media-object fa fa-angle-right fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -383,7 +396,7 @@
                             </div>
                         </div>
                         <div class="media media-circle">
-                            <a class="pull-left" href="">
+                            <a class="pull-left" href="javascript:void(0)" onclick="return false">
                                 <i class="media-object fa fa-angle-right fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -393,7 +406,7 @@
                             </div>
                         </div>
                         <div class="media media-circle">
-                            <a class="pull-left" href="">
+                            <a class="pull-left" href="javascript:void(0)" onclick="return false">
                                 <i class="media-object fa fa-angle-right fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -407,6 +420,7 @@
             </div>
         </section>
 
+        <!-- 部门版块 -->
         <section id="team">
             <div class="container">
                 <div class="row">
@@ -427,120 +441,102 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                
+                <!-- 第一排：研发部、维修部 居中 -->
+                <div class="row centered-row">
                     <div class="col-md-3 col-sm-6">
-                        <div class="row">
-                            <div class="member scrollpoint sp-effect5">
-                                <div class="member-image">
-                                    <img style="border-radius: 30px;" src="img/team/xzb.jpg" alt="" class="img-responsive img-center">
-                                    <div class="member-details">
-                                        <h4>行政部</h4>
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                            </li>
-                                        </ul>
-                                        <p>管理协调大师，负责飞扬活动策划、通知、组织、记录；物资管理；文献/档案管理等。</p>
-                                    </div>
-                                </div>
-                                <div class="member-name">
-                                    <h4>行政部</h4>
-                                    <p>热爱飞扬的人力物力管理者聚集地</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="row">
+                        <a href="subpage/maintenance/index.html" class="member-link">
                             <div class="member scrollpoint sp-effect3">
                                 <div class="member-image">
-                                    <img style="border-radius: 30px;" src="img/team/设计部.jpg" alt="" class="img-responsive img-center">
+                                    <img style="border-radius: 30px;" src="img/team/研发部.jpg" alt="" class="img-responsive img-center">
                                     <div class="member-details">
-                                        <h4>设计部</h4>
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                            </li>
-                                        </ul>
-                                        <!-- <p>飞扬门面担当，负责飞扬海报、杂志、工作服、官网UI、周边设计</p> -->
-                                        <p>飞扬门面担当，负责飞扬海报、工作服、官网UI、周边设计</p>
+                                        <h4>维修部</h4>
+                                        <p>核心技术部门，负责硬件清灰、系统重装、软件调试等公益维修工作，解决各种电脑疑难杂症。</p>
                                     </div>
                                 </div>
                                 <div class="member-name member-odd">
-                                    <h4>设计部</h4>
-                                    <p>热爱PS图像设计的美工狮聚集地</p>
+                                    <h4>维修部</h4>
+                                    <p>精通软硬件，妙手回春修电脑</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <div class="row">
-                            <div class="member scrollpoint sp-effect5">
-                                <div class="member-image">
-                                    <img style="border-radius: 30px;" src="img/team/编辑部.jpg" alt="" class="img-responsive img-center">
-                                    <div class="member-details">
-                                        <h4>编辑部</h4>
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                            </li>
-                                        </ul>
-                                        <!-- <p>飞扬话筒担当，负责飞扬媒体运营、文案及杂志撰写、对外工作对接等</p> -->
-                                        <p>飞扬话筒担当，负责飞扬媒体运营、文案撰写、对外工作对接等</p>
-                                    </div>
-                                </div>
-                                <div class="member-name">
-                                    <h4>编辑部</h4>
-                                    <p>热爱瞎写的思想活跃人类聚集地</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="row">
+                        <a href="subpage/development/index.html" class="member-link">
                             <div class="member scrollpoint sp-effect3">
                                 <div class="member-image">
                                     <img style="border-radius: 30px;" src="img/team/研发部.jpg" alt="" class="img-responsive img-center">
                                     <div class="member-details">
                                         <h4>研发部</h4>
-                                        <ul class="social">
-                                            <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                            </li>
-                                            <li><a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
-                                            </li>
-                                        </ul>
-                                        <p>着力方向涵盖Web前后端开发、客户端及移动设备开发、数据挖掘分析等，使用包括但不限于HTML/CSS/JS、Python、PHP、Node.js、Go、Java、C/C++等语言，负责为飞扬官网、报修系统等提供技术保障；开办技术讲座培训等</p>
+                                        <p>着力方向涵盖Web开发、移动开发、数据挖掘等，负责为飞扬官网、报修系统等提供技术保障。</p>
                                     </div>
                                 </div>
                                 <div class="member-name member-odd">
                                     <h4>研发部</h4>
-                                    <p>热爱Coding，用代码改变世界的小伙伴</p>
+                                    <p>热爱Coding，用代码改变世界</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 第二排：设计部、编辑部、行政部 居中 -->
+                <div class="row centered-row" style="margin-top: 30px;">
+                    <div class="col-md-3 col-sm-6">
+                        <a href="subpage/design/index.html" class="member-link">
+                            <div class="member scrollpoint sp-effect3">
+                                <div class="member-image">
+                                    <img style="border-radius: 30px;" src="img/team/设计部.jpg" alt="" class="img-responsive img-center">
+                                    <div class="member-details">
+                                        <h4>设计部</h4>
+                                        <p>飞扬门面担当，负责飞扬海报、工作服、官网UI、周边设计</p>
+                                    </div>
+                                </div>
+                                <div class="member-name member-odd">
+                                    <h4>设计部</h4>
+                                    <p>热爱PS图像设计的美工狮</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="subpage/media/index.html" class="member-link">
+                            <div class="member scrollpoint sp-effect5">
+                                <div class="member-image">
+                                    <img style="border-radius: 30px;" src="img/team/编辑部.jpg" alt="" class="img-responsive img-center">
+                                    <div class="member-details">
+                                        <h4>流媒部</h4>
+                                        <p>飞扬话筒担当，负责飞扬媒体运营、文案撰写、对外工作对接等</p>
+                                    </div>
+                                </div>
+                                <div class="member-name">
+                                    <h4>流媒部</h4>
+                                    <p>思想活跃的自媒体达人</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="subpage/administration/index.html" class="member-link">
+                            <div class="member scrollpoint sp-effect5">
+                                <div class="member-image">
+                                    <img style="border-radius: 30px;" src="img/team/xzb.jpg" alt="" class="img-responsive img-center">
+                                    <div class="member-details">
+                                        <h4>行政部</h4>
+                                        <p>管理协调大师，负责活动策划、物资管理及文献/档案管理等。</p>
+                                    </div>
+                                </div>
+                                <div class="member-name">
+                                    <h4>行政部</h4>
+                                    <p>热爱飞扬的人力物力管理者</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+
         <section id="portfolio" style="height:1000px">
             <div class="container">
                 <div class="row">
