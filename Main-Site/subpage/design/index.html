@@ -1,64 +1,3463 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html
+  data-wf-page="67dc47511d621a5add531a56"
+  data-wf-site="67dbb666b3ce8ebf5ffd59cc"
+  lang="zh"
+>
+  <head>
+    <meta charset="utf-8" />
     <title>设计部 - 四川大学飞扬俱乐部</title>
-    <link rel="shortcut icon" href="../../favicon.ico">
+    <meta property="og:type" content="website" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="css/main-style.css" rel="stylesheet" type="text/css" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      @media (min-width: 992px) {
+        html.w-mod-js:not(.w-mod-ix)
+          [data-w-id="6e98c890-f6d3-def9-8e40-7001d0dd8119"] {
+          -webkit-transform: translate3d(0, 0, 0) scale3d(0.2, 0.2, 1)
+            rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+          -moz-transform: translate3d(0, 0, 0) scale3d(0.2, 0.2, 1) rotateX(0)
+            rotateY(0) rotateZ(0) skew(0, 0);
+          -ms-transform: translate3d(0, 0, 0) scale3d(0.2, 0.2, 1) rotateX(0)
+            rotateY(0) rotateZ(0) skew(0, 0);
+          transform: translate3d(0, 0, 0) scale3d(0.2, 0.2, 1) rotateX(0)
+            rotateY(0) rotateZ(0) skew(0, 0);
         }
-        body {
-            font-family: "Microsoft YaHei", Arial, sans-serif;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            text-align: center;
-            max-width: 600px;
-        }
-        h1 {
-            color: #4facfe;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            color: #666;
-        }
-        .back-link {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #4facfe;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .back-link:hover {
-            background: #00f2fe;
-        }
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>设计部</h1>
-        <p>设计部页面正在建设中...</p>
-        <p>飞扬门面担当，负责飞扬海报、工作服、官网UI、周边设计。热爱PS图像设计的美工狮聚集地。</p>
-        <a href="../../index.html" class="back-link">返回首页</a>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+      crossorigin="anonymous"
+    />
+    <script src="js/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: { families: ["IBM Plex Mono:500", "IBM Plex Mono:regular"] },
+      });
+    </script>
+    <script type="text/javascript">
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        ((n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch"));
+      })(window, document);
+    </script>
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link href="assets/webclip.png" rel="apple-touch-icon" />
+    <!-- [Attributes by Finsweet] Disable scrolling -->
+    <script defer src="js/scrolldisable.js"></script>
+
+    <!-- Mirror click events [Attributes by Finsweet] -->
+    <script defer src="js/mirrorclick.js"></script>
+
+    <!-- Lenis CSS -->
+    <link rel="stylesheet" href="css/lenis.css" />
+
+    <style>
+      @media screen and (min-width: 992px) {
+        body.lock-scroll {
+          height: calc(100vh + 2em);
+          overflow: hidden;
+        }
+
+        .scroll-locked {
+          height: 100vh;
+          overflow: hidden;
+        }
+
+        .nav_links {
+          transform: translate(0px, -150%);
+        }
+
+        .about-modal_list {
+          opacity: 0;
+          transform: translateX(10vw);
+        }
+      }
+
+      .hero-flower-video video {
+        background-color: transparent !important;
+        transform: translateZ(0); /* force compositing */
+        will-change: transform, opacity;
+      }
+
+      .hero-text {
+        opacity: 0;
+      }
+
+      .button:hover .button-bg {
+        transform: scale(0.95);
+      }
+
+      .pixel-grid {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      .pixel-pixel {
+        position: absolute;
+        background-color: #fff;
+        will-change: opacity;
+      }
+
+      .about-modal_card-img {
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Disabled Arrow Button */
+      .swiper-button-disabled {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+
+      .swiper {
+        overflow: visible;
+      }
+    </style>
+
+    <link rel="stylesheet" href="css/swiper.css" />
+  </head>
+  <body color-mode="">
+    <div class="page-wrapper">
+      <div class="global-styles">
+        <div class="accordion-css w-embed">
+          <style>
+            	/* Animate Accordion Bottom Grid */
+            .accordion-css__item-bottom {
+              transition: grid-template-rows 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+            }
+
+            [data-accordion-status="active"] .accordion-css__item-bottom {
+               grid-template-rows: 1fr;
+            }
+
+            /* Animate Icon */
+            .accordion-css__item-icon {
+              transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+            }
+
+            [data-accordion-status="active"] .accordion-css__item-icon {
+               transform: rotate(45deg);
+          </style>
+        </div>
+        <div class="adaptive-scaling w-embed">
+          <style>
+            /* Desktop */
+            :root {
+              --size-unit: 16; /* body font-size in design - no px */
+              --size-container-ideal: 1600; /* screen-size in design - no px */
+              --size-container-min: 992px;
+              --size-container-max: 1600px;
+              --size-container: clamp(
+                var(--size-container-min),
+                100vw,
+                var(--size-container-max)
+              );
+              --size-font: calc(
+                var(--size-container) /
+                  (var(--size-container-ideal) / var(--size-unit))
+              );
+            }
+
+            /* Tablet */
+            @media screen and (max-width: 991px) {
+              :root {
+                --size-container-ideal: 834; /* screen-size in design - no px */
+                --size-container-min: 768px;
+                --size-container-max: 991px;
+              }
+            }
+
+            /* Mobile Landscape */
+            @media screen and (max-width: 767px) {
+              :root {
+                --size-container-ideal: 767; /* screen-size in design - no px */
+                --size-container-min: 480px;
+                --size-container-max: 767px;
+              }
+            }
+
+            /* Mobile Portrait */
+            @media screen and (max-width: 479px) {
+              :root {
+                --size-container-ideal: 400; /* screen-size in design - no px */
+                --size-container-min: 320px;
+                --size-container-max: 479px;
+              }
+            }
+          </style>
+        </div>
+        <div class="blendmode w-embed">
+          <style>
+            /*Apply "..." after 1 line of text */
+            .text-clamp-line-01 {
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+            }
+
+            /*Apply "..." after 2 lines of text */
+            .text-clamp-line-02 {
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+
+            /*Apply "..." after 3 lines of text */
+            .text-clamp-line-03 {
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+            }
+
+            /*Apply "..." after 4 lines of text */
+            .text-clamp-line-04 {
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 4;
+              -webkit-box-orient: vertical;
+            }
+          </style>
+        </div>
+        <div class="text-split w-embed">
+          <!-- Text Split -->
+          <style>
+            .word {
+              overflow: hidden;
+            }
+          </style>
+        </div>
+        <div class="variable-fontfamily w-embed">
+          <style>
+            /* Hide both when the real video is active */
+            .vimeo-player[data-vimeo-activated="true"][data-vimeo-loaded="true"]
+              .vimeo-player__placeholder,
+            .vimeo-player[data-vimeo-activated="true"][data-vimeo-loaded="true"]
+              .vimeo-player__video-placeholder {
+              opacity: 0;
+            }
+
+            .vimeo-player[data-vimeo-playing="true"] + .work_video-caption {
+              transform: translateY(-100%);
+            }
+
+            .vimeo-player[data-vimeo-playing="true"] .vimeo-player__interface {
+              z-index: 10;
+            }
+
+            /* Dark (Overlay) */
+            .vimeo-player[data-vimeo-playing="false"] .vimeo-player__dark {
+              opacity: 0.33;
+            }
+
+            .vimeo-player[data-vimeo-activated="false"][data-vimeo-playing="false"]
+              .vimeo-player__dark {
+              opacity: 0;
+            }
+
+            .vimeo-player[data-vimeo-activated="true"][data-vimeo-loaded="true"]
+              .vimeo-player__dark {
+              opacity: 0;
+            }
+
+            @media (hover: hover) and (pointer: fine) {
+              .vimeo-player[data-vimeo-hover="true"]:hover .vimeo-player__dark {
+                opacity: 0.33 !important;
+              }
+            }
+
+            /* Pause */
+            .vimeo-player .vimeo-player__pause {
+              display: none;
+            }
+
+            .vimeo-player[data-vimeo-playing="true"] .vimeo-player__pause {
+              display: flex;
+            }
+
+            .vimeo-player .vimeo-player__pause .vimeo-player__btn {
+              opacity: 0;
+            }
+
+            .vimeo-player[data-vimeo-activated="true"][data-vimeo-playing="false"]
+              .vimeo-player__pause
+              .vimeo-player__btn,
+            .vimeo-player[data-vimeo-activated="true"][data-vimeo-hover="true"]:hover
+              .vimeo-player__pause
+              .vimeo-player__btn {
+              opacity: 1;
+            }
+
+            @media (hover: none) and (pointer: coarse) {
+              .vimeo-player[data-vimeo-activated="true"][data-vimeo-playing="true"]
+                .vimeo-player__pause
+                .vimeo-player__btn {
+                opacity: 0 !important;
+              }
+            }
+
+            /* Play */
+            .vimeo-player[data-vimeo-playing="true"] .vimeo-player__play {
+              opacity: 0;
+            }
+
+            /* Loading */
+            .vimeo-player .vimeo-player__loading {
+              opacity: 0;
+            }
+
+            .vimeo-player[data-vimeo-playing="true"] .vimeo-player__loading {
+              opacity: 1;
+            }
+
+            .vimeo-player[data-vimeo-playing="true"][data-vimeo-loaded="true"]
+              .vimeo-player__loading {
+              opacity: 0;
+            }
+
+            /* Interface */
+            .vimeo-player .vimeo-player__interface {
+              opacity: 0;
+            }
+
+            .vimeo-player[data-vimeo-activated="false"][data-vimeo-playing="false"]
+              .vimeo-player__interface {
+              opacity: 1;
+            }
+
+            .vimeo-player .vimeo-player__interface * {
+              pointer-events: all; /* Make children of div clickable by user */
+            }
+
+            .vimeo-player[data-vimeo-activated="true"][data-vimeo-playing="false"]
+              .vimeo-player__interface,
+            .vimeo-player[data-vimeo-activated="true"][data-vimeo-hover="true"]:hover
+              .vimeo-player__interface {
+              opacity: 1;
+            }
+
+            @media (hover: none) and (pointer: coarse) {
+              .vimeo-player[data-vimeo-activated="true"][data-vimeo-playing="true"]
+                .vimeo-player__interface {
+                opacity: 0 !important;
+              }
+            }
+
+            /* Interface - Variables */
+            .vimeo-player {
+              --timeline-rounded-corners: 1.5em;
+              --timeline-dot-height: 0.75em;
+              --timeline-dot-color: #ff4c24;
+              --progress-bg: rgba(239, 238, 236, 0.2);
+              --progress-fill-bg: #ff4c24;
+              --progress-height: 0.2em;
+            }
+
+            /* Interface - Timeline */
+            .vimeo-player progress::-webkit-progress-bar {
+              border-radius: var(--timeline-rounded-corners);
+              background-color: var(--progress-bg);
+              box-shadow: 0;
+            }
+
+            .vimeo-player progress::-webkit-progress-value {
+              background: var(--progress-fill-bg);
+            }
+
+            .vimeo-player progress::-moz-progress-bar {
+              border-radius: var(--timeline-rounded-corners);
+              background: var(--progress-fill-bg);
+              box-shadow: 0;
+            }
+
+            .vimeo-player progress::-ms-fill {
+              border-radius: var(--timeline-rounded-corners);
+            }
+
+            /* Interface - Range */
+            .vimeo-player [type="range"]::-webkit-slider-thumb {
+              -webkit-appearance: none;
+            }
+
+            .vimeo-player [type="range"]:focus {
+              outline: none;
+            }
+
+            .vimeo-player [type="range"]::-ms-track {
+              width: 100%;
+              cursor: pointer;
+              background-color: transparent;
+              border-color: transparent;
+              color: transparent;
+            }
+
+            .vimeo-player [type="range"]::-webkit-slider-runnable-track {
+              width: 100%;
+              height: var(--progress-height);
+              cursor: pointer;
+              background-color: var(--progress-bg);
+              border-radius: var(--timeline-rounded-corners);
+              background-color: transparent;
+              border-color: transparent;
+              color: transparent;
+            }
+
+            .vimeo-player [type="range"]::-webkit-slider-thumb {
+              box-shadow: 0;
+              height: var(--timeline-dot-height);
+              width: var(--timeline-dot-height);
+              border-radius: var(--timeline-rounded-corners);
+              background-color: var(--timeline-dot-color);
+              cursor: pointer;
+              -webkit-appearance: none;
+              margin-top: calc(
+                (var(--progress-height) / 2) - (var(--timeline-dot-height) / 2)
+              );
+            }
+
+            .vimeo-player [type="range"]::-webkit-slider-runnable-track,
+            .vimeo-player [type="range"]:focus::-webkit-slider-runnable-track {
+              background-color: transparent;
+              border-color: transparent;
+              color: transparent;
+            }
+
+            .vimeo-player [type="range"]::-moz-range-track {
+              width: 100%;
+              height: var(--progress-height);
+              cursor: pointer;
+              background: var(--progress-bg);
+              border-radius: 0;
+              border: 0;
+              border-radius: var(--timeline-rounded-corners);
+              overflow: hidden;
+              opacity: 1 !important;
+            }
+
+            .vimeo-player [type="range"]::-moz-range-thumb {
+              box-shadow: 0;
+              border: 0;
+              height: var(--timeline-dot-height);
+              width: var(--timeline-dot-height);
+              border-radius: var(--timeline-rounded-corners);
+              background: var(--timeline-dot-color);
+              cursor: pointer;
+              box-shadow: 0;
+            }
+
+            /* Interface - Mute */
+            .vimeo-player .vimeo-player__mute svg:nth-child(2),
+            .vimeo-player[data-vimeo-muted="true"]
+              .vimeo-player__mute
+              svg:nth-child(1) {
+              display: none;
+            }
+
+            .vimeo-player .vimeo-player__mute svg:nth-child(1),
+            .vimeo-player[data-vimeo-muted="true"]
+              .vimeo-player__mute
+              svg:nth-child(2) {
+              display: block;
+            }
+
+            /* Interface - Fullscreen */
+            .vimeo-player .vimeo-player__fullscreen svg:nth-child(2),
+            .vimeo-player[data-vimeo-fullscreen="true"]
+              .vimeo-player__fullscreen
+              svg:nth-child(1) {
+              display: none;
+            }
+
+            .vimeo-player .vimeo-player__fullscreen svg:nth-child(1),
+            .vimeo-player[data-vimeo-fullscreen="true"]
+              .vimeo-player__fullscreen
+              svg:nth-child(2) {
+              display: block;
+            }
+          </style>
+        </div>
+        <div class="_w-button-override w-embed">
+          <!-- Button Override -->
+          <style>
+            button {
+              all: unset;
+              cursor: pointer;
+              pointer-events: auto;
+            }
+
+            button:focus {
+              outline: revert;
+            }
+          </style>
+        </div>
+        <div class="_w-style-override w-embed">
+          <style>
+            a,
+            .w-input,
+            .w-select,
+            .w-tab-link,
+            .w-nav-link,
+            .w-dropdown-btn,
+            .w-dropdown-toggle,
+            .w-dropdown-link {
+              color: inherit;
+              text-decoration: inherit;
+              font-size: inherit;
+            }
+
+            input,
+            select,
+            textarea {
+              -webkit-appearance: none !important;
+              -moz-appearance: none !important;
+              appearance: none !important;
+            }
+
+            /* Dropdown Toggle */
+            .w-dropdown-toggle,
+            .w-dropdown-toggle.w--open {
+              margin: 0;
+              border: none;
+              background: none;
+              font-family: inherit;
+              font-size: inherit;
+              color: inherit;
+            }
+          </style>
+        </div>
+        <div class="zoom-disable w-embed">
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </div>
+      </div>
+      <div class="nav">
+        <div class="nav_container">
+          <div class="nav_wrapper">
+            <div class="nav_links" style="flex: 1; ">
+              <a
+                href="../../index.html"
+                class="nav-link w-inline-block"
+                data-hover-blur=""
+                style="align-items: center"
+                ><div>返回主页</div></a
+              >
+            </div>
+            <a
+              aria-label="Homepage link"
+              href="javascript:void(0)"
+              aria-current="page"
+              class="nav_links w-inline-block w--current"
+            >
+              <!-- 如果是 PNG/JPG，路径根据你实际存放位置修改，建议高度设为 100% 以适配导航栏 -->
+              <img
+                src="assets/logo1920.png"
+                alt="Logo"
+                style="height: 6rem; width: auto; object-fit: contain; display: block;"
+              />
+            </a>
+            <div class="nav_links"; style="flex: 1; "></div>
+          </div>
+          <div class="nav-divider">
+            <div class="plus">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                viewBox="0 0 13 12"
+                fill="none"
+                class="icon-12px"
+              >
+                <path
+                  d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <div class="nav-line-mask">
+              <div
+                data-w-id="a3f8b649-51b2-9564-79e0-804c98ecec0b"
+                class="line"
+              ></div>
+            </div>
+            <div class="plus">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                viewBox="0 0 13 12"
+                fill="none"
+                class="icon-12px"
+              >
+                <path
+                  d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="awards-modal">
+        <div fs-scrolldisable-element="preserve" class="awards-modal_container">
+          <div
+            data-lenis-start=""
+            data-w-id="a9235c2b-da90-5719-f02e-6558a03b417d"
+            class="awards-modal_close"
+          >
+            <a data-lenis-start="" href="#" class="button w-inline-block"
+              ><div class="margin-bottom margin-4px">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="100%"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  class="icon-16px rotation-180"
+                >
+                  <path
+                    d="M7.40002 4.40039L11.4 8.40039L7.40002 12.4004"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-miterlimit="10"
+                  ></path>
+                  <path
+                    d="M1 0V6V8.4H11.4"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-miterlimit="10"
+                  ></path>
+                </svg>
+              </div>
+              <div>Close</div></a
+            >
+          </div>
+          <div class="awards-modal_inner">
+            <div class="awards_heading">
+              <div class="section-divider text-color-black">
+                <div
+                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                  class="plus"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="100%"
+                    viewBox="0 0 13 12"
+                    fill="none"
+                    class="icon-12px"
+                  >
+                    <path
+                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="line bg-color-black"></div>
+                <div
+                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                  class="plus"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="100%"
+                    viewBox="0 0 13 12"
+                    fill="none"
+                    class="icon-12px"
+                  >
+                    <path
+                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="awards-modal_img">
+            <img
+              src="assets/awards-modal-img.webp"
+              loading="lazy"
+              sizes="(max-width: 1080px) 100vw, 1080px"
+              srcset="
+                assets/awards-modal-img-p-500.webp  500w,
+                assets/awards-modal-img-p-800.webp  800w,
+                assets/awards-modal-img.webp       1080w
+              "
+              alt=""
+              class="image"
+            />
+          </div>
+        </div>
+        <div
+          data-lenis-start=""
+          data-w-id="d2096f7d-71d8-45eb-6298-41d866a9eac1"
+          class="awards-modal-bg"
+        ></div>
+      </div>
+      <div class="main-wrapper">
+        <div class="flowers-collection w-dyn-list">
+          <div role="list" class="flowers-list w-dyn-items">
+            <div role="listitem" class="flowers-item w-dyn-item">
+              <img
+                src="assets/flower-1-4_5.jpg"
+                loading="lazy"
+                alt=""
+                sizes="100vw"
+                srcset="
+                  assets/flower-1-4_5-p-500.jpg  500w,
+                  assets/flower-1-4_5-p-800.jpg  800w,
+                  assets/flower-1-4_5.jpg       1080w
+                "
+                class="flowers-image"
+              />
+            </div>
+            <div role="listitem" class="flowers-item w-dyn-item">
+              <img
+                src="assets/flower-3-4_5.jpg"
+                loading="lazy"
+                alt=""
+                sizes="100vw"
+                srcset="
+                  assets/flower-3-4_5-p-500.jpg  500w,
+                  assets/flower-3-4_5-p-800.jpg  800w,
+                  assets/flower-3-4_5.jpg       1080w
+                "
+                class="flowers-image"
+              />
+            </div>
+            <div role="listitem" class="flowers-item w-dyn-item">
+              <img
+                src="assets/flower-4-4_5.jpg"
+                loading="lazy"
+                alt=""
+                sizes="100vw"
+                srcset="
+                  assets/flower-4-4_5-p-500.jpg  500w,
+                  assets/flower-4-4_5-p-800.jpg  800w,
+                  assets/flower-4-4_5.jpg       1080w
+                "
+                class="flowers-image"
+              />
+            </div>
+            <div role="listitem" class="flowers-item w-dyn-item">
+              <img
+                src="assets/flower-5-4_5.jpg"
+                loading="lazy"
+                alt=""
+                sizes="100vw"
+                srcset="
+                  assets/flower-5-4_5-p-500.jpg  500w,
+                  assets/flower-5-4_5-p-800.jpg  800w,
+                  assets/flower-5-4_5.jpg       1080w
+                "
+                class="flowers-image"
+              />
+            </div>
+            <div role="listitem" class="flowers-item w-dyn-item">
+              <img
+                src="assets/flower-6-4_5.jpg"
+                loading="lazy"
+                alt=""
+                sizes="100vw"
+                srcset="
+                  assets/flower-6-4_5-p-500.jpg  500w,
+                  assets/flower-6-4_5-p-500.jpg  500w,
+                  assets/flower-6-4_5-p-800.jpg  800w,
+                  assets/flower-6-4_5.jpg       1080w
+                "
+                class="flowers-image"
+              />
+            </div>
+          </div>
+        </div>
+        <header id="hero" class="section_hero">
+          <div class="hero-sticky">
+            <div class="hero-sticky-overlay"></div>
+            <div class="hero-text">
+              <div class="hero-grid">
+                <div
+                  id="w-node-ca544f37-9cd8-c370-2296-781e1c71902a-1c719025"
+                  class="hero-text-main"
+                >
+                  <h1 data-text-delay="true" class="heading-m">
+                    飞扬俱乐部-设计部
+                  </h1>
+                </div>
+                <div
+                  id="w-node-ca544f37-9cd8-c370-2296-781e1c71902d-1c719025"
+                  class="swap-titles width-100"
+                >
+                  <h1
+                    data-text-delay="true"
+                    data-swap-title="first"
+                    class="swap-title is-first"
+                  >
+                    创意设计！
+                  </h1>
+                  <h1 class="swap-title">海报！</h1>
+                  <h1 class="swap-title">飞扬娘！</h1>
+                  <h1 class="swap-title">徽章！</h1>
+                  <h1 class="swap-title">宣传物料！</h1>
+                  <h1 class="swap-title">审美素养！</h1>
+                  <h1 class="swap-title">创意设计！</h1>
+                  <h1 class="swap-title">学习与成长！</h1>
+                </div>
+              </div>
+            </div>
+            <div class="hero-flower_wrapper">
+              <div class="hero-flower">
+                <img
+                  src="assets/67cd170605c4a3fd915408cb264df348_Dolsten_Header_Firstframe.webp"
+                  loading="eager"
+                  sizes="(max-width: 1500px) 100vw, 1500px"
+                  srcset="
+                    assets/67cd170605c4a3fd915408cb264df348_Dolsten_Header_Firstframe-p-500.webp   500w,
+                    assets/67cd170605c4a3fd915408cb264df348_Dolsten_Header_Firstframe-p-800.webp   800w,
+                    assets/67cd170605c4a3fd915408cb264df348_Dolsten_Header_Firstframe-p-1080.webp 1080w,
+                    assets/67cd170605c4a3fd915408cb264df348_Dolsten_Header_Firstframe.webp        1500w
+                  "
+                  alt="AI Flower placeholder"
+                  class="hero-flower-placeholder"
+                />
+                <div class="hero-flower-video w-embed">
+                  <video
+                    id="video1"
+                    autoplay
+                    muted
+                    playsinline
+                    preload="auto"
+                    style="width: 100%; height: 100%; object-fit: cover"
+                  ></video>
+                  <video
+                    id="video2"
+                    muted
+                    playsinline
+                    preload="auto"
+                    loop
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      display: none;
+                    "
+                  ></video>
+                </div>
+              </div>
+            </div>
+            <div class="hero-divider">
+              <div class="padding-global">
+                <div class="section-divider">
+                  <div
+                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                    class="plus"
+                  ></div>
+                  <div
+                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                    class="plus"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-w-id="ca544f37-9cd8-c370-2296-781e1c719052"
+            class="hero-scroll"
+          >
+            <div class="hero-video-trigger"></div>
+          </div>
+        </header>
+        <section id="about" class="section_about">
+          <div class="padding-global">
+            <div class="w-layout-blockcontainer container-col-12 w-container">
+              <div class="about_wrapper">
+                <div class="section-divider">
+                  <div
+                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                    class="plus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="100%"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                      class="icon-12px"
+                    >
+                      <path
+                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="line-mask"><div class="line"></div></div>
+                  <div
+                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                    class="plus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="100%"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                      class="icon-12px"
+                    >
+                      <path
+                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div
+                  data-w-id="136fe474-dcdb-1eb5-e0bf-f8ab7b7e03e9"
+                  class="about-founder-grid"
+                >
+                  <div
+                    id="w-node-ca5bf21d-17e4-a02d-9542-7a3d034404eb-dd531a56"
+                    style="
+                      -webkit-transform: translate3d(-120%, 0, 0)
+                        scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-60deg)
+                        skew(0, 0);
+                      -moz-transform: translate3d(-120%, 0, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(-60deg) skew(0, 0);
+                      -ms-transform: translate3d(-120%, 0, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(-60deg) skew(0, 0);
+                      transform: translate3d(-120%, 0, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(-60deg) skew(0, 0);
+                    "
+                    class="about_founder-img"
+                  >
+                    <img
+                      src="assets/flower-about.webp"
+                      loading="lazy"
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px"
+                      srcset="
+                        assets/flower-about-p-500.webp   500w,
+                        assets/flower-about-p-800.webp   800w,
+                        assets/flower-about-p-1080.webp 1080w,
+                        assets/flower-about.webp        1121w
+                      "
+                      alt="Dolsten &amp; Co. AI Flower visual"
+                      class="about_founder-flower"
+                    /><img
+                      src="assets/flower-about.webp"
+                      loading="lazy"
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 727.984375px, 939.984375px"
+                      srcset="
+                        assets/flower-about-p-500.webp   500w,
+                        assets/flower-about-p-800.webp   800w,
+                        assets/flower-about-p-1080.webp 1080w,
+                        assets/flower-about.webp        1121w
+                      "
+                      alt="Dolsten &amp; Co. AI Flower visual"
+                      class="about_founder-flower"
+                    />
+                  </div>
+                  <div
+                    id="w-node-_387f589f-8a48-3c8b-d8e2-92341e0816ca-dd531a56"
+                    class="about_founder-content"
+                  >
+                    <p class="paragraph-l">
+                      张诗怡, <br />
+                      部长
+                    </p>
+                    <p class="paragraph-s">
+                      作为设计部的核心成员，我们三人团队主要负责飞扬品牌的美术设计与视觉呈现，日常工作包括海报设计、宣传物料制作及其他各类视觉产出。此外，我们也定期在部门例会上与大家分享设计软件的使用技巧，帮助团队成员共同提升设计能力。
+                      至于部长嘛——主要负责带领大家好好吃饭，保持团队的能量与活力^_^
+                    </p>
+                    <div class="max-width-384px"></div>
+                    <p class="paragraph-l">
+                      李文宇, <br />
+                      副部长
+                    </p>
+                    <p class="paragraph-s">
+                      乐器与画笔双栖爱好者，执着于飞扬的视觉表达。作为部长的左膀右臂，也是部门团建的气氛组，日常负责协助部长统筹例会、带动干事共同学习成长；负责年终大会入场券、大修与招新海报等核心视觉物料的设计。目前依然在持续精进设计技术与审美，用创意与细节为社团活动打造专属视觉记忆点。
+                    </p>
+                    <div class="max-width-384px"></div>
+                    <p class="paragraph-l">
+                      史静宜, <br />
+                      副部长
+                    </p>
+                    <p class="paragraph-s">
+                      在设计部担任副部长期间，主要负责协助部门的招新和资源整合工作，同时一直保持对设计趋势的关注，努力为团队带来新鲜创意。主导完成的任务也很多元，从社团形象设计、海报大修到周边产品开发等等，每一类项目都用心推进。我一直持续优化出品，既保证设计质量，也紧紧盯住项目
+                      deadline，让作品能按时交付。
+                    </p>
+                  </div>
+                </div>
+                <div class="about-modal" style="padding-bottom: 10px; padding-top: 10px; ">
+                  <div class="news-modal_wrapper" style="padding-bottom: 70px; ">
+                    <div class="news-modal_subtitle">
+                      <p class="paragraph-l">我们的工作</p>
+                    </div>
+                    <div class="hide-tablet-mobile">
+                      <div class="about-modal_collection w-dyn-list">
+                        <div role="list" class="about-modal_list w-dyn-items">
+                          <div
+                            role="listitem"
+                            class="about-modal_item w-dyn-item"
+                          >
+                            <div class="about-modal_card">
+                              <div class="about-modal_card-inner">
+                                <div
+                                  data-pixel-reveal=""
+                                  class="about-modal_card-img"
+                                >
+                                  <img
+                                    src="assets/flower-1-pixelated.webp"
+                                    loading="lazy"
+                                    alt="AI Creator Network flower"
+                                    sizes="(max-width: 991px) 100vw, 939.15625px"
+                                    srcset="
+                                      assets/flower-1-pixelated-p-500.webp 500w,
+                                      assets/flower-1-pixelated.webp       792w
+                                    "
+                                    class="image"
+                                  />
+                                  <div
+                                    data-pixelated-image-reveal-grid=""
+                                    class="pixel-grid"
+                                  ></div>
+                                </div>
+                                <div class="about-modal_card-text">
+                                  <h3 class="heading-s">AI Creator Network</h3>
+                                  <div class="about-modal_card-p">
+                                    <p class="paragraph">
+                                      We work with a curated group of AI
+                                      makers—including AI filmmakers, artists,
+                                      designers, engineers, and prompt
+                                      specialists—to craft breakthrough,
+                                      effective work. Each collaborator is
+                                      chosen for their unique perspective and
+                                      technical mastery.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="plus_top-l">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_top-r">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_bottom-r">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_bottom-l">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            role="listitem"
+                            class="about-modal_item w-dyn-item"
+                          >
+                            <div class="about-modal_card">
+                              <div class="about-modal_card-inner">
+                                <div
+                                  data-pixel-reveal=""
+                                  class="about-modal_card-img"
+                                >
+                                  <img
+                                    src="assets/flower-2-pixelated.webp"
+                                    loading="lazy"
+                                    alt="AI Production Department flower"
+                                    sizes="(max-width: 991px) 100vw, 939.15625px"
+                                    srcset="
+                                      assets/flower-2-pixelated-p-500.webp 500w,
+                                      assets/flower-2-pixelated.webp       792w
+                                    "
+                                    class="image"
+                                  />
+                                  <div
+                                    data-pixelated-image-reveal-grid=""
+                                    class="pixel-grid"
+                                  ></div>
+                                </div>
+                                <div class="about-modal_card-text">
+                                  <h3 class="heading-s">
+                                    AI Production Department
+                                  </h3>
+                                  <div class="about-modal_card-p">
+                                    <p class="paragraph">
+                                      We produce photorealistic avatars, film,
+                                      imagery, campaigns, interactive elements,
+                                      social content and larger than life
+                                      activations at the highest fidelity.
+                                      Completely in-house.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="plus_top-l">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_top-r">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_bottom-r">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_bottom-l">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            role="listitem"
+                            class="about-modal_item w-dyn-item"
+                          >
+                            <div class="about-modal_card">
+                              <div class="about-modal_card-inner">
+                                <div
+                                  data-pixel-reveal=""
+                                  class="about-modal_card-img"
+                                >
+                                  <img
+                                    src="assets/flower-3-pixelated.webp"
+                                    loading="lazy"
+                                    alt="Scale Up Systems flower"
+                                    sizes="(max-width: 991px) 100vw, 939.15625px"
+                                    srcset="
+                                      assets/flower-3-pixelated-p-500.webp 500w,
+                                      assets/flower-3-pixelated.webp       792w
+                                    "
+                                    class="image"
+                                  />
+                                  <div
+                                    data-pixelated-image-reveal-grid=""
+                                    class="pixel-grid"
+                                  ></div>
+                                </div>
+                                <div class="about-modal_card-text">
+                                  <h3 class="heading-s">Scale Up Systems</h3>
+                                  <div class="about-modal_card-p">
+                                    <p class="paragraph">
+                                      We build teams around ideas—not the other
+                                      way around. Instead of relying on a fixed
+                                      in-house roster, we take a modular
+                                      approach to talent. For each project, we
+                                      carefully bring in specialists from all
+                                      over the world.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="plus_top-l">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_top-r">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_bottom-r">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_bottom-l">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            role="listitem"
+                            class="about-modal_item w-dyn-item"
+                          >
+                            <div class="about-modal_card">
+                              <div class="about-modal_card-inner">
+                                <div
+                                  data-pixel-reveal=""
+                                  class="about-modal_card-img"
+                                >
+                                  <img
+                                    src="assets/flower-4-pixelated.webp"
+                                    loading="lazy"
+                                    alt="Business Effectiveness flower"
+                                    sizes="(max-width: 991px) 100vw, 939.15625px"
+                                    srcset="
+                                      assets/flower-4-pixelated-p-500.webp 500w,
+                                      assets/flower-4-pixelated.webp       792w
+                                    "
+                                    class="image"
+                                  />
+                                  <div
+                                    data-pixelated-image-reveal-grid=""
+                                    class="pixel-grid"
+                                  ></div>
+                                </div>
+                                <div class="about-modal_card-text">
+                                  <h3 class="heading-s">
+                                    Business Effectiveness
+                                  </h3>
+                                  <div class="about-modal_card-p">
+                                    <p class="paragraph">
+                                      Creative should be unignorable—but also
+                                      drive sales. We cut costs instantly,
+                                      producing more content that is more
+                                      testable at higher fidelity for faster
+                                      growth.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="plus_top-l">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_top-r">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_bottom-r">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="plus_bottom-l">
+                                <div
+                                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                  class="plus"
+                                >
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="100%"
+                                    viewBox="0 0 13 12"
+                                    fill="none"
+                                    class="icon-12px"
+                                  >
+                                    <path
+                                      d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                      fill="currentColor"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="show-tablet-mobile">
+                      <div class="swiper-component swiper-populair">
+                        <div class="swiper swiper-class w-dyn-list">
+                          <div role="list" class="swiper-wrapper w-dyn-items">
+                            <div
+                              role="listitem"
+                              class="swiper-slide w-dyn-item"
+                            >
+                              <div class="about-modal_card">
+                                <div class="about-modal_card-inner">
+                                  <div class="about-modal_card-img">
+                                    <img
+                                      src="assets/flower-1-pixelated.webp"
+                                      loading="lazy"
+                                      alt="AI Creator Network flower"
+                                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px"
+                                      srcset="
+                                        assets/flower-1-pixelated-p-500.webp 500w,
+                                        assets/flower-1-pixelated.webp       792w
+                                      "
+                                      class="image"
+                                    />
+                                  </div>
+                                  <div class="about-modal_card-text">
+                                    <h3 class="heading-s">
+                                      AI Creator Network
+                                    </h3>
+                                    <p class="paragraph">
+                                      We work with a curated group of AI
+                                      makers—including AI filmmakers, artists,
+                                      designers, engineers, and prompt
+                                      specialists—to craft breakthrough,
+                                      effective work. Each collaborator is
+                                      chosen for their unique perspective and
+                                      technical mastery.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="plus_top-l">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_top-r">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_bottom-r">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_bottom-l">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              role="listitem"
+                              class="swiper-slide w-dyn-item"
+                            >
+                              <div class="about-modal_card">
+                                <div class="about-modal_card-inner">
+                                  <div class="about-modal_card-img">
+                                    <img
+                                      src="assets/flower-2-pixelated.webp"
+                                      loading="lazy"
+                                      alt="AI Production Department flower"
+                                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px"
+                                      srcset="
+                                        assets/flower-2-pixelated-p-500.webp 500w,
+                                        assets/flower-2-pixelated.webp       792w
+                                      "
+                                      class="image"
+                                    />
+                                  </div>
+                                  <div class="about-modal_card-text">
+                                    <h3 class="heading-s">
+                                      AI Production Department
+                                    </h3>
+                                    <p class="paragraph">
+                                      We produce photorealistic avatars, film,
+                                      imagery, campaigns, interactive elements,
+                                      social content and larger than life
+                                      activations at the highest fidelity.
+                                      Completely in-house.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="plus_top-l">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_top-r">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_bottom-r">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_bottom-l">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              role="listitem"
+                              class="swiper-slide w-dyn-item"
+                            >
+                              <div class="about-modal_card">
+                                <div class="about-modal_card-inner">
+                                  <div class="about-modal_card-img">
+                                    <img
+                                      src="assets/flower-3-pixelated.webp"
+                                      loading="lazy"
+                                      alt="Scale Up Systems flower"
+                                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px"
+                                      srcset="
+                                        assets/flower-3-pixelated-p-500.webp 500w,
+                                        assets/flower-3-pixelated.webp       792w
+                                      "
+                                      class="image"
+                                    />
+                                  </div>
+                                  <div class="about-modal_card-text">
+                                    <h3 class="heading-s">Scale Up Systems</h3>
+                                    <p class="paragraph">
+                                      We build teams around ideas—not the other
+                                      way around. Instead of relying on a fixed
+                                      in-house roster, we take a modular
+                                      approach to talent. For each project, we
+                                      carefully bring in specialists from all
+                                      over the world.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="plus_top-l">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_top-r">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_bottom-r">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_bottom-l">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              role="listitem"
+                              class="swiper-slide w-dyn-item"
+                            >
+                              <div class="about-modal_card">
+                                <div class="about-modal_card-inner">
+                                  <div class="about-modal_card-img">
+                                    <img
+                                      src="assets/flower-4-pixelated.webp"
+                                      loading="lazy"
+                                      alt="Business Effectiveness flower"
+                                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 726.625px, 939.15625px"
+                                      srcset="
+                                        assets/flower-4-pixelated-p-500.webp 500w,
+                                        assets/flower-4-pixelated.webp       792w
+                                      "
+                                      class="image"
+                                    />
+                                  </div>
+                                  <div class="about-modal_card-text">
+                                    <h3 class="heading-s">
+                                      Business Effectiveness
+                                    </h3>
+                                    <p class="paragraph">
+                                      Creative should be unignorable—but also
+                                      drive sales. We cut costs instantly,
+                                      producing more content that is more
+                                      testable at higher fidelity for faster
+                                      growth.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="plus_top-l">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_top-r">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_bottom-r">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="plus_bottom-l">
+                                  <div
+                                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                                    class="plus"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      height="100%"
+                                      viewBox="0 0 13 12"
+                                      fill="none"
+                                      class="icon-12px"
+                                    >
+                                      <path
+                                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                                        fill="currentColor"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a
+                          aria-label="Slider button previous"
+                          href="#"
+                          class="swiper-button is-prev w-inline-block"
+                        ></a
+                        ><a
+                          aria-label="Slider button next"
+                          href="#"
+                          class="swiper-button is-next w-inline-block"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer id="contact" class="footer">
+          <div class="padding-global">
+            <div class="section-divider">
+              <div
+                data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                class="plus"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="100%"
+                  viewBox="0 0 13 12"
+                  fill="none"
+                  class="icon-12px"
+                >
+                  <path
+                    d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <div class="line-mask"><div class="line"></div></div>
+              <div
+                data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                class="plus"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="100%"
+                  viewBox="0 0 13 12"
+                  fill="none"
+                  class="icon-12px"
+                >
+                  <path
+                    d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div
+              data-w-id="bb69b7e1-5e5e-fd56-22ea-cd1ed65d04d5"
+              class="footer_wrapper"
+            >
+              <a
+                data-w-id="bb69b7e1-5e5e-fd56-22ea-cd1ed65d04d6"
+                href="javascript:void(0)"
+                class="footer-contact w-inline-block"
+                ><div class="footer-btn">
+                  <div class="footer-btn_inner">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="100%"
+                      viewBox="0 0 45 48"
+                      fill="none"
+                      class="footer-btn_icon"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.208313 0.3125H5.20831V28.875L35.1311 28.875L24.6072 18.3511L28.1427 14.8156L44.7022 31.375L28.1427 47.9344L24.6072 44.3989L35.1311 33.875H0.208313V0.3125Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                    <p class="footer-btn_text">欢迎加入设计部！</p>
+                  </div>
+                  <div class="plus_top-l">
+                    <div
+                      data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                      class="plus"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="100%"
+                        viewBox="0 0 13 12"
+                        fill="none"
+                        class="icon-12px"
+                      >
+                        <path
+                          d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="plus_top-r">
+                    <div
+                      data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                      class="plus"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="100%"
+                        viewBox="0 0 13 12"
+                        fill="none"
+                        class="icon-12px"
+                      >
+                        <path
+                          d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="plus_bottom-r">
+                    <div
+                      data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                      class="plus"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="100%"
+                        viewBox="0 0 13 12"
+                        fill="none"
+                        class="icon-12px"
+                      >
+                        <path
+                          d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="plus_bottom-l">
+                    <div
+                      data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                      class="plus"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="100%"
+                        viewBox="0 0 13 12"
+                        fill="none"
+                        class="icon-12px"
+                      >
+                        <path
+                          d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div></div
+              ></a>
+              <div class="footer_card">
+                <div class="plus_top-l">
+                  <div
+                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                    class="plus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="100%"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                      class="icon-12px"
+                    >
+                      <path
+                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="plus_top-r">
+                  <div
+                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                    class="plus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="100%"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                      class="icon-12px"
+                    >
+                      <path
+                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="plus_bottom-r">
+                  <div
+                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                    class="plus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="100%"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                      class="icon-12px"
+                    >
+                      <path
+                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="plus_bottom-l">
+                  <div
+                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
+                    class="plus"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="100%"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                      class="icon-12px"
+                    >
+                      <path
+                        d="M0.5 6.46154V5.53846H6.03846V0H6.96154V5.53846H12.5V6.46154H6.96154V12H6.03846V6.46154H0.5Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <a
+                data-anchor-target="hero"
+                data-hover-blur=""
+                data-w-id="bb69b7e1-5e5e-fd56-22ea-cd1ed65d04ea"
+                href="#hero"
+                class="footer-scroll-top w-inline-block"
+                ><p class="paragraph">scroll</p>
+                <div class="footer-scroll-top_arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="100%"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    class="icon-18px"
+                  >
+                    <path
+                      d="M19.5 10L12.5 3L5.5 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-miterlimit="10"
+                    ></path>
+                    <path
+                      d="M12.5 3L12.5 22"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-miterlimit="10"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="paragraph">to top</p></a
+              >
+            </div>
+          </div>
+
+          <div class="footer_bg">
+            <img
+              src="assets/flower-scroll.webp"
+              loading="lazy"
+              sizes="(max-width: 2400px) 100vw, 2400px"
+              srcset="
+                assets/flower-scroll-p-500.png   500w,
+                assets/flower-scroll-p-800.png   800w,
+                assets/flower-scroll-p-1080.png 1080w,
+                assets/flower-scroll.webp       2400w
+              "
+              alt="Dolsten &amp; Co AI flower"
+              class="footer-img"
+            />
+          </div>
+        </footer>
+      </div>
     </div>
-</body>
+    <script src="js/jquery.js"></script>
+    <script
+      src="https://cdn.prod.website-files.com/67dbb666b3ce8ebf5ffd59cc/js/webflow.schunk.36b8fb49256177c8.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.prod.website-files.com/67dbb666b3ce8ebf5ffd59cc/js/webflow.schunk.cb4c40d8c339f955.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.prod.website-files.com/67dbb666b3ce8ebf5ffd59cc/js/webflow.99fddb56.528d0624ab71dd11.js"
+      type="text/javascript"
+    ></script>
+    <!-- GSAP: Library, Observer & ScrollTrigger -->
+    <script src="js/gsap.js"></script>
+    <script src="js/scroll-trigger.js"></script>
+    <script src="js/split-text.js"></script>
+    <!-- Vimeo -->
+    <script src="js/vimeo-player.js"></script>
+    <!-- Lenis JS -->
+    <script src="js/lenis.js"></script>
+    <script>
+      const lenis = new Lenis({
+        lerp: 0.15,
+        wheelMultiplier: 1,
+        touchMultiplier: 2,
+        smoothWheel: !0,
+        smoothTouch: !1,
+        autoRaf: !1,
+        infinite: document.body.hasAttribute("data-lenis-infinite"),
+      });
+      function preserveScrollHandler(e) {
+        e.stopPropagation();
+      }
+      function initScrollToAnchorLenis() {
+        document.querySelectorAll("[data-anchor-target]").forEach((e) => {
+          e.addEventListener("click", function () {
+            const e = this.getAttribute("data-anchor-target");
+            lenis.scrollTo(e, {
+              easing: (e) =>
+                e < 0.5 ? 8 * e * e * e * e : 1 - Math.pow(-2 * e + 2, 4) / 2,
+              duration: 1.2,
+              offset: 0,
+            });
+          });
+        });
+      }
+      function enablePreservedScroll() {
+        document.querySelectorAll("[data-lenis-preserve]").forEach((e) => {
+          (e.addEventListener("wheel", preserveScrollHandler, { passive: !1 }),
+            e.addEventListener("touchmove", preserveScrollHandler, {
+              passive: !1,
+            }));
+        });
+      }
+      function disablePreservedScroll() {
+        document.querySelectorAll("[data-lenis-preserve]").forEach((e) => {
+          (e.removeEventListener("wheel", preserveScrollHandler, {
+            passive: !1,
+          }),
+            e.removeEventListener("touchmove", preserveScrollHandler, {
+              passive: !1,
+            }));
+        });
+      }
+      (lenis.on("scroll", ScrollTrigger.update),
+        gsap.ticker.add((e) => {
+          lenis.raf(1e3 * e);
+        }),
+        gsap.ticker.lagSmoothing(0),
+        $("[data-lenis-start]").on("click", function () {
+          (lenis.start(), disablePreservedScroll());
+        }),
+        $("[data-lenis-stop]").on("click", function () {
+          (lenis.stop(), enablePreservedScroll());
+        }),
+        $("[data-lenis-toggle]").on("click", function () {
+          ($(this).toggleClass("stop-scroll"),
+            $(this).hasClass("stop-scroll")
+              ? (lenis.stop(), enablePreservedScroll())
+              : (lenis.start(), disablePreservedScroll()));
+        }),
+        document.addEventListener("DOMContentLoaded", () => {
+          initScrollToAnchorLenis();
+        }));
+    </script>
+
+    <!-- GSAP Global Text Animations -->
+    <script>
+      // ✅ Performance-aware blur check
+      const allowBlur =
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
+        (window.deviceMemory ? window.deviceMemory >= 4 : true); // fallback to true if unsupported
+
+      // ✅ Reusable animation function
+      function animateWithOptionalDelay(
+        targets,
+        type,
+        baseSettings,
+        delay = 0,
+      ) {
+        targets.forEach(function (el) {
+          let split = new SplitText(el, { type });
+          const isDelayed = el.hasAttribute("data-text-delay");
+
+          // Fix for justified lines
+          if (type.includes("lines")) {
+            split.lines.forEach((line) => (line.style.display = "inline"));
+          }
+
+          const targetsToAnimate = type.includes("chars")
+            ? split.chars
+            : split.lines;
+
+          // Initial state
+          gsap.set(targetsToAnimate, {
+            opacity: 0,
+            ...(allowBlur && { filter: "blur(10px)" }),
+          });
+
+          // Animation
+          const anim = gsap.to(targetsToAnimate, {
+            ...baseSettings,
+            ...(allowBlur ? {} : { filter: "none" }), // skip blur if not allowed
+          });
+
+          // ScrollTrigger
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: el,
+                start: "top 80%",
+                toggleActions: "play none none none",
+              },
+            })
+            .add(anim, isDelayed ? "+=" + delay : 0);
+        });
+      }
+
+      // 🥇 .heading-xxl
+      animateWithOptionalDelay(
+        gsap.utils.toArray(".heading-xxl"),
+        "words, chars",
+        {
+          opacity: 1,
+          filter: "blur(0px)",
+          duration: 1,
+          ease: "power2.out",
+          stagger: { amount: 0.3, from: "random" },
+        },
+        1,
+      );
+
+      // ✨ .paragraph-xl
+      animateWithOptionalDelay(
+        gsap.utils.toArray(".paragraph-xl"),
+        "words, chars",
+        {
+          opacity: 1,
+          filter: "blur(0px)",
+          duration: 0.8,
+          ease: "power2.out",
+          stagger: { amount: 0.3, from: "random" },
+        },
+        1,
+      );
+
+      // 🎯 Regular headings (excluding .heading-xxl, .swap-title, .rich-text-work)
+      animateWithOptionalDelay(
+        gsap.utils
+          .toArray("h1, h2, h3, h4, h5, h6")
+          .filter(
+            (el) =>
+              !el.classList.contains("swap-title") &&
+              !el.classList.contains("heading-xxl") &&
+              !el.closest(".rich-text-work"),
+          ),
+        "words, chars",
+        {
+          opacity: 1,
+          filter: "blur(0px)",
+          duration: 1,
+          ease: "power2.out",
+          stagger: { each: 0.03, from: "random" },
+        },
+        1,
+      );
+
+      // 🧾 Regular paragraphs
+      animateWithOptionalDelay(
+        gsap.utils.toArray("p"),
+        "lines, words",
+        {
+          opacity: 1,
+          filter: "blur(0px)",
+          duration: 0.8,
+          ease: "power2.out",
+          stagger: 0.1,
+        },
+        1,
+      );
+
+      // 🧾 .rich-text-work content
+      animateWithOptionalDelay(
+        gsap.utils.toArray(".rich-text-work *"),
+        "lines, words",
+        {
+          opacity: 1,
+          filter: "blur(0px)",
+          duration: 0.8,
+          ease: "power2.out",
+          stagger: 0.1,
+        },
+        1,
+      );
+    </script>
+
+    <!-- Link Hover Blur -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth >= 992) {
+          gsap.utils.toArray("[data-hover-blur]").forEach(function (el) {
+            const split = new SplitText(el, { type: "chars" });
+            gsap.set(split.chars, { filter: "blur(0px)", opacity: 1 });
+
+            let isAnimating = false;
+
+            el.addEventListener("mouseenter", function () {
+              if (isAnimating) return;
+              isAnimating = true;
+
+              // Blur out with stagger
+              gsap.to(split.chars, {
+                filter: "blur(8px)",
+                opacity: 0.5,
+                duration: 0.3,
+                ease: "power2.out",
+                stagger: { amount: 0.2, from: "random" },
+              });
+
+              // Animate back in
+              gsap.to(split.chars, {
+                filter: "blur(0px)",
+                opacity: 1,
+                duration: 0.5,
+                delay: 0.3,
+                ease: "power2.out",
+                onComplete: () => {
+                  isAnimating = false;
+                },
+              });
+            });
+          });
+        }
+      });
+    </script>
+
+    <!-- Custom Cursor -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let e = document.querySelector(".cursor"),
+          t = e.querySelector("p"),
+          o = document.querySelectorAll("[data-cursor]"),
+          r = !1,
+          n = null,
+          c = "";
+        gsap.set(e, { xPercent: 6, yPercent: 140 });
+        let s = gsap.quickTo(e, "x", { ease: "power3" }),
+          a = gsap.quickTo(e, "y", { ease: "power3" });
+        const l = () => e.offsetWidth + 16;
+        (window.addEventListener("mousemove", (o) => {
+          let i = window.innerWidth,
+            d = window.innerHeight,
+            u = window.scrollY,
+            y = o.clientX,
+            w = o.clientY + u,
+            p = 6,
+            q = 140,
+            f = l();
+          if (
+            (y > i - f ? ((r = !0), (p = -100)) : (r = !1),
+            w > u + 0.9 * d && (q = -120),
+            n)
+          ) {
+            let o = n.getAttribute("data-cursor");
+            if (o !== c) {
+              ((t.innerHTML = o), (c = o));
+              e.querySelectorAll("[data-cursor-icon]").forEach(
+                (e) => (e.style.display = "none"),
+              );
+              const r = e.querySelector(
+                `[data-cursor-icon="${o.toLowerCase()}"]`,
+              );
+              (r && (r.style.display = "block"), (f = l()));
+            }
+          }
+          (gsap.to(e, {
+            xPercent: p,
+            yPercent: q,
+            duration: 0.9,
+            ease: "power3",
+          }),
+            s(y),
+            a(w - u));
+        }),
+          o.forEach((o) => {
+            o.addEventListener("mouseenter", () => {
+              n = o;
+              let r = o.getAttribute("data-cursor");
+              if (r !== c) {
+                ((t.innerHTML = r), (c = r));
+                e.querySelectorAll("[data-cursor-icon]").forEach(
+                  (e) => (e.style.display = "none"),
+                );
+                const o = e.querySelector(
+                  `[data-cursor-icon="${r.toLowerCase()}"]`,
+                );
+                o && (o.style.display = "block");
+                l();
+              }
+            });
+          }));
+      });
+    </script>
+
+    <!-- Accordion -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-accordion-css-init]").forEach((t) => {
+          const a = "true" === t.getAttribute("data-accordion-close-siblings");
+          t.addEventListener("click", (c) => {
+            const e = c.target.closest("[data-accordion-toggle]");
+            if (!e) return;
+            const o = e.closest("[data-accordion-status]");
+            if (!o) return;
+            const s = "active" === o.getAttribute("data-accordion-status");
+            (o.setAttribute(
+              "data-accordion-status",
+              s ? "not-active" : "active",
+            ),
+              a &&
+                !s &&
+                t
+                  .querySelectorAll('[data-accordion-status="active"]')
+                  .forEach((t) => {
+                    t !== o &&
+                      t.setAttribute("data-accordion-status", "not-active");
+                  }));
+          });
+        });
+      });
+    </script>
+
+    <!-- Current Year -->
+    <script>
+      // Automatically update text element with the current year
+      Webflow.push(function () {
+        $("[current-year]").text(new Date().getFullYear());
+      });
+    </script>
+
+    <!-- Disable image dragging -->
+    <script>
+      // Disabling dragging for all images
+      document.querySelectorAll("img").forEach((img) => {
+        img.setAttribute("draggable", false);
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const videos = document.querySelectorAll("video[data-src]");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              let video = entry.target;
+              video.src = video.dataset.src;
+              video.load();
+              observer.unobserve(video);
+            }
+          });
+        });
+        videos.forEach((video) => observer.observe(video));
+      });
+    </script>
+    <script src="js/swiper.js"></script>
+
+    <!-- Pageload Scroll Block -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth < 992) return; // ❌ Exit on tablet/mobile
+
+        if ("scrollRestoration" in history) {
+          history.scrollRestoration = "manual";
+        }
+        window.scrollTo(0, 0);
+
+        const mainWrapper = document.querySelector(".main-wrapper");
+        if (mainWrapper) {
+          mainWrapper.classList.add("scroll-locked");
+        }
+
+        setTimeout(() => {
+          const lenis = new Lenis({
+            lerp: 0.15,
+            wheelMultiplier: 1,
+            touchMultiplier: 2,
+            smoothWheel: true,
+            smoothTouch: false,
+            autoRaf: false,
+          });
+
+          lenis.on("scroll", ScrollTrigger.update);
+          gsap.ticker.add((t) => {
+            lenis.raf(1000 * t);
+          });
+          gsap.ticker.lagSmoothing(0);
+
+          window.lenis = lenis;
+
+          lenis.scrollTo(0, { immediate: true });
+        }, 100);
+
+        setTimeout(() => {
+          const mainWrapper = document.querySelector(".main-wrapper");
+          if (mainWrapper) {
+            mainWrapper.classList.remove("scroll-locked");
+          }
+        }, 5000);
+      });
+    </script>
+
+    <!-- Hero Motion -->
+    <script>
+      const video1 = document.getElementById("video1");
+      const video2 = document.getElementById("video2");
+
+      // Detect Safari
+      const isSafari = /^((?!chrome|android).)*safari/i.test(
+        navigator.userAgent,
+      );
+
+      // Detect low performance device
+      const isLowPerformance = () => {
+        const cores = navigator.hardwareConcurrency || 2;
+        const connection = navigator.connection || {};
+        const effectiveType = connection.effectiveType || "4g";
+        return cores <= 4 || ["slow-2g", "2g", "3g"].includes(effectiveType);
+      };
+
+      const useCompressed = isLowPerformance();
+
+      // Source links
+      const sources = {
+        safari: {
+          video1: useCompressed
+            ? "assets/DOLSTEN_NR_A-compressed.mp4"
+            : "assets/DOLSTEN_NR_A_hvec.mp4",
+          video2: useCompressed
+            ? "assets/DOLSTEN_NR_B-compressed.mp4"
+            : "assets/DOLSTEN_NR_B_hvec.mp4",
+        },
+        other: {
+          video1: useCompressed
+            ? "assets/DOLSTEN_NR_A-compressed.webm"
+            : "assets/DOLSTEN_NR_A.webm",
+          video2: useCompressed
+            ? "assets/DOLSTEN_NR_B-compressed.webm"
+            : "assets/DOLSTEN_NR_B.webm",
+        },
+      };
+
+      const src1 = document.createElement("source");
+      const src2 = document.createElement("source");
+
+      if (isSafari) {
+        src1.src = sources.safari.video1;
+        src1.type = "video/mp4";
+        src2.src = sources.safari.video2;
+        src2.type = "video/mp4";
+      } else {
+        src1.src = sources.other.video1;
+        src1.type = "video/webm";
+        src2.src = sources.other.video2;
+        src2.type = "video/webm";
+      }
+
+      video1.appendChild(src1);
+      video2.appendChild(src2);
+
+      video1.load();
+      video2.load();
+
+      video1.play().catch((e) => {
+        console.warn("Autoplay prevented:", e);
+      });
+
+      // Placeholder fade-out
+      video1.addEventListener("playing", () => {
+        const poster = document.querySelector(".hero-flower-placeholder");
+        if (poster) {
+          gsap.to(poster, {
+            opacity: 0,
+            duration: 0.3,
+            ease: "power1.out",
+            onComplete: () => {
+              poster.style.display = "none";
+            },
+          });
+        }
+      });
+
+      // Fallback for failed video load
+      video1.addEventListener("error", () => {
+        const poster = document.querySelector(".hero-flower-placeholder");
+        if (poster) poster.style.opacity = 1;
+      });
+
+      // Seamless transition
+      let video2Started = false;
+
+      video1.addEventListener("timeupdate", () => {
+        if (video1.duration - video1.currentTime < 0.01 && !video2Started) {
+          video2.style.display = "block";
+          video2.play();
+          video2Started = true;
+        }
+      });
+
+      video2.addEventListener("playing", () => {
+        video1.style.display = "none";
+      });
+    </script>
+
+    <!-- Hero Scroll Text Cycle -->
+    <script>
+      // ✅ Hero Scroll Text Cycle with delay for first swap-title if data-text-delay="true"
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.utils.toArray(".swap-titles").forEach((container) => {
+          let firstTitle = container.querySelector('[data-swap-title="first"]');
+          let titles = gsap.utils
+            .toArray(container.querySelectorAll(".swap-title"))
+            .filter((el) => el !== firstTitle);
+          let timeline = gsap.timeline({ paused: true });
+
+          gsap.set(titles, { y: "100%", opacity: 0, position: "absolute" });
+
+          let firstSplit = new SplitText(firstTitle, { type: "words, chars" });
+          gsap.set(firstSplit.chars, {
+            opacity: 0,
+            y: 10,
+            filter: "blur(10px)",
+          });
+
+          const firstAnim = gsap.to(firstSplit.chars, {
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            duration: 0.8,
+            ease: "power2.out",
+            stagger: { each: 0.03, from: "random" },
+          });
+
+          if (firstTitle.hasAttribute("data-text-delay")) {
+            const isMobile = window.innerWidth <= 768; // you can adjust breakpoint if needed
+            const delay = isMobile ? "+=3" : "+=1";
+            timeline.add(firstAnim, delay);
+          } else {
+            timeline.add(firstAnim);
+          }
+
+          titles.forEach((title, i) => {
+            let split = new SplitText(title, { type: "words, chars" });
+            gsap.set(split.chars, { opacity: 0, y: 10, filter: "blur(10px)" });
+
+            let prevTitle = i === 0 ? firstTitle : titles[i - 1];
+
+            timeline
+              .to(
+                prevTitle,
+                {
+                  y: "-100%",
+                  opacity: 0,
+                  duration: 0.8,
+                  ease: "power2.inOut",
+                },
+                "+=1.5",
+              )
+
+              .fromTo(
+                title,
+                { y: "100%", opacity: 0 },
+                {
+                  y: "0%",
+                  opacity: 1,
+                  duration: 0.8,
+                  ease: "power2.out",
+                  onStart: () => {
+                    gsap.to(split.chars, {
+                      opacity: 1,
+                      y: 0,
+                      filter: "blur(0px)",
+                      duration: 0.8,
+                      ease: "power2.out",
+                      stagger: { each: 0.03, from: "random" },
+                    });
+                  },
+                },
+                "-=0.7",
+              );
+          });
+
+          ScrollTrigger.create({
+            trigger: container,
+            start: "top 80%",
+            once: true,
+            onEnter: () => timeline.play(0),
+          });
+        });
+      });
+    </script>
+
+    <!-- Awards Logo Cycle -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.utils.toArray(".awards_swap-logo").forEach((container) => {
+          const firstLogo = container.querySelector(".awards-logo.is-first");
+          const logos = gsap.utils
+            .toArray(container.querySelectorAll(".awards-logo"))
+            .filter((el) => el !== firstLogo);
+          const timeline = gsap.timeline({ paused: true });
+
+          // Set initial styles
+          gsap.set(logos, {
+            y: "100%",
+            opacity: 0,
+            position: "absolute",
+            filter: "blur(10px)",
+          });
+
+          // Animate in first image
+          timeline.fromTo(
+            firstLogo,
+            { y: "100%", opacity: 0, filter: "blur(10px)" },
+            {
+              y: "0%",
+              opacity: 1,
+              filter: "blur(0px)",
+              duration: 0.8,
+              ease: "power2.out",
+            },
+          );
+
+          // Animate the loop of the rest
+          logos.forEach((logo, i) => {
+            const prev = i === 0 ? firstLogo : logos[i - 1];
+
+            timeline
+              .to(
+                prev,
+                {
+                  y: "-100%",
+                  opacity: 0,
+                  filter: "blur(10px)",
+                  duration: 0.8,
+                  ease: "power2.inOut",
+                },
+                "+=1.5",
+              ) // Same delay as swap-titles
+
+              .fromTo(
+                logo,
+                { y: "100%", opacity: 0, filter: "blur(10px)" },
+                {
+                  y: "0%",
+                  opacity: 1,
+                  filter: "blur(0px)",
+                  duration: 0.8,
+                  ease: "power2.out",
+                },
+                "-=0.7",
+              );
+          });
+
+          ScrollTrigger.create({
+            trigger: container,
+            start: "top 80%",
+            once: true,
+            onEnter: () => timeline.play(0),
+          });
+        });
+      });
+    </script>
+
+    <!-- Vimeo -->
+    <script>
+      function initVimeoPlayer() {
+        // Select all elements that have [data-vimeo-player-init]
+        const vimeoPlayers = document.querySelectorAll(
+          "[data-vimeo-player-init]",
+        );
+
+        vimeoPlayers.forEach(function (vimeoElement, index) {
+          // Add Vimeo URL ID to the iframe [src]
+          // Looks like: https://player.vimeo.com/video/1019191082
+          const vimeoVideoID = vimeoElement.getAttribute("data-vimeo-video-id");
+          if (!vimeoVideoID) return;
+          const vimeoVideoURL = `https://player.vimeo.com/video/${vimeoVideoID}?api=1&background=1&autoplay=0&loop=0&muted=1`;
+          vimeoElement
+            .querySelector("iframe")
+            .setAttribute("src", vimeoVideoURL);
+
+          // Assign an ID to each element
+          const videoIndexID = "vimeo-player-index-" + index;
+          vimeoElement.setAttribute("id", videoIndexID);
+
+          const iframeID = vimeoElement.id;
+          const player = new Vimeo.Player(iframeID);
+
+          // Update Aspect Ratio if [data-vimeo-update-size="true"]
+          if (vimeoElement.getAttribute("data-vimeo-update-size") === "true") {
+            player.getVideoWidth().then(function (width) {
+              player.getVideoHeight().then(function (height) {
+                const beforeEl = vimeoElement.querySelector(
+                  ".vimeo-player__before",
+                );
+                if (beforeEl) {
+                  beforeEl.style.paddingTop = (height / width) * 100 + "%";
+                }
+              });
+            });
+          }
+
+          // Loaded
+          player.on("play", function () {
+            vimeoElement.setAttribute("data-vimeo-loaded", "true");
+          });
+
+          // Autoplay
+          if (vimeoElement.getAttribute("data-vimeo-autoplay") === "false") {
+            // Autoplay = false
+            player.setVolume(1);
+            player.pause();
+          } else {
+            // Autoplay = true
+            player.setVolume(0);
+            vimeoElement.setAttribute("data-vimeo-muted", "true");
+
+            // If paused-by-user === false, do scroll-based autoplay
+            if (
+              vimeoElement.getAttribute("data-vimeo-paused-by-user") === "false"
+            ) {
+              function checkVisibility() {
+                const rect = vimeoElement.getBoundingClientRect();
+                const inView = rect.top < window.innerHeight && rect.bottom > 0;
+                inView ? vimeoPlayerPlay() : vimeoPlayerPause();
+              }
+
+              // Initial check
+              checkVisibility();
+
+              // Handle scroll
+              window.addEventListener("scroll", checkVisibility);
+            }
+          }
+
+          // Function: Play Video
+          function vimeoPlayerPlay() {
+            vimeoElement.setAttribute("data-vimeo-activated", "true");
+            vimeoElement.setAttribute("data-vimeo-playing", "true");
+            player.play();
+
+            const captionEl = vimeoElement.parentElement.querySelector(
+              ".work_video-caption",
+            );
+            if (captionEl) {
+              gsap.to(captionEl, {
+                yPercent: -100,
+                duration: 0.6,
+                ease: "power2.out",
+              });
+            }
+          }
+
+          // Function: Pause Video
+          function vimeoPlayerPause() {
+            vimeoElement.setAttribute("data-vimeo-playing", "false");
+            player.pause();
+
+            const captionEl = vimeoElement.parentElement.querySelector(
+              ".work_video-caption",
+            );
+            if (captionEl) {
+              gsap.to(captionEl, {
+                yPercent: 0,
+                duration: 0.6,
+                ease: "power2.out",
+              });
+            }
+          }
+
+          // Click: Play
+          const playBtn = vimeoElement.querySelector(
+            '[data-vimeo-control="play"]',
+          );
+          if (playBtn) {
+            playBtn.addEventListener("click", function () {
+              // Always set volume to 0 first to avoid pop
+              player.setVolume(0);
+              vimeoPlayerPlay();
+
+              // If muted attribute is 'true', keep volume at 0, else 1
+              if (vimeoElement.getAttribute("data-vimeo-muted") === "true") {
+                player.setVolume(0);
+              } else {
+                player.setVolume(1);
+              }
+            });
+          }
+
+          // Click: Pause
+          const pauseBtn = vimeoElement.querySelector(
+            '[data-vimeo-control="pause"]',
+          );
+          if (pauseBtn) {
+            pauseBtn.addEventListener("click", function () {
+              vimeoPlayerPause();
+              // If paused by user => kill the scroll-based autoplay
+              if (vimeoElement.getAttribute("data-vimeo-autoplay") === "true") {
+                vimeoElement.setAttribute("data-vimeo-paused-by-user", "true");
+                // Removing scroll listener (if you’d like)
+                window.removeEventListener("scroll", checkVisibility);
+              }
+            });
+          }
+
+          // Click: Mute
+          const muteBtn = vimeoElement.querySelector(
+            '[data-vimeo-control="mute"]',
+          );
+          if (muteBtn) {
+            muteBtn.addEventListener("click", function () {
+              if (vimeoElement.getAttribute("data-vimeo-muted") === "false") {
+                player.setVolume(0);
+                vimeoElement.setAttribute("data-vimeo-muted", "true");
+              } else {
+                player.setVolume(1);
+                vimeoElement.setAttribute("data-vimeo-muted", "false");
+              }
+            });
+          }
+
+          // Fullscreen
+          // Check if Fullscreen API is supported
+          const fullscreenSupported = !!(
+            document.fullscreenEnabled ||
+            document.webkitFullscreenEnabled ||
+            document.mozFullScreenEnabled ||
+            document.msFullscreenEnabled
+          );
+
+          const fullscreenBtn = vimeoElement.querySelector(
+            '[data-vimeo-control="fullscreen"]',
+          );
+
+          // Hide the fullscreen button if not supported
+          if (!fullscreenSupported && fullscreenBtn) {
+            fullscreenBtn.style.display = "none";
+          }
+
+          if (fullscreenBtn) {
+            fullscreenBtn.addEventListener("click", () => {
+              const fullscreenElement = document.getElementById(iframeID);
+              if (!fullscreenElement) return;
+
+              const isFullscreen =
+                document.fullscreenElement ||
+                document.webkitFullscreenElement ||
+                document.mozFullScreenElement ||
+                document.msFullscreenElement;
+
+              if (isFullscreen) {
+                // Exit fullscreen
+                vimeoElement.setAttribute("data-vimeo-fullscreen", "false");
+                (
+                  document.exitFullscreen ||
+                  document.webkitExitFullscreen ||
+                  document.mozCancelFullScreen ||
+                  document.msExitFullscreen
+                ).call(document);
+              } else {
+                // Enter fullscreen
+                vimeoElement.setAttribute("data-vimeo-fullscreen", "true");
+                (
+                  fullscreenElement.requestFullscreen ||
+                  fullscreenElement.webkitRequestFullscreen ||
+                  fullscreenElement.mozRequestFullScreen ||
+                  fullscreenElement.msRequestFullscreen
+                ).call(fullscreenElement);
+              }
+            });
+          }
+
+          const handleFullscreenChange = () => {
+            const isFullscreen =
+              document.fullscreenElement ||
+              document.webkitFullscreenElement ||
+              document.mozFullScreenElement ||
+              document.msFullscreenElement;
+
+            vimeoElement.setAttribute(
+              "data-vimeo-fullscreen",
+              isFullscreen ? "true" : "false",
+            );
+          };
+
+          // Add event listeners for fullscreen changes (with vendor prefixes)
+          [
+            "fullscreenchange",
+            "webkitfullscreenchange",
+            "mozfullscreenchange",
+            "msfullscreenchange",
+          ].forEach((event) => {
+            document.addEventListener(event, handleFullscreenChange);
+          });
+
+          // Convert seconds to mm:ss
+          function secondsTimeSpanToHMS(s) {
+            let h = Math.floor(s / 3600);
+            s -= h * 3600;
+            let m = Math.floor(s / 60);
+            s -= m * 60;
+            return m + ":" + (s < 10 ? "0" + s : s);
+          }
+
+          // Duration
+          const vimeoDuration = vimeoElement.querySelector(
+            "[data-vimeo-duration]",
+          );
+          player.getDuration().then(function (duration) {
+            if (vimeoDuration) {
+              vimeoDuration.textContent = secondsTimeSpanToHMS(duration);
+            }
+            // Update timeline + progress max
+            const timelineAndProgress = vimeoElement.querySelectorAll(
+              '[data-vimeo-control="timeline"], progress',
+            );
+            timelineAndProgress.forEach((el) => {
+              el.setAttribute("max", duration);
+            });
+          });
+
+          // Timeline
+          const timelineElem = vimeoElement.querySelector(
+            '[data-vimeo-control="timeline"]',
+          );
+          const progressElem = vimeoElement.querySelector("progress");
+
+          function updateTimelineValue() {
+            player.getDuration().then(function () {
+              const timeVal = timelineElem.value;
+              player.setCurrentTime(timeVal);
+              if (progressElem) {
+                progressElem.value = timeVal;
+              }
+            });
+          }
+
+          if (timelineElem) {
+            ["input", "change"].forEach((evt) => {
+              timelineElem.addEventListener(evt, updateTimelineValue);
+            });
+          }
+
+          // Progress Time & Timeline (timeupdate)
+          player.on("timeupdate", function (data) {
+            if (timelineElem) {
+              timelineElem.value = data.seconds;
+            }
+            if (progressElem) {
+              progressElem.value = data.seconds;
+            }
+            if (vimeoDuration) {
+              vimeoDuration.textContent = secondsTimeSpanToHMS(
+                Math.trunc(data.seconds),
+              );
+            }
+          });
+
+          // Hide controls after hover on Vimeo player
+          let vimeoHoverTimer;
+          vimeoElement.addEventListener("mousemove", function () {
+            if (vimeoElement.getAttribute("data-vimeo-hover") === "false") {
+              vimeoElement.setAttribute("data-vimeo-hover", "true");
+            }
+            clearTimeout(vimeoHoverTimer);
+            vimeoHoverTimer = setTimeout(vimeoHoverTrue, 3000);
+          });
+
+          function vimeoHoverTrue() {
+            vimeoElement.setAttribute("data-vimeo-hover", "false");
+          }
+
+          // Video Ended
+          function vimeoOnEnd() {
+            vimeoElement.setAttribute("data-vimeo-activated", "false");
+            vimeoElement.setAttribute("data-vimeo-playing", "false");
+            player.unload();
+          }
+          player.on("ended", vimeoOnEnd);
+        });
+      }
+
+      // Initialize Vimeo Player
+      document.addEventListener("DOMContentLoaded", function () {
+        initVimeoPlayer();
+      });
+    </script>
+
+    <!-- Awards Hover -->
+    <script>
+      $(document).ready(function () {
+        if (window.innerWidth >= 992) {
+          $(".awards_row").on("mouseenter", function () {
+            const $img = $(this).find(".awards_visual-img");
+
+            if ($img.data("tween")) {
+              $img.data("tween").kill();
+            }
+
+            const tween = gsap.to($img, {
+              opacity: 1,
+              filter: "blur(0px)",
+              duration: 0.3,
+              ease: "power2.out",
+            });
+
+            $img.data("tween", tween);
+          });
+
+          $(".awards_row").on("mouseleave", function () {
+            const $img = $(this).find(".awards_visual-img");
+
+            if ($img.data("tween")) {
+              $img.data("tween").kill();
+            }
+
+            const tween = gsap.to($img, {
+              opacity: 0,
+              filter: "blur(4px)",
+              duration: 0.3,
+              ease: "power2.out",
+            });
+
+            $img.data("tween", tween);
+          });
+        }
+      });
+    </script>
+
+    <!-- Marquee -->
+    <script>
+      function initCSSMarquee() {
+        const desktopSpeed = 75; // px per second
+        const mobileSpeed = 40; // slower on mobile
+        const marquees = document.querySelectorAll("[data-css-marquee]");
+
+        const isMobile = window.innerWidth <= 768; // You can tweak the breakpoint
+        const pixelsPerSecond = isMobile ? mobileSpeed : desktopSpeed;
+
+        // Duplicate each [data-css-marquee-list] element inside its container
+        marquees.forEach((marquee) => {
+          marquee
+            .querySelectorAll("[data-css-marquee-list]")
+            .forEach((list) => {
+              const duplicate = list.cloneNode(true);
+              marquee.appendChild(duplicate);
+            });
+        });
+
+        // Create an IntersectionObserver to check if the marquee container is in view
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              entry.target
+                .querySelectorAll("[data-css-marquee-list]")
+                .forEach(
+                  (list) =>
+                    (list.style.animationPlayState = entry.isIntersecting
+                      ? "running"
+                      : "paused"),
+                );
+            });
+          },
+          { threshold: 0 },
+        );
+
+        // Calculate the width and set the animation duration accordingly
+        marquees.forEach((marquee) => {
+          marquee
+            .querySelectorAll("[data-css-marquee-list]")
+            .forEach((list) => {
+              list.style.animationDuration =
+                list.offsetWidth / pixelsPerSecond + "s";
+              list.style.animationPlayState = "paused";
+            });
+          observer.observe(marquee);
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        initCSSMarquee();
+      });
+    </script>
+
+    <!-- Swiper -->
+    <script>
+      // Initialize Swiper
+      const swiper1 = new Swiper(".swiper", {
+        direction: "horizontal",
+        loop: false,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
+        centeredSlides: false,
+        speed: 300,
+        allowTouchMove: true, // Enable drag/swipe functionality
+        breakpoints: {
+          480: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+        },
+        // Custom navigation using external elements
+        navigation: {
+          nextEl: ".swiper-button.is-next",
+          prevEl: ".swiper-button.is-prev",
+        },
+      });
+    </script>
+
+    <!-- Cards Image Pixels -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const gridSize = 7;
+        const pixelSize = 100 / gridSize;
+
+        document
+          .querySelectorAll(".about-modal_card-img")
+          .forEach((wrapper) => {
+            const grid = wrapper.querySelector(".pixel-grid");
+
+            if (!grid) return;
+
+            // Clear existing pixels
+            grid.innerHTML = "";
+
+            // Generate pixel grid
+            for (let row = 0; row < gridSize; row++) {
+              for (let col = 0; col < gridSize; col++) {
+                const pixel = document.createElement("div");
+                pixel.classList.add("pixel-pixel");
+                pixel.style.width = `${pixelSize}%`;
+                pixel.style.height = `${pixelSize}%`;
+                pixel.style.left = `${col * pixelSize}%`;
+                pixel.style.top = `${row * pixelSize}%`;
+                grid.appendChild(pixel);
+              }
+            }
+
+            const pixels = grid.querySelectorAll(".pixel-pixel");
+            gsap.set(pixels, {
+              backgroundColor: "#fff",
+              position: "absolute",
+              zIndex: 2,
+              opacity: 1,
+            });
+
+            ScrollTrigger.create({
+              trigger: wrapper,
+              start: "top 75%",
+              once: true,
+              onEnter: () => {
+                gsap.to(pixels, {
+                  opacity: 0,
+                  duration: 0.6,
+                  ease: "power2.out",
+                  stagger: {
+                    each: 0.01,
+                    from: "random",
+                  },
+                  onComplete: () => {
+                    pixels.forEach((p) => p.remove());
+                  },
+                });
+              },
+            });
+          });
+      });
+    </script>
+
+    <!-- Cards Scroll -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      window.addEventListener("DOMContentLoaded", () => {
+        ScrollTrigger.matchMedia({
+          // Desktop only
+          "(min-width: 992px)": function () {
+            // Animate the entire list sliding from right to center
+            gsap.to(".about-modal_list", {
+              x: 0,
+              opacity: 1,
+              ease: "back.out(1.7)",
+              duration: 1.4,
+              scrollTrigger: {
+                trigger: ".about-modal_wrapper",
+                start: "top 40%",
+                toggleActions: "play none none none",
+              },
+            });
+
+            // Animate each card from bottom up with stagger
+            gsap.from(".about-modal_card", {
+              y: 60,
+              opacity: 0,
+              duration: 1.2,
+              ease: "back.out(1.7)",
+              stagger: 0.25,
+              scrollTrigger: {
+                trigger: ".about-modal_wrapper",
+                start: "top 40%",
+                toggleActions: "play none none none",
+              },
+            });
+          },
+        });
+      });
+    </script>
+  </body>
 </html>
