@@ -166,13 +166,7 @@ td,
 th {
   padding: 0;
 }
-@font-face {
-  font-family: webflow-icons;
-  src: url(data:application/x-font-ttf;charset=utf-8;base64,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)
-    format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
+
 [class^="w-icon-"],
 [class*="\ w-icon-"] {
   speak: none;
@@ -272,88 +266,7 @@ pre.w-code-block code {
 .w-optimization {
   display: contents;
 }
-.w-webflow-badge,
-.w-webflow-badge > img {
-  box-sizing: unset;
-  width: unset;
-  height: unset;
-  max-height: unset;
-  max-width: unset;
-  min-height: unset;
-  min-width: unset;
-  margin: unset;
-  padding: unset;
-  float: unset;
-  clear: unset;
-  border: unset;
-  border-radius: unset;
-  background: unset;
-  background-image: unset;
-  background-position: unset;
-  background-size: unset;
-  background-repeat: unset;
-  background-origin: unset;
-  background-clip: unset;
-  background-attachment: unset;
-  background-color: unset;
-  box-shadow: unset;
-  transform: unset;
-  direction: unset;
-  font-family: unset;
-  font-weight: unset;
-  color: unset;
-  font-size: unset;
-  line-height: unset;
-  font-style: unset;
-  font-variant: unset;
-  text-align: unset;
-  letter-spacing: unset;
-  -webkit-text-decoration: unset;
-  text-decoration: unset;
-  text-indent: unset;
-  text-transform: unset;
-  list-style-type: unset;
-  text-shadow: unset;
-  vertical-align: unset;
-  cursor: unset;
-  white-space: unset;
-  word-break: unset;
-  word-spacing: unset;
-  word-wrap: unset;
-  transition: unset;
-}
-.w-webflow-badge {
-  white-space: nowrap;
-  cursor: pointer;
-  box-shadow:
-    0 0 0 1px #0000001a,
-    0 1px 3px #0000001a;
-  visibility: visible !important;
-  opacity: 1 !important;
-  z-index: 2147483647 !important;
-  color: #aaadb0 !important;
-  overflow: unset !important;
-  background-color: #fff !important;
-  border-radius: 3px !important;
-  width: auto !important;
-  height: auto !important;
-  margin: 0 !important;
-  padding: 6px !important;
-  font-size: 12px !important;
-  line-height: 14px !important;
-  text-decoration: none !important;
-  display: inline-block !important;
-  position: fixed !important;
-  inset: auto 12px 12px auto !important;
-  transform: none !important;
-}
-.w-webflow-badge > img {
-  position: unset;
-  visibility: unset !important;
-  opacity: 1 !important;
-  vertical-align: middle !important;
-  display: inline-block !important;
-}
+
 h1,
 h2,
 h3,
@@ -1484,7 +1397,7 @@ textarea.w-select {
     opacity: 0.8;
   }
   .w-lightbox-control:hover {
-    opacity: 1;
+    opacity: 0;
   }
 }
 .w-lightbox-inactive,
@@ -1820,7 +1733,7 @@ textarea.w-select {
 }
 @font-face {
   font-family: PP Neue Montreal;
-  src: url(https://cdn.prod.website-files.com/67dbb666b3ce8ebf5ffd59cc/67dbbbc4b2bb3bdb73a818a1_PPNeueMontreal-Regular.woff2)
+  src: url(assets/PPNeueMontreal.woff2)
     format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -4978,7 +4891,7 @@ figcaption {
   display: flex;
 }
 .swap-title {
-  opacity: 0;
+  opacity: 1;
   font-family: var(--_headings---heading-m--font);
   font-size: var(--_headings---heading-m--font-size);
   line-height: var(--_headings---heading-l--line-height);
@@ -5122,31 +5035,6 @@ figcaption {
   width: 100%;
   display: flex;
 }
-.cursor {
-  z-index: 1000;
-  grid-column-gap: 0.25em;
-  grid-row-gap: 0.25em;
-  background-color: var(--_colors---swatch--white);
-  opacity: 0;
-  pointer-events: none;
-  color: var(--_colors---swatch--black);
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.3em 0.5em 0.4em;
-  font-size: 1.125em;
-  transition: opacity 0.2s;
-  display: flex;
-  position: fixed;
-  inset: 0% auto auto 0%;
-}
-.cursor-paragraph {
-  color: var(--_colors---swatch--black);
-  font-size: var(--_paragraphs---paragraph-s--font-size);
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 500;
-  line-height: 1;
-}
 .swap-titles {
   text-align: left;
   justify-content: flex-start;
@@ -5287,7 +5175,7 @@ figcaption {
   inset: 0%;
 }
 .awards_visual-img {
-  opacity: 0;
+  opacity: 1;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -5427,7 +5315,7 @@ figcaption {
 }
 .awards-modal-bg {
   z-index: 0;
-  opacity: 0;
+  opacity: 1;
   pointer-events: auto;
   background-color: #0003;
   width: 100%;
@@ -6546,7 +6434,7 @@ figcaption {
   z-index: 1;
   grid-column-gap: 0.5em;
   grid-row-gap: 0.5em;
-  opacity: 0;
+  opacity: 1;
   color: var(--_colors---swatch--black);
   letter-spacing: -0.01em;
   cursor: pointer;
@@ -7267,7 +7155,7 @@ figcaption {
     max-width: none;
   }
   .vimeo-player__btn {
-    opacity: 1;
+    opacity: 0;
     display: flex;
   }
   .vimeo-player__duration {
@@ -7410,7 +7298,7 @@ figcaption {
     padding-top: 3em;
   }
   .hero-scroll-down_wrap {
-    opacity: 1;
+    opacity: 0;
   }
   .pageload-counter {
     display: none;

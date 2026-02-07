@@ -6916,13 +6916,13 @@
           prev: {
             translate: [0, 0, 0],
             rotate: [0, 0, 0],
-            opacity: 1,
+            opacity: 0,
             scale: 1,
           },
           next: {
             translate: [0, 0, 0],
             rotate: [0, 0, 0],
-            opacity: 1,
+            opacity: 0,
             scale: 1,
           },
         },
@@ -6963,7 +6963,7 @@
               translate: [0, 0, 0],
               rotate: [0, 0, 0],
               scale: 1,
-              opacity: 1,
+              opacity: 0,
             };
             (d < 0
               ? ((f = r.next), (m = !0))

@@ -10,32 +10,12 @@
     <meta property="og:type" content="website" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="css/main-style.css" rel="stylesheet" type="text/css" />
-    <style>
-      @media (min-width: 992px) {
-        html.w-mod-js:not(.w-mod-ix)
-          [data-w-id="6e98c890-f6d3-def9-8e40-7001d0dd8119"] {
-          -webkit-transform: translate3d(0, 0, 0) scale3d(0.2, 0.2, 1)
-            rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-          -moz-transform: translate3d(0, 0, 0) scale3d(0.2, 0.2, 1) rotateX(0)
-            rotateY(0) rotateZ(0) skew(0, 0);
-          -ms-transform: translate3d(0, 0, 0) scale3d(0.2, 0.2, 1) rotateX(0)
-            rotateY(0) rotateZ(0) skew(0, 0);
-          transform: translate3d(0, 0, 0) scale3d(0.2, 0.2, 1) rotateX(0)
-            rotateY(0) rotateZ(0) skew(0, 0);
-        }
-      }
-    </style>
+
     <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link
-      href="https://fonts.gstatic.com"
-      rel="preconnect"
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
     <script src="js/webfont.js" type="text/javascript"></script>
     <script type="text/javascript">
-      WebFont.load({
-        google: { families: ["IBM Plex Mono:500", "IBM Plex Mono:regular"] },
-      });
+      WebFont.load({ google: { families: ["IBM Plex Mono:500", "IBM Plex Mono:regular"] },});
     </script>
     <script type="text/javascript">
       !(function (o, c) {
@@ -75,7 +55,7 @@
         }
 
         .about-modal_list {
-          opacity: 0;
+          opacity: 1;
           transform: translateX(10vw);
         }
       }
@@ -87,7 +67,7 @@
       }
 
       .hero-text {
-        opacity: 0;
+        opacity: 1;
       }
 
       .button:hover .button-bg {
@@ -145,7 +125,7 @@
             }
 
             [data-accordion-status="active"] .accordion-css__item-icon {
-               transform: rotate(45deg);
+               transform: rotate(45deg); }
           </style>
         </div>
         <div class="adaptive-scaling w-embed">
@@ -245,7 +225,7 @@
               .vimeo-player__placeholder,
             .vimeo-player[data-vimeo-activated="true"][data-vimeo-loaded="true"]
               .vimeo-player__video-placeholder {
-              opacity: 0;
+              opacity: 1;
             }
 
             .vimeo-player[data-vimeo-playing="true"] + .work_video-caption {
@@ -263,12 +243,12 @@
 
             .vimeo-player[data-vimeo-activated="false"][data-vimeo-playing="false"]
               .vimeo-player__dark {
-              opacity: 0;
+              opacity: 1;
             }
 
             .vimeo-player[data-vimeo-activated="true"][data-vimeo-loaded="true"]
               .vimeo-player__dark {
-              opacity: 0;
+              opacity: 1;
             }
 
             @media (hover: hover) and (pointer: fine) {
@@ -287,7 +267,7 @@
             }
 
             .vimeo-player .vimeo-player__pause .vimeo-player__btn {
-              opacity: 0;
+              opacity: 1;
             }
 
             .vimeo-player[data-vimeo-activated="true"][data-vimeo-playing="false"]
@@ -303,18 +283,18 @@
               .vimeo-player[data-vimeo-activated="true"][data-vimeo-playing="true"]
                 .vimeo-player__pause
                 .vimeo-player__btn {
-                opacity: 0 !important;
+                opacity: 1 !important;
               }
             }
 
             /* Play */
             .vimeo-player[data-vimeo-playing="true"] .vimeo-player__play {
-              opacity: 0;
+              opacity: 1;
             }
 
             /* Loading */
             .vimeo-player .vimeo-player__loading {
-              opacity: 0;
+              opacity: 1;
             }
 
             .vimeo-player[data-vimeo-playing="true"] .vimeo-player__loading {
@@ -323,12 +303,12 @@
 
             .vimeo-player[data-vimeo-playing="true"][data-vimeo-loaded="true"]
               .vimeo-player__loading {
-              opacity: 0;
+              opacity: 1;
             }
 
             /* Interface */
             .vimeo-player .vimeo-player__interface {
-              opacity: 0;
+              opacity: 1;
             }
 
             .vimeo-player[data-vimeo-activated="false"][data-vimeo-playing="false"]
@@ -350,7 +330,7 @@
             @media (hover: none) and (pointer: coarse) {
               .vimeo-player[data-vimeo-activated="true"][data-vimeo-playing="true"]
                 .vimeo-player__interface {
-                opacity: 0 !important;
+                opacity: 1 !important;
               }
             }
 
@@ -583,10 +563,7 @@
               </svg>
             </div>
             <div class="nav-line-mask">
-              <div
-                data-w-id="a3f8b649-51b2-9564-79e0-804c98ecec0b"
-                class="line"
-              ></div>
+              <div class="line"></div>
             </div>
             <div class="plus">
               <svg
@@ -609,7 +586,6 @@
         <div fs-scrolldisable-element="preserve" class="awards-modal_container">
           <div
             data-lenis-start=""
-            data-w-id="a9235c2b-da90-5719-f02e-6558a03b417d"
             class="awards-modal_close"
           >
             <a data-lenis-start="" href="#" class="button w-inline-block"
@@ -642,7 +618,6 @@
             <div class="awards_heading">
               <div class="section-divider text-color-black">
                 <div
-                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
                   class="plus"
                 >
                   <svg
@@ -659,10 +634,7 @@
                   </svg>
                 </div>
                 <div class="line bg-color-black"></div>
-                <div
-                  data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
-                  class="plus"
-                >
+                <div class="plus">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="100%"
@@ -696,7 +668,6 @@
         </div>
         <div
           data-lenis-start=""
-          data-w-id="d2096f7d-71d8-45eb-6298-41d866a9eac1"
           class="awards-modal-bg"
         ></div>
       </div>
@@ -853,14 +824,8 @@
             <div class="hero-divider">
               <div class="padding-global">
                 <div class="section-divider">
-                  <div
-                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
-                    class="plus"
-                  ></div>
-                  <div
-                    data-w-id="7ec87088-59ca-0ba1-ae59-3bec6ca6216c"
-                    class="plus"
-                  ></div>
+                  <div class="plus"></div>
+                  <div class="plus"></div>
                 </div>
               </div>
             </div>
@@ -2215,15 +2180,15 @@
     </div>
     <script src="js/jquery.js"></script>
     <script
-      src="https://cdn.prod.website-files.com/67dbb666b3ce8ebf5ffd59cc/js/webflow.schunk.36b8fb49256177c8.js"
+      src="js/webflow1.js"
       type="text/javascript"
     ></script>
     <script
-      src="https://cdn.prod.website-files.com/67dbb666b3ce8ebf5ffd59cc/js/webflow.schunk.cb4c40d8c339f955.js"
+      src="js/webflow2.js"
       type="text/javascript"
     ></script>
     <script
-      src="https://cdn.prod.website-files.com/67dbb666b3ce8ebf5ffd59cc/js/webflow.99fddb56.528d0624ab71dd11.js"
+      src="js/webflow3.js"
       type="text/javascript"
     ></script>
     <!-- GSAP: Library, Observer & ScrollTrigger -->
@@ -2329,7 +2294,7 @@
 
           // Initial state
           gsap.set(targetsToAnimate, {
-            opacity: 0,
+            opacity: 1,
             ...(allowBlur && { filter: "blur(10px)" }),
           });
 
@@ -2715,7 +2680,7 @@
         const poster = document.querySelector(".hero-flower-placeholder");
         if (poster) {
           gsap.to(poster, {
-            opacity: 0,
+            opacity: 1,
             duration: 0.3,
             ease: "power1.out",
             onComplete: () => {
