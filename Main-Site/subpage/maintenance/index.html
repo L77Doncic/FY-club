@@ -18,30 +18,33 @@
 </head>
 <body>
   <main class="bg-white text-gray-900 min-h-screen selection:bg-blue-200 selection:text-blue-900">
-    <!-- Navbar 组件 -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
-      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <!-- Left: Back Arrow -->
+  <!-- Navbar 组件 -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
+      <!-- Left: Back Arrow 贴最左侧 -->
+      <div class="fixed left-0 top-0 h-20 flex items-center z-50">
         <button 
           id="backToHome"
-          class="p-2 rounded-full hover:bg-gray-100 transition-colors group"
+          class="p-2 ml-2 rounded-full hover:bg-gray-100 transition-colors group"
           aria-label="Back to Home"
+          onclick="window.location.href='../../index.html'"
         >
           <i data-lucide="arrow-left" class="w-6 h-6 text-gray-500 group-hover:text-blue-600 transition-colors"></i>
         </button>
-
-        <!-- Center: Logo -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-2">
-          <i data-lucide="cpu" class="w-8 h-8 text-blue-600"></i>
-          <span class="font-display font-bold text-xl tracking-wider text-gray-900">
-            NEXUS<span class="text-blue-600">CORE</span>
-          </span>
-        </div>
-
-        <!-- Right: Menu Placeholder -->
-        <div class="w-10"></div>
       </div>
-    </nav>
+
+      <!-- Center: Logo -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-2">
+        <i data-lucide="cpu" class="w-8 h-8 text-blue-600"></i>
+        <span class="font-display font-bold text-xl tracking-wider text-gray-900">
+          NEXUS<span class="text-blue-600">CORE</span>
+        </span>
+      </div>
+
+      <!-- Right: Menu Placeholder -->
+      <div class="w-10"></div>
+    </div>
+  </nav>
 
     <!-- Hero 组件 -->
     <section id="hero" class="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-white">
