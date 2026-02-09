@@ -1,4 +1,244 @@
 {
+     "2026": [
+        {
+            "name": "吴焕基",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_wuhuanji_"
+        },
+        {
+            "name": "廖浩斐",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_liaohaofei_"
+        },
+        {
+            "name": "鲍启瑞",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_baoqirui_"
+        },
+        {
+            "name": "魏沂",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_weiyi_"
+        },
+        {
+            "name": "莫志翔",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_mozixiang_"
+        },
+        {
+            "name": "马兵",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_mabing_"
+        },
+        {
+            "name": "汪郁川",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_wangyuchuan_"
+        },
+        {
+            "name": "許涛",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_xutao_"
+        },
+        {
+            "name": "杜宇晨",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_duyuchen_"
+        },
+        {
+            "name": "廖朗",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_liaolang_"
+        },
+        {
+            "name": "魏嘉恩",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_weijiaen_"
+        },
+        {
+            "name": "曹哲明",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_caozeming_"
+        },
+        {
+            "name": "顾祥瀚",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_guxianghan_"
+        },
+        {
+            "name": "毛麒杰",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_maoqijie_"
+        },
+        {
+            "name": "张晓旺",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_zhangxiaowang_"
+        },
+        {
+            "name": "黄金山",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_huangjinshan_"
+        },
+        {
+            "name": "黄珏麟",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_huangjuelin_"
+        },
+        {
+            "name": "曾元宏",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_zengyuanhong_"
+        },
+        {
+            "name": "邓知见",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_dengzhijian_"
+        },
+        {
+            "name": "李文宇",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_liwenyu_"
+        },
+        {
+            "name": "李佩恒",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2025_lipeiheng_"
+        }
+    ],
+     "2025": [
+        {
+            "name": "罗馨怡",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_luoxinyi_"
+        },
+        {
+            "name": "乔烨",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_qiaoye_"
+        },
+        {
+            "name": "李晟昕宇",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_lishengxinyu_"
+        },
+        {
+            "name": "敬然",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_jingran_"
+        },
+        {
+            "name": "张红威",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_zhanghongwei_"
+        },
+        {
+            "name": "龚昱帆",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_gongyufan_"
+        },
+        {
+            "name": "苗峻",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_miaojun_"
+        },
+        {
+            "name": "唐浚杰",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_tangjunjie_"
+        },
+        {
+            "name": "云翔",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_yunxiang_"
+        },
+        {
+            "name": "张昊坤",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_zhanghaokun_"
+        },
+        {
+            "name": "刘畅",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_liuchang_"
+        },
+        {
+            "name": "吴双",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_wushuang_"
+        }
+    ],
+    "2024": [
+        {
+            "name": "林莉",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2023_linli_"
+        },
+        {
+            "name": "孙玮利",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2023_sunweili_"
+        },
+        {
+            "name": "杜律志",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2023_dulvzhi_"
+        },
+        {
+            "name": "魏莱",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2023_weilai_"
+        },
+        {
+            "name": "贾鸿升",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2023_jiahongsheng_"
+        },
+        {
+            "name": "肖勃龙",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2023_xiaobolong_"
+        }
+    ],
     "2023": [
         {
             "name": "丁玲",
