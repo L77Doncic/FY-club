@@ -3,6 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 注册本地花体签名 */
+@font-face {
+    font-family: 'MrDafoe';
+    /* 注意：这里的路径要根据你的实际文件位置调整 */
+    src: url('fonts/MrDafoe-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 自定义工具类 */
 @layer utilities {
   .perspective-1000 {
