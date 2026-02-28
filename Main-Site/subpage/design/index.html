@@ -1866,6 +1866,86 @@
             </div>
           </div>
         </section>
+          </section>
+
+        <style>
+          .design-gallery-section {
+            padding: 6vw 5vw;
+            background-color: transparent;
+            position: relative;
+            z-index: 10;
+          }
+          .design-gallery-title {
+            text-align: center;
+            margin-bottom: 4vw;
+          }
+          .design-gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2vw;
+            justify-content: center;
+            max-width: 1400px;
+            margin: 0 auto;
+          }
+          .design-gallery-item {
+            /* 电脑端一行3个 */
+            width: calc(33.333% - 1.34vw);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 4/3;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+          }
+          .design-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+          }
+          .design-gallery-item:hover img {
+            transform: scale(1.08); /* 鼠标悬浮缓慢放大 */
+          }
+          /* 平板端适配：一行2个 */
+          @media (max-width: 991px) {
+            .design-gallery-item {
+              width: calc(50% - 1vw);
+            }
+          }
+          /* 手机端适配：一行1个 */
+          @media (max-width: 767px) {
+            .design-gallery-item {
+              width: 100%;
+              margin-bottom: 2vw;
+              border-radius: 16px;
+            }
+            .design-gallery-grid {
+              gap: 4vw;
+            }
+          }
+        </style>
+
+        <section id="photo-gallery" class="design-gallery-section">
+          <div class="design-gallery-title">
+            <p class="paragraph-l" style="font-weight: bold; font-family: inherit;">部门日常与合影</p>
+          </div>
+          <div class="design-gallery-grid">
+            <div class="design-gallery-item">
+              <img src="images/photo1.jpg" alt="设计部照片1" draggable="false">
+            </div>
+            <div class="design-gallery-item">
+              <img src="images/photo2.jpg" alt="设计部照片2" draggable="false">
+            </div>
+            <div class="design-gallery-item">
+              <img src="images/photo3.jpg" alt="设计部照片3" draggable="false">
+            </div>
+            <div class="design-gallery-item">
+              <img src="images/photo4.jpg" alt="设计部照片4" draggable="false">
+            </div>
+            <div class="design-gallery-item">
+              <img src="images/photo5.jpg" alt="设计部照片5" draggable="false">
+            </div>
+          </div>
+        </section>
         <footer id="contact" class="footer">
           <div class="padding-global">
             <div class="section-divider">
