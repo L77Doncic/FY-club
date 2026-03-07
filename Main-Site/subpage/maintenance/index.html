@@ -178,158 +178,146 @@
           </div>
         </div>
 
-        <!-- Info Cards -->
-        <div class="absolute inset-0 z-50 w-full max-w-7xl mx-auto pointer-events-none">
-          <!-- Case Info Card -->
-          <div id="card-case" class="absolute top-1/2 -translate-y-1/2 right-4 md:right-20 max-w-xs md:max-w-sm pointer-events-none opacity-0 translate-x-20 scale-95 transition-all duration-500">
-            <div class="bg-white/90 backdrop-blur-md border border-white/50 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative overflow-hidden">
-              <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent pointer-events-none"></div>
-              <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="p-2 bg-blue-50 rounded text-blue-600 border border-blue-100">
-                  <i data-lucide="monitor" class="w-6 h-6 text-blue-600"></i>
-                </div>
-                <h3 class="text-2xl font-display font-bold text-gray-900 uppercase tracking-wider">The Chassis</h3>
-              </div>
-              <p class="text-gray-600 leading-relaxed mb-4 text-sm md:text-base">
-                The foundation of the build. A tempered glass mid-tower case designed for maximum airflow and aesthetic appeal. It houses the soul of the machine.
-              </p>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-500">
-                  <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>Tempered Glass</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-500">
-                  <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>E-ATX Support</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-500">
-                  <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>USB-C Front Panel</span>
-                </div>
-              </div>
-            </div>
-          </div>
+<!-- Info Cards - 调整顺序：先部长，后副部长，再核心介绍 -->
+<div class="absolute inset-0 z-50 w-full max-w-7xl mx-auto pointer-events-none">
+  <!-- 1. 吴焕基（部长）- 第一个展示（原card-case位置） -->
+  <div id="card-case" class="absolute top-1/2 -translate-y-1/2 right-4 md:right-20 max-w-xs md:max-w-sm pointer-events-none opacity-0 translate-x-20 scale-95 transition-all duration-500">
+    <div class="bg-white/90 backdrop-blur-md border border-white/50 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="p-2 bg-blue-50 rounded text-blue-600 border border-blue-100">
+          <i data-lucide="user" class="w-6 h-6 text-blue-600"></i>
+        </div>
+        <h3 class="text-2xl font-display font-bold text-gray-900 uppercase tracking-wider">吴焕基（部长）</h3>
+      </div>
+      <p class="text-gray-600 leading-relaxed mb-4 text-sm md:text-base">
+        24计算机学院，等待代码能力下降10000倍的世界加载ing
+      </p>
+      <div class="space-y-2">
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+          <span>计算机学院 2024级</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+          <span>维修部部长</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-          <!-- GPU Info Card -->
-          <div id="card-gpu" class="absolute top-1/2 -translate-y-1/2 left-4 md:left-20 max-w-xs md:max-w-sm pointer-events-none opacity-0 -translate-x-20 scale-95 transition-all duration-500">
-            <div class="bg-white/90 backdrop-blur-md border border-white/50 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative overflow-hidden">
-              <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent pointer-events-none"></div>
-              <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="p-2 bg-blue-50 rounded text-blue-600 border border-blue-100">
-                  <i data-lucide="grid" class="w-6 h-6 text-blue-600"></i>
-                </div>
-                <h3 class="text-2xl font-display font-bold text-gray-900 uppercase tracking-wider">Graphics Processing Unit</h3>
-              </div>
-              <p class="text-gray-600 leading-relaxed mb-4 text-sm md:text-base">
-                The visual powerhouse. This RTX 4090 equivalent pushes pixels at incredible speeds, enabling real-time ray tracing and 4K gaming at high refresh rates.
-              </p>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-500">
-                  <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>24GB GDDR6X</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-500">
-                  <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>16384 CUDA Cores</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-500">
-                  <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>450W TDP</span>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- 2. 黄珏麟（副部长）- 第二个展示（原card-gpu位置） -->
+  <div id="card-gpu" class="absolute top-1/2 -translate-y-1/2 left-4 md:left-20 max-w-xs md:max-w-sm pointer-events-none opacity-0 -translate-x-20 scale-95 transition-all duration-500">
+    <div class="bg-white/90 backdrop-blur-md border border-white/50 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="p-2 bg-blue-50 rounded text-blue-600 border border-blue-100">
+          <i data-lucide="user" class="w-6 h-6 text-blue-600"></i>
+        </div>
+        <h3 class="text-2xl font-display font-bold text-gray-900 uppercase tracking-wider">黄珏麟（副部长）</h3>
+      </div>
+      <p class="text-gray-600 leading-relaxed mb-4 text-sm md:text-base">
+        2024级数学学院，没有什么特别爱好，对各类电子产品比较感兴趣，欢迎交流
+      </p>
+      <div class="space-y-2">
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+          <span>数学学院 2024级</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+          <span>维修部副部长</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-          <!-- CPU Cooler Info Card -->
-          <div id="card-cpu_cooler" class="absolute top-1/2 -translate-y-1/2 right-4 md:right-20 max-w-xs md:max-w-sm pointer-events-none opacity-0 translate-x-20 scale-95 transition-all duration-500">
-            <div class="bg-white/90 backdrop-blur-md border border-white/50 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative overflow-hidden">
-              <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent pointer-events-none"></div>
-              <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="p-2 bg-blue-50 rounded text-blue-600 border border-blue-100">
-                  <i data-lucide="fan" class="w-6 h-6 text-blue-600"></i>
-                </div>
-                <h3 class="text-2xl font-display font-bold text-gray-900 uppercase tracking-wider">AIO Liquid Cooling</h3>
-              </div>
-              <p class="text-gray-600 leading-relaxed mb-4 text-sm md:text-base">
-                Keeping temperatures low under heavy loads. This 360mm radiator system ensures the processor stays frosty even during the most intense rendering tasks.
-              </p>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2 text-sm text-gray-500">
-                  <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>360mm Radiator</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-500">
-                  <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>LCD Pump Display</span>
-                </div>
-                <div class="flex items-center gap-2 text-sm text-gray-500">
-                  <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>Silent Fans</span>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- 3. 廖朗（副部长）- 第三个展示（原card-cpu_cooler位置） -->
+  <div id="card-cpu_cooler" class="absolute top-1/2 -translate-y-1/2 right-4 md:right-20 max-w-xs md:max-w-sm pointer-events-none opacity-0 translate-x-20 scale-95 transition-all duration-500">
+    <div class="bg-white/90 backdrop-blur-md border border-white/50 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+      <div class="flex items-center gap-3 mb-3">
+        <div class="p-2 bg-blue-50 rounded text-blue-600 border border-blue-100">
+          <i data-lucide="user" class="w-6 h-6 text-blue-600"></i>
+        </div>
+        <h3 class="text-2xl font-display font-bold text-gray-900 uppercase tracking-wider">廖朗（副部长）</h3>
+      </div>
+      <p class="text-gray-600 leading-relaxed mb-4 text-sm md:text-base">
+        2024级匹兹堡学院，喜欢研究软硬件知识，希望在飞扬能够帮到大家！
+      </p>
+      <div class="space-y-2">
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+          <span>匹兹堡学院 2024级</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+          <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+          <span>维修部副部长</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-          <!-- RAM Info Card -->
+          <!-- 4. 在维修部能做些什么 -->
           <div id="card-ram" class="absolute top-1/2 -translate-y-1/2 left-4 md:left-20 max-w-xs md:max-w-sm pointer-events-none opacity-0 -translate-x-20 scale-95 transition-all duration-500">
             <div class="bg-white/90 backdrop-blur-md border border-white/50 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative overflow-hidden">
               <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent pointer-events-none"></div>
               <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
               <div class="flex items-center gap-3 mb-3">
                 <div class="p-2 bg-blue-50 rounded text-blue-600 border border-blue-100">
-                  <i data-lucide="hard-drive" class="w-6 h-6 text-blue-600"></i>
+                  <i data-lucide="hammer" class="w-6 h-6 text-blue-600"></i>
                 </div>
-                <h3 class="text-2xl font-display font-bold text-gray-900 uppercase tracking-wider">System Memory</h3>
+                <h3 class="text-xl font-display font-bold text-gray-900 uppercase tracking-wider">在维修部能做些什么？</h3>
               </div>
               <p class="text-gray-600 leading-relaxed mb-4 text-sm md:text-base">
-                Blazing fast DDR5 memory. High bandwidth and low latency ensure your applications snap open instantly and multitasking is effortless.
+                从硬件实操到软件攻坚，做全能型技术极客
               </p>
               <div class="space-y-2">
                 <div class="flex items-center gap-2 text-sm text-gray-500">
                   <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>64GB (2x32)</span>
+                  <span>硬件清灰/加装配件</span>
                 </div>
                 <div class="flex items-center gap-2 text-sm text-gray-500">
                   <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>6000MHz</span>
+                  <span>系统/软件故障修复</span>
                 </div>
                 <div class="flex items-center gap-2 text-sm text-gray-500">
                   <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>RGB Sync</span>
+                  <span>疑难杂症诊断</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- PSU Info Card -->
+          <!-- 5. 加入维修部能收获什么 -->
           <div id="card-psu" class="absolute top-1/2 -translate-y-1/2 right-4 md:right-20 max-w-xs md:max-w-sm pointer-events-none opacity-0 translate-x-20 scale-95 transition-all duration-500">
             <div class="bg-white/90 backdrop-blur-md border border-white/50 p-6 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] relative overflow-hidden">
               <div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-50 to-transparent pointer-events-none"></div>
               <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
               <div class="flex items-center gap-3 mb-3">
                 <div class="p-2 bg-blue-50 rounded text-blue-600 border border-blue-100">
-                  <i data-lucide="zap" class="w-6 h-6 text-blue-600"></i>
+                  <i data-lucide="trophy" class="w-6 h-6 text-blue-600"></i>
                 </div>
-                <h3 class="text-2xl font-display font-bold text-gray-900 uppercase tracking-wider">Power Supply Unit</h3>
+                <h3 class="text-xl font-display font-bold text-gray-900 uppercase tracking-wider">加入维修部能收获什么？</h3>
               </div>
               <p class="text-gray-600 leading-relaxed mb-4 text-sm md:text-base">
-                The heart of the system. A titanium-rated power supply delivering clean, stable energy to all components with maximum efficiency.
+                技术成长+思维提升+社交能力
               </p>
               <div class="space-y-2">
                 <div class="flex items-center gap-2 text-sm text-gray-500">
                   <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>1200W</span>
+                  <span>硬核技术实战</span>
                 </div>
                 <div class="flex items-center gap-2 text-sm text-gray-500">
                   <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>80+ Titanium</span>
+                  <span>师傅带徒弟传承</span>
                 </div>
                 <div class="flex items-center gap-2 text-sm text-gray-500">
                   <div class="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                  <span>Fully Modular</span>
+                  <span>逻辑/沟通能力提升</span>
                 </div>
               </div>
             </div>
@@ -345,6 +333,7 @@
       </div>
     </div>
 
+    <!-- 精彩瞬间板块 - 添加悬停文字介绍 -->
     <section id="photo-gallery" class="relative bg-white py-24 z-20">
       <div class="max-w-7xl mx-auto px-6">
 
@@ -356,20 +345,31 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
+          <!-- 第一张：三校区大型义修 -->
           <div class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gray-100 border border-gray-200">
-            <img src="images/photo1.jpg" alt="维修部日常 1" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <img src="images/photo1.jpg" alt="三校区大型义修" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-white text-xl font-bold mb-2">三校区大型义修</h3>
+              <p class="text-gray-200 text-sm">这是部门的招牌活动。每学期在校园广场排开的维修摊位，是飞扬最具排场的时刻，场面既忙碌又专业。</p>
+            </div>
           </div>
 
+          <!-- 第二张：飞扬师傅介绍会 -->
           <div class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gray-100 border border-gray-200">
-            <img src="images/photo2.jpg" alt="维修部日常 2" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <img src="images/photo2.jpg" alt="飞扬师傅介绍会" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-white text-xl font-bold mb-2">飞扬师傅介绍会</h3>
+              <p class="text-gray-200 text-sm">这是一个展现成员的窗口。通过精心准备的文稿和演示，介绍每位师傅擅长的领域——无论是擅长处理复杂的软件冲突，还是精通各类硬件拆解。</p>
+            </div>
           </div>
 
+          <!-- 第三张：内部维修例会 -->
           <div class="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gray-100 border border-gray-200">
-            <img src="images/photo3.jpg" alt="维修部日常 3" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <img src="images/photo3.jpg" alt="内部维修例会" class="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-white text-xl font-bold mb-2">内部维修例会</h3>
+              <p class="text-gray-200 text-sm">部门内部会定期举行维修例会。大家聚在一起由部长团为新成员介绍讲解电脑知识。</p>
+            </div>
           </div>
 
         </div>
