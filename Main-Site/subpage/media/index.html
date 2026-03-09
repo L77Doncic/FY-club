@@ -1,64 +1,1191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>流媒部 - 四川大学飞扬俱乐部</title>
+  <head>
+    <meta charset="utf-8" />
     <link rel="shortcut icon" href="../../favicon.ico">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="generator" content="Astro v4.15.4" />
+    <title>流媒部 - 四川大学飞扬俱乐部</title>
+    <!-- ensure relative paths resolve correctly when opened from subdirectories -->
+    <base href="./" />
+    <link rel="stylesheet" href="./_astro/B0RXM3KL.css" />
+    <script type="module" src="./_astro/DKAByMYm.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: "Microsoft YaHei", Arial, sans-serif;
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            text-align: center;
-            max-width: 600px;
-        }
-        h1 {
-            color: #fa709a;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            color: #666;
-        }
-        .back-link {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #fa709a;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .back-link:hover {
-            background: #fee140;
-        }
+      /* 按钮样式 - 与页面风格统一 */
+      .back-button-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--s) * 24);
+        padding: var(--grid-gap);
+      }
+      
+      .back-button-text {
+        font-family: 'inter', sans-serif;
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        color: var(--orange1, #ff8a00);
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        /* 可选：若需要增加行高避免文字挤压，可添加此行 */
+        line-height: 1.2;
+      }
+      
+      .back-button {
+        padding: calc(var(--s) * 16) calc(var(--s) * 32);
+        background: transparent;
+        border: 1px solid var(--dark2, #333333);
+        border-radius: 0;
+        font-family: 'inter', sans-serif;
+        font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+        color: var(--light1, #ffffff);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: capitalize;
+      }
+      
+      .back-button:hover {
+        border-color: var(--orange1, #ff8a00);
+        color: var(--orange1, #ff8a00);
+      }
+      
+      /* 确保变量未定义时的降级样式 */
+      :root {
+        --s: 1px;
+        --grid-gap: 20px;
+        --orange1: #ff8a00;
+        --dark2: #333333;
+        --light1: #ffffff;
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>流媒部</h1>
-        <p>流媒部页面正在建设中...</p>
-        <p>负责飞扬俱乐部的媒体运营、视频制作、直播等流媒体相关工作。</p>
-        <a href="../../index.html" class="back-link">返回首页</a>
+  </head>
+  <body>
+    <div id="scroll-container" class="h-[100dvh] overflow-y-scroll relative">
+      <div id="scroll-content" class="relative">
+        <div data-scrollable-content>
+          <div
+            class="fixed w-full h-full z-50 design-grid px-[var(--grid-gap)] invisible pointer-events-none"
+            id="design-grid"
+          >
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+            <div class="border-x border-dark2/50 h-full"></div>
+          </div>
+          <div
+            class="fixed inset-0 p-[calc(var(--s)*20)] z-[100] pointer-events-none font-inter"
+          >
+            <div
+              class="w-full h-full relative p-[calc(var(--s)*16)] text-sm lg:text-xsm text-dark2 flex justify-between items-start"
+            >
+              <div>
+                <p id="fps-count">00fps</p>
+                <p id="resolution">0x0</p>
+              </div>
+              <div class="flex gap-[calc(var(--s)*8)] items-center">
+                <div
+                  class="h-[calc(var(--s)*8)] w-[calc(var(--s)*8)] rounded-full bg-orange1"
+                ></div>
+                <p id="timer">00:00:00</p>
+              </div>
+              <div
+                class="border-dark2 h-[calc(var(--s)*32)] w-[calc(var(--s)*32)] absolute border-t border-l top-0 left-0"
+              ></div>
+              <div
+                class="border-dark2 h-[calc(var(--s)*32)] w-[calc(var(--s)*32)] absolute border-r border-t top-0 right-0"
+              ></div>
+              <div
+                class="border-dark2 h-[calc(var(--s)*32)] w-[calc(var(--s)*32)] absolute border-l border-b bottom-0 left-0"
+              ></div>
+              <div
+                class="border-dark2 h-[calc(var(--s)*32)] w-[calc(var(--s)*32)] absolute border-b border-r bottom-0 right-0"
+              ></div>
+              <div
+                id="scroller"
+                class="absolute bottom-0 left-[50%] translate-x-[-50%] flex flex-col items-center gap-[calc(var(--s)*12)]"
+              >
+                <div class="w-full h-[calc(var(--s)*8)] relative">
+                  <div
+                    class="w-[calc(100%-var(--s)*8+2px)] absolute h-full top-0"
+                  >
+                    <span
+                      style="visibility: hidden"
+                      id="scroller-cursor"
+                      class="block w-0 h-0 border-l-[calc(var(--s)*4)] absolute left-[0] translate-x-[-50%] top-0 border-l-[transparent] border-r-[transparent] border-r-[calc(var(--s)*4)] border-t-[calc(var(--s)*8)] border-t-dark2"
+                    ></span>
+                  </div>
+                </div>
+                <div class="flex items-end">
+                  <span
+                    style="visibility: hidden"
+                    data-scroller-pin
+                    class="block w-[calc(var(--s)*8)] border-l border-dark2 h-[calc(var(--s)*16)]"
+                  ></span>
+                  <span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    style="visibility: hidden"
+                    data-scroller-pin
+                    class="block w-[calc(var(--s)*8)] border-l border-dark2 h-[calc(var(--s)*16)]"
+                  ></span>
+                  <span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    style="visibility: hidden"
+                    data-scroller-pin
+                    class="block w-[calc(var(--s)*8)] border-l border-dark2 h-[calc(var(--s)*16)]"
+                  ></span>
+                  <span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    style="visibility: hidden"
+                    data-scroller-pin
+                    class="block w-[calc(var(--s)*8)] border-l border-dark2 h-[calc(var(--s)*16)]"
+                  ></span>
+                  <span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span
+                  ><span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*8)] border-l border-dark2"
+                  ></span>
+                  <span
+                    data-scroller-pin
+                    style="visibility: hidden"
+                    class="block w-[calc(var(--s)*8)] h-[calc(var(--s)*16)] border-l border-dark2"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute w-full z-[5] px-[calc(var(--s)*20)]">
+            <div class="h-[700vh] p-[calc(var(--s)*20)] relative flex flex-col">
+              <div class="h-[450vh]">
+                <div class="h-[250vh]">
+                  <div class="pt-[calc(var(--s)*100)] flex-1">
+                    <span
+                      class="uppercase w-full font-bold text-[10.7vw] md:text-[11.4vw] leading-[120%] tracking-tighter flex justify-between text-[white]"
+                      data-animation="title"
+                    >
+                      <span class="block">欢迎加入</span>
+                      <span class="block">流媒部</span>
+                    </span>
+                    <div class="mt-[30vmax]">
+                      <div
+                        class="flex flex-col gap-[calc(var(--s)*300)] md:gap-[calc(var(--s)*400)]"
+                        data-top-cover-parts-section="true"
+                      >
+                        <div class="design-grid w-full">
+                          <div
+                            class="text-body text-light1 row-start-1 row-end-2 relative col-start-2 col-end-6 md:col-end-4 invisible"
+                          >
+                            <p class="w-full sm:absolute top-0 left-0">
+                              1971年9月，佳能发布了F-1，永远改变了专业摄影的格局。这款旗舰单反相机代表了佳能大胆进军专业市场的决心，以非凡的制造质量、可靠性以及全面的可互换组件系统，挑战了尼康的霸主地位。
+                            </p>
+                          </div>
+                          <div
+                            class="text-sm text-orange1 row-start-1 row-end-2 font-inter font-semibold col-start-7 col-end-13 md:col-end-12"
+                          >
+                            <span
+                              data-top-cover-part="pentaprism"
+                              class="flex items-center capitalize w-full opacity-0 transition-opacity duration-300 gap-[calc(var(--s)*20)]"
+                            >
+                              <span
+                                class="block border-b border-dashed border-dark2 flex-1 h-[1px]"
+                              ></span>
+                              <span class="block">五棱镜</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="design-grid w-full mt-[calc(var(--s)*100)]">
+                          <div
+                            class="text-body text-light1 row-start-1 row-end-2 relative col-start-8 md:col-start-10 col-end-13 md:col-end-12 invisible mt-[calc(var(--s)*64)] md:mt-0"
+                          >
+                            <p class="w-full sm:absolute top-0 left-0">
+                              佳能F-1不仅仅是一台相机——它是佳能作为专业摄影领域重量级竞争者登场的宣言，背后庞大的FL和FD镜头生态系统更是为佳能未来几十年的成功奠定了基础。佳能F-1的每一个组件都是充分考虑到专业需求而设计的，打造出的这一相机系统能够承受新闻摄影的严酷考验，满足影棚工作的精度要求，以及全球摄影师在各种充满挑战的环境下工作的可靠性需求。
+                            </p>
+                          </div>
+                          <div
+                            class="text-sm text-orange1 row-start-1 row-end-2 font-inter font-semibold col-start-1 md:col-start-2 col-end-7"
+                          >
+                            <span
+                              data-top-cover-part="focus_screen"
+                              class="flex items-center capitalize w-full opacity-0 transition-opacity duration-300 gap-[calc(var(--s)*20)]"
+                            >
+                              <span class="block">对焦屏</span>
+                              <span
+                                class="block border-b border-dashed border-dark2 flex-1 h-[1px]"
+                              ></span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="design-grid w-full">
+                          <div
+                            class="text-sm text-orange1 row-start-1 row-end-2 font-inter font-semibold col-start-1 md:col-start-2 col-end-7"
+                          >
+                            <span
+                              data-top-cover-part="focus_screen_box"
+                              class="flex items-center capitalize w-full opacity-0 transition-opacity duration-300 gap-[calc(var(--s)*20)]"
+                            >
+                              <span class="block">对焦屏框</span>
+                              <span
+                                class="block border-b border-dashed border-dark2 flex-1 h-[1px]"
+                              ></span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="h-[100vh]"></div>
+            <section class="px-[var(--grid-gap)]">
+              <div
+                class="design-grid text-body text-light1 h-full pb-[10vmax] gap-y-[calc(var(--s)*120)] md:gap-y-0 invisible"
+              >
+                <div
+                  class="md:col-start-2 md:col-end-5 col-start-1 col-end-7 row-start-1"
+                  data-animation-threshold="-100px"
+                >
+                  <p>
+                    35毫米胶片于20世纪30年代被引入静态摄影，因其在便携性、图像质量和经济性之间的完美平衡而成为黄金标准。每卷35毫米胶卷通常包含24或36张底片，每张尺寸为24x36毫米。这种宽高比（3:2）成为了大多数消费级相机的默认标准，并深刻影响了数码传感器的格式。胶片两侧带有供传输机械使用的穿孔，并被安装在避光的金属暗盒中。曝光后，必须使用C-41（用于彩色负片）、E-6（用于彩色反转片）或D-76、Rodinal等黑白显影剂进行化学冲洗。
+                  </p>
+                </div>
+                <div
+                  class="col-start-7 col-end-13 md:col-start-9 md:col-end-12 row-start-2"
+                >
+                  <div class="flex flex-col gap-[calc(var(--s)*60)]">
+                    <div data-animation-threshold="-100px">
+                      <p>
+                        如今的摄影师可以使用各种各样的35毫米胶片，每种胶片都有其独特的感官特征，这些特征由其乳剂层的化学成分、ISO感光度、颗粒结构以及预期光照条件所决定。选择合适的胶片既是一项技术决定，也是一项艺术决定——它不仅影响曝光和冲洗，还会影响最终图像的情感基调。
+                      </p>
+                    </div>
+                    <div class="flex flex-col text-sm col-start-1 col-end-5">
+                      <div
+                        class="grid grid-cols-5 py-[calc(var(--s)*20)] font-semibold font-inter"
+                      >
+                        <p class="col-start-2 col-end-5">胶片型号</p>
+                        <p class="col-start-5 col-end-6 justify-self-end">
+                          ISO
+                        </p>
+                      </div>
+                      <div class="relative">
+                        <div
+                          class="absolute top-0 left-0 w-full h-[1px] bg-dark2"
+                        ></div>
+                        <div
+                          class="relative py-[calc(var(--s)*20)] grid grid-cols-5 items-center"
+                        >
+                          <p class="text-sm col-start-1 col-end-2 text-dark2">
+                            01.
+                          </p>
+                          <p class="col-start-2 col-end-5">Kodak Portra 400</p>
+                          <p class="col-start-5 col-end-6 justify-self-end">
+                            400
+                          </p>
+                          <div
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-dark2"
+                          ></div>
+                        </div>
+                        <div
+                          class="relative py-[calc(var(--s)*20)] grid grid-cols-5 items-center"
+                        >
+                          <p class="text-sm col-start-1 col-end-2 text-dark2">
+                            02.
+                          </p>
+                          <p class="col-start-2 col-end-5">Ilford HP5 Plus</p>
+                          <p class="col-start-5 col-end-6 justify-self-end">
+                            400
+                          </p>
+                          <div
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-dark2"
+                          ></div>
+                        </div>
+                        <div
+                          class="relative py-[calc(var(--s)*20)] grid grid-cols-5 items-center"
+                        >
+                          <p class="text-sm col-start-1 col-end-2 text-dark2">
+                            03.
+                          </p>
+                          <p class="col-start-2 col-end-5">Kodak Ektar 100</p>
+                          <p class="col-start-5 col-end-6 justify-self-end">
+                            100
+                          </p>
+                          <div
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-dark2"
+                          ></div>
+                        </div>
+                        <div
+                          class="relative py-[calc(var(--s)*20)] grid grid-cols-5 items-center"
+                        >
+                          <p class="text-sm col-start-1 col-end-2 text-dark2">
+                            04.
+                          </p>
+                          <p class="col-start-2 col-end-5">
+                            Fujifilm Superia X-TRA 400
+                          </p>
+                          <p class="col-start-5 col-end-6 justify-self-end">
+                            400
+                          </p>
+                          <div
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-dark2"
+                          ></div>
+                        </div>
+                        <div
+                          class="relative py-[calc(var(--s)*20)] grid grid-cols-5 items-center"
+                        >
+                          <p class="text-sm col-start-1 col-end-2 text-dark2">
+                            05.
+                          </p>
+                          <p class="col-start-2 col-end-5">Cinestill 800T</p>
+                          <p class="col-start-5 col-end-6 justify-self-end">
+                            800
+                          </p>
+                          <div
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-dark2"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-start-1 col-end-7 md:col-start-2 md:col-end-5 row-start-3 md:row-start-2 md:mt-[30vmax]"
+                  data-animation-threshold="-100px"
+                >
+                  <p>
+                    彩色负片由一系列复杂的分层材料组成，每一层都经过精心设计以响应特定波长的光。其核心是通常由三醋酸纤维素或聚酯制成的透明片基，提供结构支撑。片基上方是结合层，可促进片基和乳剂之间的粘合。乳剂本身分为三个主要感光层，分别响应可见光谱的不同部分：蓝光、绿光和红光。这些感光层被染料滤光层（如黄色滤光层和紫外线吸收层）分隔开，以控制多余的光污染并提高光谱精度。其他涂层，包括防光晕涂层和顶部保护层，可减少眩光并保护胶片免受机械损伤。这些分层共同构成了一个复杂的光化学系统，能够以惊人的准确度和深度捕捉色彩信息，从而将真实场景模拟再现到物理介质上。
+                  </p>
+                </div>
+              </div>
+            </section>
+            <div class="h-[300dvh] md:h-[400dvh]"></div>
+            <section
+              id="section-scan"
+              class="w-full h-[calc((5/4)*(4*var(--scan-element-height)+2*var(--scan-padding-y)-20dvh))] relative"
+            >
+              <div
+                class="w-full h-[100dvh] flex justify-center items-center sticky top-0 z-20"
+              >
+                <div class="w-full design-grid px-[var(--grid-gap)]">
+                  <div
+                    id="scan-element"
+                    class="col-start-2 col-end-12 md:col-start-4 md:col-end-10 aspect-[3/2]"
+                  ></div>
+                </div>
+                <div
+                  class="absolute left-0 bottom-0 w-full h-[var(--scan-padding-y)] bg-dark1"
+                ></div>
+              </div>
+              <div id="scan-steps" class="h-[100%] w-full absolute top-0 z-10">
+                <div class="h-[calc((100%-100dvh)*0.2)]"></div>
+                <div
+                  class="h-[calc((100%-100dvh)*0.8+100dvh)] flex flex-col py-[var(--scan-padding-y)] relative"
+                >
+                  <div class="sticky top-[var(--scan-padding-y)] w-full z-50">
+                    <div
+                      class="absolute top-0 left-0 w-[calc(2*var(--column-width)+3*var(--grid-gap))] bg-dark1 z-50 h-[var(--scan-element-height)] origin-top invisible md:visible"
+                      id="scan-data-mask"
+                    ></div>
+                  </div>
+                  <div
+                    class="flex-1 top-[var(--scan-padding-y)] sticky w-full px-[var(--grid-gap)] text-body text-orange1 flex flex-col z-10"
+                  >
+                    <div class="flex-1 md:hidden"></div>
+                    <div class="design-grid w-full">
+                      <p
+                        class="col-start-2 col-end-13 md:col-end-4 font-inter font-semibold capitalize bg-dark1 relative"
+                      >
+                        胶片负片
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex-1 top-[var(--scan-padding-y)] sticky w-full px-[var(--grid-gap)] text-body text-orange1 flex flex-col z-10"
+                  >
+                    <div class="flex-1 md:hidden"></div>
+                    <div class="design-grid w-full">
+                      <p
+                        class="col-start-2 col-end-13 md:col-end-4 font-inter font-semibold capitalize bg-dark1 relative"
+                      >
+                        白平衡校正
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex-1 top-[var(--scan-padding-y)] sticky w-full px-[var(--grid-gap)] text-body text-orange1 flex flex-col z-10"
+                  >
+                    <div class="flex-1 md:hidden"></div>
+                    <div class="design-grid w-full">
+                      <p
+                        class="col-start-2 col-end-13 md:col-end-4 font-inter font-semibold capitalize bg-dark1 relative"
+                      >
+                        胶片正片
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex-1 top-[var(--scan-padding-y)] sticky w-full px-[var(--grid-gap)] text-body text-orange1 flex flex-col z-10"
+                  >
+                    <div class="flex-1 md:hidden"></div>
+                    <div class="design-grid w-full">
+                      <p
+                        class="col-start-2 col-end-13 md:col-end-4 font-inter font-semibold capitalize bg-dark1 relative"
+                      >
+                        色彩校正
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <main id="content" class="relative z-[19]">
+            <section
+              id="section-camera"
+              class="h-[700vh] p-[calc(var(--s)*20)] relative flex flex-col"
+            >
+              <div
+                id="camera-section-mask"
+                class="absolute top-0 left-0 w-full h-[calc(100%+100dvh)] bg-dark1 invisible"
+              ></div>
+              <div class="h-[450vh]">
+                <div class="h-[250vh]">
+                  <div class="pt-[calc(var(--s)*100)] flex-1">
+                    <span
+                      class="uppercase w-full font-bold text-[10.55vw] leading-[120%] flex justify-between opacity-0"
+                    >
+                      <span class="block">欢迎加入</span>
+                      <span class="block">流媒部</span>
+                    </span>
+                    <div class="mt-[30vmax]">
+                      <div
+                        class="flex flex-col gap-[calc(var(--s)*300)] md:gap-[calc(var(--s)*400)]"
+                      >
+                        <div class="design-grid w-full">
+                          <div
+                            class="text-body text-light1 row-start-1 row-end-2 relative col-start-2 col-end-6 md:col-end-4"
+                            data-animation="paragraph"
+                          >
+                            <p class="w-full sm:absolute top-0 left-0">
+                              1971年9月，佳能发布了F-1，永远改变了专业摄影的格局。这款旗舰单反相机代表了佳能大胆进军专业市场的决心，以非凡的制造质量、可靠性以及全面的可互换组件系统，挑战了尼康的霸主地位。
+                            </p>
+                          </div>
+                          <div
+                            class="text-sm text-orange1 row-start-1 row-end-2 font-inter font-semibold col-start-7 col-end-13 md:col-end-12"
+                          >
+                            <span
+                              class="flex items-center capitalize w-full opacity-0 transition-opacity duration-300 gap-[calc(var(--s)*20)]"
+                            >
+                              <span
+                                class="block border-b border-dashed border-dark2 flex-1 h-[1px]"
+                              ></span>
+                              <span class="block">五棱镜</span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="design-grid w-full mt-[calc(var(--s)*100)]">
+                          <div
+                            class="text-body text-light1 row-start-1 row-end-2 relative col-start-8 md:col-start-10 col-end-13 md:col-end-12 mt-[calc(var(--s)*64)] md:mt-0"
+                            data-animation="paragraph"
+                          >
+                            <p class="w-full sm:absolute top-0 left-0">
+                              佳能F-1不仅仅是一台相机——它是佳能作为专业摄影领域重量级竞争者登场的宣言，背后庞大的FL和FD镜头生态系统更是为佳能未来几十年的成功奠定了基础。佳能F-1的每一个组件都是充分考虑到专业需求而设计的，打造出的这一相机系统能够承受新闻摄影的严酷考验，满足影棚工作的精度要求，以及全球摄影师在各种充满挑战的环境下工作的可靠性需求。
+                            </p>
+                          </div>
+                          <div
+                            class="text-sm text-orange1 row-start-1 row-end-2 font-inter font-semibold col-start-1 md:col-start-2 col-end-7"
+                          >
+                            <span
+                              class="flex items-center capitalize w-full opacity-0 transition-opacity duration-300 gap-[calc(var(--s)*20)]"
+                            >
+                              <span class="block">对焦屏</span>
+                              <span
+                                class="block border-b border-dashed border-dark2 flex-1 h-[1px]"
+                              ></span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="design-grid w-full">
+                          <div
+                            class="text-sm text-orange1 row-start-1 row-end-2 font-inter font-semibold col-start-1 md:col-start-2 col-end-7"
+                          >
+                            <span
+                              class="flex items-center capitalize w-full opacity-0 transition-opacity duration-300 gap-[calc(var(--s)*20)]"
+                            >
+                              <span class="block">对焦屏框</span>
+                              <span
+                                class="block border-b border-dashed border-dark2 flex-1 h-[1px]"
+                              ></span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div
+              class="fixed w-full left-0 top-[20vh] md:top-[50vh] translate-y-[-50%]"
+            >
+              <div
+                class="design-grid w-full items-center opacity-0 transition-opacity duration-300 px-[var(--grid-gap)]"
+                data-camera-cta-text
+              >
+                <div
+                  class="col-start-1 col-end-3 md:col-end-2 relative hidden md:block"
+                >
+                  <p class="text-sm text-light1">Canon F-1 <br />1971.09 <br />可将鼠标悬停在<br />镜头部件上</p>
+                </div>
+                <div
+                  class="col-start-3 md:col-start-2 md:col-end-4 col-end-6 h-0 border-b border-dashed border-dark2 hidden md:block"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="fixed z-[-1] w-[25vw] md:w-[30vw] lg:w-[40vw] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] pointer-events-none invisible"
+              id="camera-scaler"
+            ></div>
+            <div
+              class="fixed bottom-[calc(var(--s)*20)] px-[var(--grid-gap)] design-grid w-full pointer-events-none opacity-0 transition-opacity duration-300"
+              id="part-viewer-container"
+            >
+              <div
+                class="text-sm pb-[calc(var(--s)*8)] col-start-1 col-end-6 md:col-start-10 md:col-end-13 pointer-events-auto"
+              >
+                <p
+                  id="part-viewer-name"
+                  class="text-orange1 font-inter font-semibold capitalize"
+                ></p>
+                <p
+                  id="part-viewer-description"
+                  class="text-sm text-light1 mt-[calc(var(--s)*12)]"
+                ></p>
+              </div>
+              <div class="col-start-8 md:col-start-10 col-end-13">
+                <div
+                  id="part-viewer"
+                  class="aspect-square relative w-full min-w-full"
+                >
+                  <div
+                    class="border-dark2 h-[calc(var(--s)*32)] w-[calc(var(--s)*32)] absolute border-t border-l top-0 left-0"
+                  ></div>
+                  <div
+                    class="border-dark2 h-[calc(var(--s)*32)] w-[calc(var(--s)*32)] absolute border-r border-t top-0 right-0"
+                  ></div>
+                  <div
+                    class="border-dark2 h-[calc(var(--s)*32)] w-[calc(var(--s)*32)] absolute border-l border-b bottom-0 left-0 hidden md:block"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="h-[100vh]"></div>
+            <section id="section-film" class="px-[var(--grid-gap)]">
+              <div
+                class="design-grid text-body text-light1 h-full pb-[10vmax] gap-y-[calc(var(--s)*120)] md:gap-y-0 visible"
+              >
+                <div
+                  class="md:col-start-2 md:col-end-5 col-start-1 col-end-7 row-start-1"
+                  data-animation="paragraph"
+                  data-animation-threshold="-100px"
+                >
+                  <p>
+                    35毫米胶片于20世纪30年代被引入静态摄影，因其在便携性、图像质量和经济性之间的完美平衡而成为黄金标准。每卷35毫米胶卷通常包含24或36张底片，每张尺寸为24x36毫米。这种宽高比（3:2）成为了大多数消费级相机的默认标准，并深刻影响了数码传感器的格式。胶片两侧带有供传输机械使用的穿孔，并被安装在避光的金属暗盒中。曝光后，必须使用C-41（用于彩色负片）、E-6（用于彩色反转片）或D-76、Rodinal等黑白显影剂进行化学冲洗。
+                  </p>
+                </div>
+                <div
+                  class="col-start-7 col-end-13 md:col-start-9 md:col-end-12 row-start-2"
+                >
+                  <div class="flex flex-col gap-[calc(var(--s)*60)]">
+                    <div
+                      data-animation="paragraph"
+                      data-animation-threshold="-100px"
+                    >
+                      <p>
+                        如今的摄影师可以使用各种各样的35毫米胶片，每种胶片都有其独特的感官特征，这些特征由其乳剂层的化学成分、ISO感光度、颗粒结构以及预期光照条件所决定。选择合适的胶片既是一项技术决定，也是一项艺术决定——它不仅影响曝光和冲洗，还会影响最终图像的情感基调。
+                      </p>
+                    </div>
+                    <div class="flex flex-col text-sm col-start-1 col-end-5">
+                      <div
+                        class="grid grid-cols-5 py-[calc(var(--s)*20)] font-semibold font-inter"
+                      >
+                        <p class="col-start-2 col-end-5">胶片型号</p>
+                        <p class="col-start-5 col-end-6 justify-self-end">
+                          ISO
+                        </p>
+                      </div>
+                      <div class="relative">
+                        <div
+                          data-animated-line="true"
+                          class="absolute top-0 left-0 w-full h-[1px] bg-dark2"
+                        ></div>
+                        <div
+                          class="relative py-[calc(var(--s)*20)] grid grid-cols-5 items-center"
+                        >
+                          <p class="text-sm col-start-1 col-end-2 text-dark2">
+                            01.
+                          </p>
+                          <p class="col-start-2 col-end-5">Kodak Portra 400</p>
+                          <p class="col-start-5 col-end-6 justify-self-end">
+                            400
+                          </p>
+                          <div
+                            data-animated-line="true"
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-dark2"
+                          ></div>
+                        </div>
+                        <div
+                          class="relative py-[calc(var(--s)*20)] grid grid-cols-5 items-center"
+                        >
+                          <p class="text-sm col-start-1 col-end-2 text-dark2">
+                            02.
+                          </p>
+                          <p class="col-start-2 col-end-5">Ilford HP5 Plus</p>
+                          <p class="col-start-5 col-end-6 justify-self-end">
+                            400
+                          </p>
+                          <div
+                            data-animated-line="true"
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-dark2"
+                          ></div>
+                        </div>
+                        <div
+                          class="relative py-[calc(var(--s)*20)] grid grid-cols-5 items-center"
+                        >
+                          <p class="text-sm col-start-1 col-end-2 text-dark2">
+                            03.
+                          </p>
+                          <p class="col-start-2 col-end-5">Kodak Ektar 100</p>
+                          <p class="col-start-5 col-end-6 justify-self-end">
+                            100
+                          </p>
+                          <div
+                            data-animated-line="true"
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-dark2"
+                          ></div>
+                        </div>
+                        <div
+                          class="relative py-[calc(var(--s)*20)] grid grid-cols-5 items-center"
+                        >
+                          <p class="text-sm col-start-1 col-end-2 text-dark2">
+                            04.
+                          </p>
+                          <p class="col-start-2 col-end-5">
+                            Fujifilm Superia X-TRA 400
+                          </p>
+                          <p class="col-start-5 col-end-6 justify-self-end">
+                            400
+                          </p>
+                          <div
+                            data-animated-line="true"
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-dark2"
+                          ></div>
+                        </div>
+                        <div
+                          class="relative py-[calc(var(--s)*20)] grid grid-cols-5 items-center"
+                        >
+                          <p class="text-sm col-start-1 col-end-2 text-dark2">
+                            05.
+                          </p>
+                          <p class="col-start-2 col-end-5">Cinestill 800T</p>
+                          <p class="col-start-5 col-end-6 justify-self-end">
+                            800
+                          </p>
+                          <div
+                            data-animated-line="true"
+                            class="absolute bottom-0 left-0 w-full h-[1px] bg-dark2"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-start-1 col-end-7 md:col-start-2 md:col-end-5 row-start-3 md:row-start-2 md:mt-[30vmax]"
+                  data-animation="paragraph"
+                  data-animation-threshold="-100px"
+                >
+                  <p>
+                    彩色负片由一系列复杂的分层材料组成，每一层都经过精心设计以响应特定波长的光。其核心是通常由三醋酸纤维素或聚酯制成的透明片基，提供结构支撑。片基上方是结合层，可促进片基和乳剂之间的粘合。乳剂本身分为三个主要感光层，分别响应可见光谱的不同部分：蓝光、绿光和红光。这些感光层被染料滤光层（如黄色滤光层和紫外线吸收层）分隔开，以控制多余的光污染并提高光谱精度。其他涂层，包括防光晕涂层和顶部保护层，可减少眩光并保护胶片免受机械损伤。这些分层共同构成了一个复杂的光化学系统，能够以惊人的准确度和深度捕捉色彩信息，从而将真实场景模拟再现到物理介质上。
+                  </p>
+                </div>
+              </div>
+            </section>
+            <div
+              class="fixed z-[-1] w-[30vw] lg:w-[40vw] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] pointer-events-none invisible"
+              id="film-scaler"
+            ></div>
+            <section
+              id="section-film-layers"
+              class="px-[var(--grid-gap)] h-[300dvh] md:h-[400dvh] relative"
+            >
+              <div
+                class="w-full h-[100dvh] flex flex-col justify-center sticky top-0"
+              >
+                <div class="w-full design-grid">
+                  <div
+                    class="col-start-1 md:col-start-3 col-span-2 md:col-span-1"
+                  >
+                    <div
+                      class="w-full h-[calc(2*var(--column-width)*tan(45)+4*var(--column-width)*2/3)] md:h-[calc(var(--column-width)*tan(45)+var(--column-width)*2/3)]"
+                    >
+                      <div
+                        class="w-full aspect-[3/2] -skew-y-[45deg] origin-top-right scale-y-[2]"
+                        data-layer-image
+                      >
+                        <img
+                          src="./images/scan/256/film-base.jpg"
+                          alt=""
+                          class="block"
+                        />
+                      </div>
+                    </div>
+                    <div data-layer-text class="flex flex-col items-center">
+                      <div
+                        class="h-[calc(var(--s)*96)] border-l border-dashed border-dark2 w-0"
+                      ></div>
+                      <p
+                        class="text-white text-sm text-orange1 text-center mt-[calc(var(--s)*16)] font-inter font-semibold capitalize"
+                      >
+                        胶片片基
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-start-4 hidden md:block col-span-2 md:col-span-1"
+                  >
+                    <div
+                      class="w-full h-[calc(2*var(--column-width)*tan(45)+4*var(--column-width)*2/3)] md:h-[calc(var(--column-width)*tan(45)+var(--column-width)*2/3)]"
+                    >
+                      <div
+                        class="w-full aspect-[3/2] -skew-y-[45deg] origin-top-right scale-y-[2]"
+                        data-layer-image
+                      >
+                        <img
+                          src="./images/scan/256/subbing-layer.jpg"
+                          alt=""
+                          class="block"
+                        />
+                      </div>
+                    </div>
+                    <div data-layer-text class="flex flex-col items-center">
+                      <div
+                        class="h-[calc(var(--s)*96)] border-l border-dashed border-dark2 w-0"
+                      ></div>
+                      <p
+                        class="text-white text-sm text-orange1 text-center mt-[calc(var(--s)*16)] font-inter font-semibold capitalize"
+                      >
+                        结合层
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-staer-3 md:col-start-5 col-span-2 md:col-span-1"
+                  >
+                    <div
+                      class="w-full h-[calc(2*var(--column-width)*tan(45)+4*var(--column-width)*2/3)] md:h-[calc(var(--column-width)*tan(45)+var(--column-width)*2/3)]"
+                    >
+                      <div
+                        class="w-full aspect-[3/2] -skew-y-[45deg] origin-top-right scale-y-[2]"
+                        data-layer-image
+                      >
+                        <img
+                          src="./images/scan/256/red-light-sensitive-layer.jpg"
+                          alt=""
+                          class="block"
+                        />
+                      </div>
+                    </div>
+                    <div data-layer-text class="flex flex-col items-center">
+                      <div
+                        class="h-[calc(var(--s)*96)] border-l border-dashed border-dark2 w-0"
+                      ></div>
+                      <p
+                        class="text-white text-sm text-orange1 text-center mt-[calc(var(--s)*16)] font-inter font-semibold capitalize"
+                      >
+                        感红光层
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-start-6 hidden md:block col-span-2 md:col-span-1"
+                  >
+                    <div
+                      class="w-full h-[calc(2*var(--column-width)*tan(45)+4*var(--column-width)*2/3)] md:h-[calc(var(--column-width)*tan(45)+var(--column-width)*2/3)]"
+                    >
+                      <div
+                        class="w-full aspect-[3/2] -skew-y-[45deg] origin-top-right scale-y-[2]"
+                        data-layer-image
+                      >
+                        <img
+                          src="./images/scan/256/green-light-sensitive-layer.jpg"
+                          alt=""
+                          class="block"
+                        />
+                      </div>
+                    </div>
+                    <div data-layer-text class="flex flex-col items-center">
+                      <div
+                        class="h-[calc(var(--s)*96)] border-l border-dashed border-dark2 w-0"
+                      ></div>
+                      <p
+                        class="text-white text-sm text-orange1 text-center mt-[calc(var(--s)*16)] font-inter font-semibold capitalize"
+                      >
+                        感绿光层
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-start-5 md:col-start-7 col-span-2 md:col-span-1"
+                  >
+                    <div
+                      class="w-full h-[calc(2*var(--column-width)*tan(45)+4*var(--column-width)*2/3)] md:h-[calc(var(--column-width)*tan(45)+var(--column-width)*2/3)]"
+                    >
+                      <div
+                        class="w-full aspect-[3/2] -skew-y-[45deg] origin-top-right scale-y-[2]"
+                        data-layer-image
+                      >
+                        <img
+                          src="./images/scan/256/yellow-filter.jpg"
+                          alt=""
+                          class="block"
+                        />
+                      </div>
+                    </div>
+                    <div data-layer-text class="flex flex-col items-center">
+                      <div
+                        class="h-[calc(var(--s)*96)] border-l border-dashed border-dark2 w-0"
+                      ></div>
+                      <p
+                        class="text-white text-sm text-orange1 text-center mt-[calc(var(--s)*16)] font-inter font-semibold capitalize"
+                      >
+                        黄色滤光层
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-start-7 md:col-start-8 col-span-2 md:col-span-1"
+                  >
+                    <div
+                      class="w-full h-[calc(2*var(--column-width)*tan(45)+4*var(--column-width)*2/3)] md:h-[calc(var(--column-width)*tan(45)+var(--column-width)*2/3)]"
+                    >
+                      <div
+                        class="w-full aspect-[3/2] -skew-y-[45deg] origin-top-right scale-y-[2]"
+                        data-layer-image
+                      >
+                        <img
+                          src="./images/scan/256/blue-light-sensitive-layer.jpg"
+                          alt=""
+                          class="block"
+                        />
+                      </div>
+                    </div>
+                    <div data-layer-text class="flex flex-col items-center">
+                      <div
+                        class="h-[calc(var(--s)*96)] border-l border-dashed border-dark2 w-0"
+                      ></div>
+                      <p
+                        class="text-white text-sm text-orange1 text-center mt-[calc(var(--s)*16)] font-inter font-semibold capitalize"
+                      >
+                        感蓝光层
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-start-9 col-span-2 md:col-span-1">
+                    <div
+                      class="w-full h-[calc(2*var(--column-width)*tan(45)+4*var(--column-width)*2/3)] md:h-[calc(var(--column-width)*tan(45)+var(--column-width)*2/3)]"
+                    >
+                      <div
+                        class="w-full aspect-[3/2] -skew-y-[45deg] origin-top-right scale-y-[2]"
+                        data-layer-image
+                      >
+                        <img
+                          src="./images/scan/256/uv-filter.jpg"
+                          alt=""
+                          class="block"
+                        />
+                      </div>
+                    </div>
+                    <div data-layer-text class="flex flex-col items-center">
+                      <div
+                        class="h-[calc(var(--s)*96)] border-l border-dashed border-dark2 w-0"
+                      ></div>
+                      <p
+                        class="text-white text-sm text-orange1 text-center mt-[calc(var(--s)*16)] font-inter font-semibold capitalize"
+                      >
+                        紫外线滤光层
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-start-11 md:col-start-10 col-span-2 md:col-span-1"
+                  >
+                    <div
+                      class="w-full h-[calc(2*var(--column-width)*tan(45)+4*var(--column-width)*2/3)] md:h-[calc(var(--column-width)*tan(45)+var(--column-width)*2/3)]"
+                    >
+                      <div
+                        class="w-full aspect-[3/2] -skew-y-[45deg] origin-top-right scale-y-[2]"
+                        data-layer-image
+                      >
+                        <img
+                          src="./images/scan/256/6.jpg"
+                          alt=""
+                          class="block"
+                        />
+                      </div>
+                    </div>
+                    <div data-layer-text class="flex flex-col items-center">
+                      <div
+                        class="h-[calc(var(--s)*96)] border-l border-dashed border-dark2 w-0"
+                      ></div>
+                      <p
+                        class="text-white text-sm text-orange1 text-center mt-[calc(var(--s)*16)] font-inter font-semibold capitalize"
+                      >
+                        保护层
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div
+              class="w-full h-[calc((5/4)*(4*var(--scan-element-height)+2*var(--scan-padding-y)-20dvh))] relative"
+            ></div>
+            <!-- 修改后的 Footer 区域 - 返回首页按钮 -->
+            <footer id="footer" class="h-[100dvh]">
+              <div class="back-button-container">
+                <p class="back-button-text">期待在流媒部与你相见</p>
+                <button class="back-button" id="backToHomeBtn">返回首页</button>
+              </div>
+            </footer>
+          </main>
+          
+          <canvas class="z-10" id="webgl"></canvas>
+        </div>
+      </div>
     </div>
-</body>
+    <div class="fixed top-0 left-0 z-[99] w-full h-[100dvh]" id="preloader">
+      <div
+        class="w-full h-full bg-dark1 p-[calc(var(--s)*20)] relative flex justify-center items-center text-sm lg:text-xsm text-dark2"
+      >
+        <p style="opacity: 0" data-preloader-count>0%</p>
+        <div
+          class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] aspect-square"
+          style=""
+          data-preloader-center
+        >
+          <div
+            class="h-[calc(var(--s)*20)] w-[calc(var(--s)*20)] border-l border-t border-dark2 absolute top-0 left-0"
+          ></div>
+          <div
+            class="h-[calc(var(--s)*20)] w-[calc(var(--s)*20)] border-l border-b border-dark2 absolute bottom-0 left-0"
+          ></div>
+          <div
+            class="h-[calc(var(--s)*20)] w-[calc(var(--s)*20)] border-t border-r border-dark2 absolute top-0 right-0"
+          ></div>
+          <div
+            class="h-[calc(var(--s)*20)] w-[calc(var(--s)*20)] border-b border-r border-dark2 absolute bottom-0 right-0"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 返回首页功能脚本 -->
+    <script>
+      // 等待页面加载完成
+      document.addEventListener('DOMContentLoaded', function() {
+        // 获取返回首页按钮元素
+        const backToHomeBtn = document.getElementById('backToHomeBtn');
+        
+        // 点击按钮跳转到首页
+        backToHomeBtn.addEventListener('click', function() {
+          window.location.href = '../../index.html';
+        });
+      });
+    </script>
+  </body>
 </html>
