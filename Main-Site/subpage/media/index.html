@@ -63,6 +63,17 @@
         --dark2: #333333;
         --light1: #ffffff;
       }
+
+      /* 统一的部长/副部长标题样式 - 高权重确保生效 */
+      .minister-title {
+        color: var(--orange1, #ff8a00) !important;
+        font-weight: 700 !important;
+        display: block !important;
+        margin-bottom: 8px !important;  /* 微调间距，适配多个标题 */
+        font-size: 1.25rem !important;
+        transition: none !important;     /* 防止动画脚本修改样式 */
+  }
+
     </style>
   </head>
   <body>
@@ -370,7 +381,7 @@
                             class="text-body text-light1 row-start-1 row-end-2 relative col-start-2 col-end-6 md:col-end-4 invisible"
                           >
                             <p class="w-full sm:absolute top-0 left-0">
-                              1971年9月，佳能发布了F-1，永远改变了专业摄影的格局。这款旗舰单反相机代表了佳能大胆进军专业市场的决心，以非凡的制造质量、可靠性以及全面的可互换组件系统，挑战了尼康的霸主地位。
+                              我们是飞扬宣传大使，是创意的引爆点！我们执笔运营，撰写文案，制作推文，塑造飞扬线上形象；我们妙手摄影，刻录每一帧高光瞬间。用推文传递风采，用镜头讲述故事——我们，是飞扬的最佳记录者！
                             </p>
                           </div>
                           <div
@@ -392,9 +403,18 @@
                             class="text-body text-light1 row-start-1 row-end-2 relative col-start-8 md:col-start-10 col-end-13 md:col-end-12 invisible mt-[calc(var(--s)*64)] md:mt-0"
                           >
                             <p class="w-full sm:absolute top-0 left-0">
-                              佳能F-1不仅仅是一台相机——它是佳能作为专业摄影领域重量级竞争者登场的宣言，背后庞大的FL和FD镜头生态系统更是为佳能未来几十年的成功奠定了基础。佳能F-1的每一个组件都是充分考虑到专业需求而设计的，打造出的这一相机系统能够承受新闻摄影的严酷考验，满足影棚工作的精度要求，以及全球摄影师在各种充满挑战的环境下工作的可靠性需求。
+                              张晓旺，部长<br>
+                              日常统筹协调部门各项事务、管理运营官方账号，同时时刻为团队成员加油打气，用热情与活力带动大家一起传递飞扬能量
+                              <br><br>
+                              莫志翔，副部长<br>
+                              日常负责影像内容创作全流程，从现场拍摄取材到后期剪辑包装，用镜头捕捉精彩瞬间，用画面讲述飞扬故事，持续精进视听语言，为社团打造富有感染力的视觉记忆点
+                              <br><br>
+                              张艺书，副部长<br>
+                              主要负责公众号等平台的推文制作，用细腻笔触与精巧排版传递飞扬温度，从选题构思到内容撰写，用心打磨每一篇推送，让文字成为连接社团与大家的温暖桥梁
+                              <br><br>
                             </p>
                           </div>
+                          
                           <div
                             class="text-sm text-orange1 row-start-1 row-end-2 font-inter font-semibold col-start-1 md:col-start-2 col-end-7"
                           >
@@ -409,6 +429,7 @@
                             </span>
                           </div>
                         </div>
+                        
                         <div class="design-grid w-full">
                           <div
                             class="text-sm text-orange1 row-start-1 row-end-2 font-inter font-semibold col-start-1 md:col-start-2 col-end-7"
@@ -435,36 +456,56 @@
               <div
                 class="design-grid text-body text-light1 h-full pb-[10vmax] gap-y-[calc(var(--s)*120)] md:gap-y-0 invisible"
               >
-                <div
-                  class="md:col-start-2 md:col-end-5 col-start-1 col-end-7 row-start-1"
-                  data-animation-threshold="-100px"
-                >
-                  <p>
-                    35毫米胶片于20世纪30年代被引入静态摄影，因其在便携性、图像质量和经济性之间的完美平衡而成为黄金标准。每卷35毫米胶卷通常包含24或36张底片，每张尺寸为24x36毫米。这种宽高比（3:2）成为了大多数消费级相机的默认标准，并深刻影响了数码传感器的格式。胶片两侧带有供传输机械使用的穿孔，并被安装在避光的金属暗盒中。曝光后，必须使用C-41（用于彩色负片）、E-6（用于彩色反转片）或D-76、Rodinal等黑白显影剂进行化学冲洗。
-                  </p>
+                <div class="md:col-start-2 md:col-end-5 col-start-1 col-end-7 row-start-1">
+                  <!-- 1. 标题独立出来，不加动画属性，确保样式绝对生效 -->
+                  <h3 style="color: var(--orange1, #ff8a00); font-weight: bold; margin-bottom: 16px; font-size: 1.25rem;">
+                    推文制作
+                  </h3>
+                  
+                  <!-- 2. 正文单独放在带有动画的 div 里 -->
+                  <div data-animation="paragraph" data-animation-threshold="-100px">
+                    <p>
+                      用文字与排版编织飞扬故事，负责公众号等平台的内容创作与视觉呈现。从选题策划、文案撰写到版式设计，精心打磨每一篇推送，让鲜活的活动瞬间与温暖的社团日常，通过细腻笔触触达每一位读者，成为连接社团与外界的情感纽带。
+                    </p>
+                  </div>
                 </div>
-                <div
-                  class="col-start-7 col-end-13 md:col-start-9 md:col-end-12 row-start-2"
-                >
+                <div class="col-start-7 col-end-13 md:col-start-9 md:col-end-12 row-start-2">
                   <div class="flex flex-col gap-[calc(var(--s)*60)]">
-                    <div data-animation-threshold="-100px">
-                      <p>
-                        如今的摄影师可以使用各种各样的35毫米胶片，每种胶片都有其独特的感官特征，这些特征由其乳剂层的化学成分、ISO感光度、颗粒结构以及预期光照条件所决定。选择合适的胶片既是一项技术决定，也是一项艺术决定——它不仅影响曝光和冲洗，还会影响最终图像的情感基调。
-                      </p>
+                    <div>
+                      <!-- 1. 标题独立出来，不加动画属性，强制设为橙色、加粗、加大并留出底部空行 -->
+                      <h3 style="color: var(--orange1, #ff8a00); font-weight: bold; margin-bottom: 16px; font-size: 1.25rem;">
+                        账号运营（B站 & QQ）
+                      </h3>
+                      
+                      <!-- 2. 正文保留在原有的动画控制层中 -->
+                      <div data-animation="paragraph" data-animation-threshold="-100px">
+                        <p>
+                          B站账号：影像内容的主阵地，负责视频策划、拍摄、剪辑与发布，用镜头捕捉社团高光时刻，制作富有感染力的视听作品，打造飞扬专属的视觉记忆点。
+                          <br><br>
+                          QQ平台：日常互动与信息传递的核心渠道，负责动态更新、活动预告与社群维护，及时传递社团资讯，拉近与成员的距离，让飞扬的活力时刻在线。
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="col-start-1 col-end-7 md:col-start-2 md:col-end-5 row-start-3 md:row-start-2 md:mt-[30vmax]"
-                  data-animation-threshold="-100px"
-                >
-                  <p>
-                    彩色负片由一系列复杂的分层材料组成，每一层都经过精心设计以响应特定波长的光。其核心是通常由三醋酸纤维素或聚酯制成的透明片基，提供结构支撑。片基上方是结合层，可促进片基和乳剂之间的粘合。乳剂本身分为三个主要感光层，分别响应可见光谱的不同部分：蓝光、绿光和红光。这些感光层被染料滤光层（如黄色滤光层和紫外线吸收层）分隔开，以控制多余的光污染并提高光谱精度。其他涂层，包括防光晕涂层和顶部保护层，可减少眩光并保护胶片免受机械损伤。这些分层共同构成了一个复杂的光化学系统，能够以惊人的准确度和深度捕捉色彩信息，从而将真实场景模拟再现到物理介质上。
-                  </p>
+                <div class="col-start-1 col-end-7 md:col-start-2 md:col-end-5 row-start-3 md:row-start-2 md:mt-[30vmax]">
+                  <!-- 1. 标题独立出来，避开动画脚本，强制设为橙色、加粗并留出底部空行 -->
+                  <h3 style="color: var(--orange1, #ff8a00); font-weight: bold; margin-bottom: 16px; font-size: 1.25rem;">
+                    部门例会
+                  </h3>
+                  
+                  <!-- 2. 正文保留在原有的动画控制层中 -->
+                  <div data-animation="paragraph" data-animation-threshold="-100px">
+                    <p>
+                      既是技能课堂，也是温暖团建。例会中我们会和小萌新们亲切交流，快速拉近距离；同时系统传授摄影、视频剪辑、推文制作等专业技能，从基础操作到创意进阶，手把手带领大家成长，让每一位成员都能在实践中收获能力与归属感，共同为飞扬的视听传播注入新鲜力量。
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
+
             <div class="h-[300dvh] md:h-[400dvh]"></div>
+            
             <section
               id="section-scan"
               class="w-full h-[calc((5/4)*(4*var(--scan-element-height)+2*var(--scan-padding-y)-20dvh))] relative"
@@ -573,7 +614,7 @@
                             data-animation="paragraph"
                           >
                             <p class="w-full sm:absolute top-0 left-0">
-                              1971年9月，佳能发布了F-1，永远改变了专业摄影的格局。这款旗舰单反相机代表了佳能大胆进军专业市场的决心，以非凡的制造质量、可靠性以及全面的可互换组件系统，挑战了尼康的霸主地位。
+                              我们是飞扬宣传大使，是创意的引爆点！我们执笔运营，撰写文案，制作推文，塑造飞扬线上形象；我们妙手摄影，刻录每一帧高光瞬间。用推文传递风采，用镜头讲述故事——我们，是飞扬的最佳记录者！
                             </p>
                           </div>
                           <div
@@ -595,7 +636,15 @@
                             data-animation="paragraph"
                           >
                             <p class="w-full sm:absolute top-0 left-0">
-                              佳能F-1不仅仅是一台相机——它是佳能作为专业摄影领域重量级竞争者登场的宣言，背后庞大的FL和FD镜头生态系统更是为佳能未来几十年的成功奠定了基础。佳能F-1的每一个组件都是充分考虑到专业需求而设计的，打造出的这一相机系统能够承受新闻摄影的严酷考验，满足影棚工作的精度要求，以及全球摄影师在各种充满挑战的环境下工作的可靠性需求。
+                              张晓旺，部长<br>
+                              日常统筹协调部门各项事务、管理运营官方账号，同时时刻为团队成员加油打气，用热情与活力带动大家一起传递飞扬能量
+                              <br><br>
+                              莫志翔，副部长<br>
+                              日常负责影像内容创作全流程，从现场拍摄取材到后期剪辑包装，用镜头捕捉精彩瞬间，用画面讲述飞扬故事，持续精进视听语言，为社团打造富有感染力的视觉记忆点
+                              <br><br>
+                              张艺书，副部长<br>
+                              主要负责公众号等平台的推文制作，用细腻笔触与精巧排版传递飞扬温度，从选题构思到内容撰写，用心打磨每一篇推送，让文字成为连接社团与大家的温暖桥梁
+                              <br><br>
                             </p>
                           </div>
                           <div
@@ -690,44 +739,59 @@
               <div
                 class="design-grid text-body text-light1 h-full pb-[10vmax] gap-y-[calc(var(--s)*120)] md:gap-y-0 visible"
               >
-                <div
-                  class="md:col-start-2 md:col-end-5 col-start-1 col-end-7 row-start-1"
-                  data-animation="paragraph"
-                  data-animation-threshold="-100px"
-                >
-                  <p>
-                    35毫米胶片于20世纪30年代被引入静态摄影，因其在便携性、图像质量和经济性之间的完美平衡而成为黄金标准。每卷35毫米胶卷通常包含24或36张底片，每张尺寸为24x36毫米。这种宽高比（3:2）成为了大多数消费级相机的默认标准，并深刻影响了数码传感器的格式。胶片两侧带有供传输机械使用的穿孔，并被安装在避光的金属暗盒中。曝光后，必须使用C-41（用于彩色负片）、E-6（用于彩色反转片）或D-76、Rodinal等黑白显影剂进行化学冲洗。
-                  </p>
+                <div class="md:col-start-2 md:col-end-5 col-start-1 col-end-7 row-start-1">
+                  <!-- 1. 标题独立出来，不加动画属性，确保样式绝对生效 -->
+                  <h3 style="color: var(--orange1, #ff8a00); font-weight: bold; margin-bottom: 16px; font-size: 1.25rem;">
+                    推文制作
+                  </h3>
+                  
+                  <!-- 2. 正文单独放在带有动画的 div 里 -->
+                  <div data-animation="paragraph" data-animation-threshold="-100px">
+                    <p>
+                      用文字与排版编织飞扬故事，负责公众号等平台的内容创作与视觉呈现。从选题策划、文案撰写到版式设计，精心打磨每一篇推送，让鲜活的活动瞬间与温暖的社团日常，通过细腻笔触触达每一位读者，成为连接社团与外界的情感纽带。
+                    </p>
+                  </div>
                 </div>
-                <div
-                  class="col-start-7 col-end-13 md:col-start-9 md:col-end-12 row-start-2"
-                >
+                <div class="col-start-7 col-end-13 md:col-start-9 md:col-end-12 row-start-2">
                   <div class="flex flex-col gap-[calc(var(--s)*60)]">
-                    <div
-                      data-animation="paragraph"
-                      data-animation-threshold="-100px"
-                    >
-                      <p>
-                        如今的摄影师可以使用各种各样的35毫米胶片，每种胶片都有其独特的感官特征，这些特征由其乳剂层的化学成分、ISO感光度、颗粒结构以及预期光照条件所决定。选择合适的胶片既是一项技术决定，也是一项艺术决定——它不仅影响曝光和冲洗，还会影响最终图像的情感基调。
-                      </p>
+                    <div>
+                      <!-- 1. 标题独立出来，不加动画属性，强制设为橙色、加粗、加大并留出底部空行 -->
+                      <h3 style="color: var(--orange1, #ff8a00); font-weight: bold; margin-bottom: 16px; font-size: 1.25rem;">
+                        账号运营（B站 & QQ）
+                      </h3>
+                      
+                      <!-- 2. 正文保留在原有的动画控制层中 -->
+                      <div data-animation-threshold="-100px">
+                        <p>
+                          B站账号：影像内容的主阵地，负责视频策划、拍摄、剪辑与发布，用镜头捕捉社团高光时刻，制作富有感染力的视听作品，打造飞扬专属的视觉记忆点。
+                          <br><br>
+                          QQ平台：日常互动与信息传递的核心渠道，负责动态更新、活动预告与社群维护，及时传递社团资讯，拉近与成员的距离，让飞扬的活力时刻在线。
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="col-start-1 col-end-7 md:col-start-2 md:col-end-5 row-start-3 md:row-start-2 md:mt-[30vmax]"
-                  data-animation="paragraph"
-                  data-animation-threshold="-100px"
-                >
-                  <p>
-                    彩色负片由一系列复杂的分层材料组成，每一层都经过精心设计以响应特定波长的光。其核心是通常由三醋酸纤维素或聚酯制成的透明片基，提供结构支撑。片基上方是结合层，可促进片基和乳剂之间的粘合。乳剂本身分为三个主要感光层，分别响应可见光谱的不同部分：蓝光、绿光和红光。这些感光层被染料滤光层（如黄色滤光层和紫外线吸收层）分隔开，以控制多余的光污染并提高光谱精度。其他涂层，包括防光晕涂层和顶部保护层，可减少眩光并保护胶片免受机械损伤。这些分层共同构成了一个复杂的光化学系统，能够以惊人的准确度和深度捕捉色彩信息，从而将真实场景模拟再现到物理介质上。
-                  </p>
+                <div class="col-start-1 col-end-7 md:col-start-2 md:col-end-5 row-start-3 md:row-start-2 md:mt-[30vmax]">
+                  <!-- 1. 标题独立出来，避开动画脚本，强制设为橙色、加粗并留出底部空行 -->
+                  <h3 style="color: var(--orange1, #ff8a00); font-weight: bold; margin-bottom: 16px; font-size: 1.25rem;">
+                    部门例会
+                  </h3>
+                  
+                  <!-- 2. 正文保留在原有的动画控制层中 -->
+                  <div data-animation="paragraph" data-animation-threshold="-100px">
+                    <p>
+                      既是技能课堂，也是温暖团建。例会中我们会和小萌新们亲切交流，快速拉近距离；同时系统传授摄影、视频剪辑、推文制作等专业技能，从基础操作到创意进阶，手把手带领大家成长，让每一位成员都能在实践中收获能力与归属感，共同为飞扬的视听传播注入新鲜力量。
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
+
             <div
               class="fixed z-[-1] w-[30vw] lg:w-[40vw] top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] pointer-events-none invisible"
               id="film-scaler"
             ></div>
+
             <section
               id="section-film-layers"
               class="px-[var(--grid-gap)] h-[300dvh] md:h-[400dvh] relative"
@@ -1144,7 +1208,6 @@
         <p style="opacity: 0" data-preloader-count>0%</p>
         <div
           class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] aspect-square"
-          style=""
           data-preloader-center
         >
           <div
