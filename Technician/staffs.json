@@ -2,19 +2,19 @@
      "2026": [
         {
             "name": "吴焕基",
-            "teacher": "",
+            "teacher": " 侯星宇 王嘉麟",
             "mote": "",
             "pic_h": "staffs/2025_wuhuanji_"
         },
         {
             "name": "廖浩斐",
-            "teacher": "",
+            "teacher": "唐浚杰",
             "mote": "",
             "pic_h": "staffs/2025_liaohaofei_"
         },
         {
             "name": "鲍启瑞",
-            "teacher": "",
+            "teacher": "李隆豪 董卓璨",
             "mote": "",
             "pic_h": "staffs/2025_baoqirui_"
         },
@@ -26,103 +26,97 @@
         },
         {
             "name": "莫志翔",
-            "teacher": "",
+            "teacher": "胡仲凡",
             "mote": "",
             "pic_h": "staffs/2025_mozixiang_"
         },
         {
             "name": "马兵",
-            "teacher": "",
+            "teacher": "李隆豪 董卓璨",
             "mote": "",
             "pic_h": "staffs/2025_mabing_"
         },
         {
             "name": "汪郁川",
-            "teacher": "",
+            "teacher": "毛麒杰 贾鸿升",
             "mote": "",
             "pic_h": "staffs/2025_wangyuchuan_"
         },
         {
             "name": "許涛",
-            "teacher": "",
+            "teacher": "封欢欢 丁玲",
             "mote": "",
             "pic_h": "staffs/2025_xutao_"
         },
         {
             "name": "杜宇晨",
-            "teacher": "",
+            "teacher": "翟雨佳",
             "mote": "",
             "pic_h": "staffs/2025_duyuchen_"
         },
         {
             "name": "廖朗",
-            "teacher": "",
+            "teacher": "王嘉麟 林峻茗",
             "mote": "",
             "pic_h": "staffs/2025_liaolang_"
         },
         {
             "name": "魏嘉恩",
-            "teacher": "",
+            "teacher": "贾鸿升 毛麒杰 林峻茗 王嘉麟",
             "mote": "",
             "pic_h": "staffs/2025_weijiaen_"
         },
         {
             "name": "曹哲明",
-            "teacher": "",
+            "teacher": "毛麒杰 贾鸿升",
             "mote": "",
             "pic_h": "staffs/2025_caozeming_"
         },
         {
             "name": "顾祥瀚",
-            "teacher": "",
+            "teacher": "贾鸿升 毛麒杰",
             "mote": "",
             "pic_h": "staffs/2025_guxianghan_"
         },
         {
-            "name": "毛麒杰",
-            "teacher": "",
-            "mote": "",
-            "pic_h": "staffs/2025_maoqijie_"
-        },
-        {
             "name": "张晓旺",
-            "teacher": "",
+            "teacher": "贾鸿升 毛麒杰",
             "mote": "",
             "pic_h": "staffs/2025_zhangxiaowang_"
         },
         {
             "name": "黄金山",
-            "teacher": "",
+            "teacher": "贾鸿升",
             "mote": "",
             "pic_h": "staffs/2025_huangjinshan_"
         },
         {
             "name": "黄珏麟",
-            "teacher": "",
+            "teacher": "张闫昕哲 林峻茗 王嘉麟",
             "mote": "",
             "pic_h": "staffs/2025_huangjuelin_"
         },
         {
             "name": "曾元宏",
-            "teacher": "",
+            "teacher": "乔烨",
             "mote": "",
             "pic_h": "staffs/2025_zengyuanhong_"
         },
         {
             "name": "邓知见",
-            "teacher": "",
+            "teacher": "林峻茗 王嘉麟",
             "mote": "",
             "pic_h": "staffs/2025_dengzhijian_"
         },
         {
             "name": "李文宇",
-            "teacher": "",
+            "teacher": "王嘉麟 林峻茗",
             "mote": "",
             "pic_h": "staffs/2025_liwenyu_"
         },
         {
             "name": "李佩恒",
-            "teacher": "",
+            "teacher": "侯星宇",
             "mote": "",
             "pic_h": "staffs/2025_lipeiheng_"
         }
@@ -193,6 +187,12 @@
             "teacher": "",
             "mote": "",
             "pic_h": "staffs/2024_liuchang_"
+        },
+        {
+            "name": "毛麒杰",
+            "teacher": "",
+            "mote": "",
+            "pic_h": "staffs/2024_maoqijie_"
         },
         {
             "name": "吴双",
