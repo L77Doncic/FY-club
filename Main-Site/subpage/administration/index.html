@@ -9,7 +9,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- css files -->
 		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="css/team.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="css/cobox.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="css/navigation.css" rel="stylesheet" type="text/css" media="all" />
@@ -17,12 +16,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<link rel="shortcut icon" href="../../favicon.ico">
 		<!-- /css files -->
 		<!-- fonts -->
-		<link href='http://fonts.useso.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.useso.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<!-- /fonts -->
 		<!-- js files -->
-		<script src="js/SmoothScroll.min.js"></script>
-		<script src="js/modernizr.js"></script> <!-- Modernizr -->
+		<script src="js/SmoothScroll.min.js" defer></script>
+		<script src="js/modernizr.js" defer></script> <!-- Modernizr -->
 		<!-- /js files -->
 	</head>
 	<body data-spy="scroll" data-offset="0" data-target="#navigation">
@@ -226,19 +225,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<a href="#0" class="cd-top">Top</a>
 		<!-- js files -->
 		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/smoothscroll.js"></script>
-		<script>
-			$('.carousel').carousel({
-				interval: 3500
-			})
-		</script>
-		<script src="js/navigation.js"></script>
+		<script src="js/bootstrap.min.js" defer></script>
+		<script src="js/smoothscroll.js" defer></script>
+		<script src="js/navigation.js" defer></script>
 		<!-- js for gallery -->
-		<script src="js/cobox.js" type="text/javascript"></script>
+		<script src="js/cobox.js" type="text/javascript" defer></script>
 		<!-- /js for gallery -->
 		<!-- js for back to top -->
-		<script src="js/backtotop.js"></script>
+		<script src="js/backtotop.js" defer></script>
+		<script>
+			$(document).ready(function() {
+				$('.carousel').carousel({
+					interval: 3500
+				});
+			});
+		</script>
 		<!-- /js for back to top -->
 		<!-- /js files -->
 	</body>

@@ -6,12 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        .animated { animation-duration: 1s; animation-fill-mode: both; }
+        .fadeInDown { animation-name: fadeInDown; }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translate3d(0, -100%, 0); }
+            to { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+    </style>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/jquery.easy-pie-chart.css">
     <link rel="stylesheet" href="css/styles.css" title="mainStyle">
     <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
-    <script src="js/modernizr.custom.32033.js" defer></script>
     <script src="js/uaredirect.js" type="text/javascript" defer></script>
 	<link rel="preload" href="css/bootstrap.min.css" as="style">
 	<link rel="preload" href="css/styles.css" as="style">
