@@ -384,11 +384,11 @@
 					
 					.typewriter {
 						--typewriter-text-color: white;
-						animation-trigger: --t play-forwards reset;
+						animation-trigger: --t play-forwards play-backwards;
 						animation-duration: 1.5s;
 						
 						&::after {
-							animation-trigger: --t play-forwards reset;
+							animation-trigger: --t play-forwards play-backwards;
 							animation-delay: 0.9s;
 						}
 					}
@@ -464,7 +464,7 @@
 
 						h3 {
 							animation: fade-a-bit 500ms ease both;
-							animation-trigger: --t play-forwards reset;
+							animation-trigger: --t play-forwards play-backwards;
 						}
 
 						p {
@@ -480,14 +480,14 @@
 								transform-origin: 0 100%;
 								background: white;
 								animation: fake-clip-it 500ms ease both;
-								animation-trigger: --t play-forwards reset;
+								animation-trigger: --t play-forwards play-backwards;
 							}
 						}
 						
 						/* Exclude the first one, because that one is always visible */
 						img:not(.feature:first-child img) {
 							animation: fade-in 500ms ease both;
-							animation-trigger: --t play-forwards reset;
+							animation-trigger: --t play-forwards play-backwards;
 						}
 					}
 				}
