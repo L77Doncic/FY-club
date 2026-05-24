@@ -10,14 +10,37 @@
 var appMaster = {
 
     preLoader: function(){
-        var imageSources = [];
-        $('img').each(function() {
-            var sources = $(this).attr('src');
-            imageSources.push(sources);
-        });
-        if($(imageSources).load()){
+        // 只等待首屏关键图片（轮播区域和 preloader 内的图片）
+        var heroImages = $('.fullwidthbanner-container img, .pre-loader img');
+        var loaded = 0;
+        var total = heroImages.length;
+        var dismissed = false;
+
+        function dismiss() {
+            if (dismissed) return;
+            dismissed = true;
             $('.pre-loader').fadeOut('slow');
         }
+
+        if (total === 0) {
+            dismiss();
+            return;
+        }
+
+        heroImages.each(function() {
+            if (this.complete) {
+                loaded++;
+                if (loaded >= total) dismiss();
+            } else {
+                $(this).on('load error', function() {
+                    loaded++;
+                    if (loaded >= total) dismiss();
+                });
+            }
+        });
+
+        // 3 秒超时兜底
+        setTimeout(dismiss, 3000);
     },
 
     navSpy: function(){
