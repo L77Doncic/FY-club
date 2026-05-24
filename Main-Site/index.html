@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="css/jquery.easy-pie-chart.css">
     <link rel="stylesheet" href="css/styles.css" title="mainStyle">
     <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
-    <script src="js/modernizr.custom.32033.js"></script>
-    <script src="js/uaredirect.js" type="text/javascript"></script>
-	<link rel="preload" as="image" href="img/music_on.png">
-	<link rel="preload" as="image" href="img/music_off.png">
+    <script src="js/modernizr.custom.32033.js" defer></script>
+    <script src="js/uaredirect.js" type="text/javascript" defer></script>
+	<link rel="preload" href="css/bootstrap.min.css" as="style">
+	<link rel="preload" href="css/styles.css" as="style">
+	<link rel="preload" as="image" href="img/main/bgp1.webp" imagesrcset="img/main/bgp1.webp" imagesizes="100vw">
     <style>
         .bgm_div {
             position: fixed;
@@ -137,7 +138,7 @@
     </div>
 
     <div class="bgm_div">
-        <audio id="backgroundMusic" src="music/fy.mp3" autoplay loop></audio>
+        <audio id="backgroundMusic" src="music/fy.mp3" loop preload="none"></audio>
         <a id="backgroundMusic_btn" onclick="toggleMusic()">
             <img id="music_btn" border="0">
         </a>
@@ -899,14 +900,14 @@
         </footer>
     </div>
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/jquery.easypiechart.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/stellar.js" defer></script>
+    <script src="js/isotope.pkgd.min.js" defer></script>
+    <script src="js/jquery.easypiechart.min.js" defer></script>
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js" defer></script>
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js" defer></script>
+    <script src="js/waypoints.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 
 <script>
         var musicPlaying = false;
@@ -974,20 +975,19 @@
             appMaster.skillsChart();
             appMaster.isoTop();
             appMaster.canvasHack();
-            var promise = audioElement.play();
-            if (promise !== undefined) {
-                promise.then(function() {
-                    console.log("浏览器允许自动播放");
-                    musicBtn.classList.add('music_rotate');
-                    musicBtn.src = 'img/music_on.png';
-                }).catch(function(error) {
-                    console.log("浏览器已阻止自动播放");
-                    musicBtn.classList.remove('music_rotate');
-                    musicBtn.src = 'img/music_off.png';
-                });
-            } else {
-                console.log("旧版本浏览器，无法确定自动播放策略。");
-            }
+            // 延迟 5 秒后尝试播放，不阻塞首屏加载
+            setTimeout(function() {
+                var promise = audioElement.play();
+                if (promise !== undefined) {
+                    promise.then(function() {
+                        musicBtn.classList.add('music_rotate');
+                        musicBtn.src = 'img/music_on.png';
+                    }).catch(function() {
+                        musicBtn.classList.remove('music_rotate');
+                        musicBtn.src = 'img/music_off.png';
+                    });
+                }
+            }, 5000);
         });
     </script>
 </body>
