@@ -17,26 +17,6 @@
 	<link rel="preload" href="css/styles.css" as="style">
 	<link rel="preload" as="image" href="img/main/bgp1.webp" imagesrcset="img/main/bgp1.webp" imagesizes="100vw">
     <style>
-        .bgm_div {
-            position: fixed;
-            margin: 5px;
-            z-index: 999;
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .music_rotate {
-            animation: rotate 4s linear infinite;
-        }
-
         /* 二维码弹窗样式 */
         .qr-modal {
             display: none;
@@ -137,12 +117,7 @@
         </div>
     </div>
 
-    <div class="bgm_div">
-        <audio id="backgroundMusic" src="music/fy.mp3" loop preload="none"></audio>
-        <a id="backgroundMusic_btn" onclick="toggleMusic()">
-            <img id="music_btn" border="0">
-        </a>
-    </div>
+
 	<div class="pre-loader">
         <div class="load-con">
             <img src="img/logo-blue.png" class="animated fadeInDown" alt="">
@@ -910,24 +885,6 @@
     <script src="js/script.js" defer></script>
 
 <script>
-        var musicPlaying = false;
-        var audioElement = document.getElementById('backgroundMusic');
-        var musicBtn = document.getElementById('music_btn');
-
-        function toggleMusic() {
-            if (musicPlaying) {
-                audioElement.pause();
-                musicBtn.classList.remove('music_rotate');
-                musicBtn.src = 'img/music_off.png';
-            } else {
-                audioElement.play();
-                musicBtn.classList.add('music_rotate');
-                musicBtn.src = 'img/music_on.png';
-            }
-
-            musicPlaying = !musicPlaying;
-        }
-
         function showQRCode(imageSrc) {
             var modal = document.getElementById('qrModal');
             var qrImage = document.getElementById('qrImage');
@@ -975,19 +932,6 @@
             appMaster.skillsChart();
             appMaster.isoTop();
             appMaster.canvasHack();
-            // 延迟 5 秒后尝试播放，不阻塞首屏加载
-            setTimeout(function() {
-                var promise = audioElement.play();
-                if (promise !== undefined) {
-                    promise.then(function() {
-                        musicBtn.classList.add('music_rotate');
-                        musicBtn.src = 'img/music_on.png';
-                    }).catch(function() {
-                        musicBtn.classList.remove('music_rotate');
-                        musicBtn.src = 'img/music_off.png';
-                    });
-                }
-            }, 5000);
         });
     </script>
 </body>
