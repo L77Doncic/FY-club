@@ -3,18 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link rel="shortcut icon" href="../../Main-Site/favicon.ico">
+    <link rel="shortcut icon" href="../../favicon.ico">
     <title>资源网站</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
     <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <!-- 自定义样式 -->
     <style>
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
-
         body {
             background-color: #1e252e;
             color: #e2e8f0;
@@ -65,13 +63,6 @@
                     <span class="material-symbols-outlined text-2xl">arrow_back</span>
                     <span class="text-base font-medium">返回主页</span>
                 </a>
-                
-                <!-- 方案2：绝对文件路径（备用，需根据你的实际路径修改）
-                <a href="file:///C:/Users/Camellia/Desktop/FY-club/Main-Site/index.html" class="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors duration-200">
-                    <span class="material-symbols-outlined text-2xl">arrow_back</span>
-                    <span class="text-base font-medium">返回主页</span>
-                </a>
-                -->
             </div>
             
             <!-- 头部区域 -->
