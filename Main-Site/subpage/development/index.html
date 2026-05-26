@@ -53,13 +53,13 @@
 	<h1>
 		<span class="sr-only">研发部 - 四川大学飞扬俱乐部</span>
 		<!-- 修正：添加images/前缀，指向正确的图片路径 -->
-		<img src="images/logo512.png" alt="研发部 - 四川大学飞扬俱乐部" style="
+		<picture><source srcset="images/logo512.webp" type="image/webp"><img src="images/logo512.png" alt="研发部 - 四川大学飞扬俱乐部" style="
 			width: 180px; /* 核心：设置logo宽度，高度自动适配 */
 			height: auto; /* 保持图片比例 */
 			display: block; /* 居中显示 */
 			margin: 0 auto; /* 水平居中 */
 			object-fit: contain; /* 防止图片变形 */
-		">
+		"></picture>
 	</h1>
 	<p>飞扬俱乐部研发部 <span>期待你的加入</span></p>
 </section>
@@ -152,7 +152,7 @@
 	<div class="carousel">
 		<div class="developer">
 			<figure>
-				<img src="images/photo12.webp" loading="lazy">
+				<picture><source srcset="images/photo12.webp" type="image/webp"><img src="images/photo12.jpg" loading="lazy"></picture>
 				<figcaption class="typewriter">部    长</figcaption>
 			</figure>
 			<h3>许涛</h3>
@@ -161,7 +161,7 @@
 		</div>
 		<div class="developer">
 			<figure>
-				<img src="images/photo13.webp" loading="lazy">
+				<picture><source srcset="images/photo13.webp" type="image/webp"><img src="images/photo13.jpg" loading="lazy"></picture>
 				<figcaption class="typewriter">副 部 长</figcaption>
 			</figure>
 			<h3>杜宇晨</h3>
@@ -170,7 +170,7 @@
 		</div>
 		<div class="developer">
 			<figure>
-				<img src="images/photo15.webp" loading="lazy">
+				<picture><source srcset="images/photo15.webp" type="image/webp"><img src="images/photo15.jpg" loading="lazy"></picture>
 				<figcaption class="typewriter">副 部 长</figcaption>
 			</figure>
 			<h3>丁童童</h3>
@@ -350,7 +350,7 @@
     </div>
 </section>
   <!-- 本地JS -->
-  <script src="js/main.js"></script>
+  <script defer src="js/main.js"></script>
 
 </body>
 </html>

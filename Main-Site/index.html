@@ -6,140 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style>
-        .animated { animation-duration: 1s; animation-fill-mode: both; }
-        .fadeInLeft { animation-name: fadeInLeft; }
-        .fadeInRight { animation-name: fadeInRight; }
-        .fadeInDown { animation-name: fadeInDown; }
-        .fadeIn { animation-name: fadeIn; }
-        .fadeInUp { animation-name: fadeInUp; }
-        .bounceIn { animation-name: bounceIn; }
-        @keyframes fadeInLeft {
-            from { opacity: 0; transform: translate3d(-100%, 0, 0); }
-            to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-        @keyframes fadeInRight {
-            from { opacity: 0; transform: translate3d(100%, 0, 0); }
-            to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translate3d(0, -100%, 0); }
-            to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translate3d(0, 100%, 0); }
-            to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-        @keyframes bounceIn {
-            20%, 40%, 60%, 80%, from, to { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
-            0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
-            20% { transform: scale3d(1.1, 1.1, 1.1); }
-            40% { transform: scale3d(0.9, 0.9, 0.9); }
-            60% { opacity: 1; transform: scale3d(1.03, 1.03, 1.03); }
-            80% { transform: scale3d(0.97, 0.97, 0.97); }
-            to { opacity: 1; transform: scale3d(1, 1, 1); }
-        }
-    </style>
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/jquery.easy-pie-chart.css">
     <link rel="stylesheet" href="css/styles.css" title="mainStyle">
     <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <script src="js/uaredirect.js" type="text/javascript" defer></script>
 	<link rel="preload" as="image" href="img/main/bgp1.webp" imagesrcset="img/main/bgp1.webp" imagesizes="100vw">
-    <style>
-        /* 二维码弹窗样式 */
-        .qr-modal {
-            display: none;
-            position: fixed;
-            z-index: 10000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            animation: fadeIn 0.3s;
-        }
-
-        .qr-modal-content {
-            position: relative;
-            margin: 10% auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            max-width: 400px;
-            text-align: center;
-            animation: slideDown 0.3s;
-        }
-
-        .qr-close {
-            position: absolute;
-            right: -40px;
-            top: -40px;
-            color: #fff;
-            font-size: 36px;
-            font-weight: bold;
-            cursor: pointer;
-            line-height: 1;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .qr-close:hover {
-            color: #ccc;
-        }
-
-        .qr-modal-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-
-        .qr-description {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #333;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* 部门版块自定义居中样式 */
-        .centered-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .member-link {
-            text-decoration: none !important;
-            color: inherit;
-            display: block;
-            transition: transform 0.3s;
-        }
-        .member-link:hover {
-            transform: translateY(-5px);
-        }
-    </style>
 </head>
 <body>
     <!-- 二维码弹窗 -->
@@ -212,7 +83,7 @@
                                     <a style="font-family:FZYaoti;" href="#portfolio" class="btn btn-naked">四川大学十佳校级社团</a>
                                 </div>
                                 <div class="tp-caption lfb" data-x="left" data-y="center" data-hoffset="715" data-voffset="350" data-speed="1000" data-start="1900" data-easing="Power4.easeOut">
-                                    <a style="font-family:FZYaoti;" href="#about"  style="font-size:18px;" class="btn btn-naked">开始探索 <span class="fa fa-angle-right"></span></a>
+                                    <a style="font-family:FZYaoti; font-size:18px;" href="#about" class="btn btn-naked">开始探索 <span class="fa fa-angle-right"></span></a>
                                 </div>
                             </li>
                             <li data-transition="slotfade-horizontal" data-slotamount="7" data-masterspeed="500">
@@ -424,13 +295,6 @@
                 </div>
             </div>
         </section>
-<style>
-            #team .member-image img {
-                width: 100% !important;
-                aspect-ratio: 4/3 !important; /* 统一为 4:3 比例 */
-                object-fit: cover !important; /* 自动裁剪，保证不变形 */
-            }
-        </style>
         <div class="row centered-row">
         <!-- 部门版块 -->
         <section id="team">
@@ -572,13 +436,6 @@
                         <button data-filter=".stjz">社团讲座</button>
                         <button data-filter=".bsdh">拜师大会</button>
                     </div>
-<style>
-                #container .details img.img-responsive {
-                    width: 100% !important;
-                    aspect-ratio: 4/3 !important;
-                    object-fit: cover !important;
-                }
-            </style>
             <div id="container">
                 <div class="item col-md-3 col-sm-6 btdz">
                     <div class="details">
