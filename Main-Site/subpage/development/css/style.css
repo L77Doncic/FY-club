@@ -442,17 +442,8 @@
 		}
 		
 		@layer product-features {
-			/* Scroll-triggered fading of the text + images */
+			/* Scroll-triggered fading of images */
 			@supports (timeline-trigger-name: --t) {
-				@keyframes fade-a-bit {
-					from { opacity: 1; }
-					to { opacity: 0.3; }
-				}
-
-				@keyframes fake-clip-it {
-					to { scale: 100% 0%; }
-				}
-				
 				@keyframes fade-in {
 					from { opacity: 0; }
 				}
@@ -461,28 +452,6 @@
 					#features .feature {
 						timeline-trigger: --t view() entry 100% cover 50%;
 						trigger-scope: --t;
-
-						h3 {
-							animation: fade-a-bit 500ms ease both;
-							animation-trigger: --t play-forwards reset;
-						}
-
-						p {
-							position: relative;
-
-							&::after {
-								content: '';
-								position: absolute;
-								bottom: 0;
-								left: 0;
-								right: 0;
-								height: 100%;
-								transform-origin: 0 100%;
-								background: white;
-								animation: fake-clip-it 500ms ease both;
-								animation-trigger: --t play-forwards reset;
-							}
-						}
 
 						/* Exclude the first one, because that one is always visible */
 						img:not(.feature:first-child img) {
