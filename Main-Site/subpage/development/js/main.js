@@ -43,3 +43,28 @@ if ('paintWorklet' in CSS) {
 } else {
     console.warn("当前浏览器不支持 Houdini Paint API，请使用最新版 Chrome 或 Edge。");
 }
+
+// IntersectionObserver: 控制 features 区域图片显示
+(function() {
+    const features = document.querySelectorAll('#features .feature');
+    if (!features.length) return;
+
+    // 默认激活第一个
+    features[0].classList.add('active');
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                features.forEach(function(f) { f.classList.remove('active'); });
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        rootMargin: '-40% 0px -40% 0px',
+        threshold: 0
+    });
+
+    features.forEach(function(feature) {
+        observer.observe(feature);
+    });
+})();
