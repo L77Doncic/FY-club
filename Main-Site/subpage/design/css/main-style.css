@@ -5728,13 +5728,14 @@ figcaption {
   grid-row-gap: 1.5rem;
   will-change: transform;
   display: flex;
+  flex-wrap: wrap;
 }
 .about-modal_item {
   flex: none;
 }
 .about-modal_card {
   aspect-ratio: 4.4/6;
-  width: 23vw;
+  width: calc(25% - 1.125rem);
   padding: 1em;
   position: relative;
 }
