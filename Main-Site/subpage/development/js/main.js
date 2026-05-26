@@ -55,8 +55,8 @@ if ('paintWorklet' in CSS) {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-                features.forEach(function(f) { f.classList.remove('active'); });
                 entry.target.classList.add('active');
+                features.forEach(function(f) { if (f !== entry.target) f.classList.remove('active'); });
             }
         });
     }, {
