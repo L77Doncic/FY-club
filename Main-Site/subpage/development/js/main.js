@@ -56,7 +56,9 @@ if ('paintWorklet' in CSS) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                features.forEach(function(f) { if (f !== entry.target) f.classList.remove('active'); });
+                setTimeout(function() {
+                    features.forEach(function(f) { if (f !== entry.target) f.classList.remove('active'); });
+                }, 800);
             }
         });
     }, {
