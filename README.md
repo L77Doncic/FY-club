@@ -130,18 +130,27 @@
 
 ```
 FY-club/
-├── index.html               # 主页面
-├── B站.html                 # B站账号介绍页
-├── LICENSE                  # MIT开源许可证
-├── README.md                # 项目说明文档
-└── src/
-    ├── character/           # 字体资源
-    │   ├── calligraphy/     # 书法字体（紫霞魂肤瑶手写体）
-    │   └── tech/            # 科技风格字体（紫魂极客黑）
-    └── img/                 # 图片资源
-        ├── logo-transparent.svg  # 俱乐部Logo
-        ├── logo-transparent.png  # 俱乐部Logo图片格式
-        └── bilibili-qr.jpg       # B站二维码图片
+├── LICENSE                        # MIT 开源许可证
+├── README.md                      # 项目说明文档
+├── Main-Site/                     # 主站
+│   ├── index.html                 # 首页
+│   ├── css/                       # 样式文件（Bootstrap、Font Awesome、自定义样式）
+│   ├── js/                        # 脚本文件（jQuery、Revolution Slider 等）
+│   ├── img/                       # 首页图片资源
+│   ├── fonts/                     # 字体文件
+│   ├── rs-plugin/                 # Revolution Slider 插件
+│   └── subpage/                   # 各部门子页面
+│       ├── administration/        # 行政部
+│       ├── design/                # 设计部
+│       ├── development/           # 研发部
+│       ├── maintenance/           # 维修部
+│       ├── media/                 # 流媒部
+│       └── resource_web/          # 资源网站
+└── Technician/                    # 技师端页面
+    ├── index.html
+    ├── assets/
+    ├── images/
+    └── staffs/
 ```
 
 ## 🎯 网站主要功能
