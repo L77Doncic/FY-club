@@ -445,8 +445,8 @@
 			/* Scroll-triggered fading of the text + images */
 			@supports (timeline-trigger-name: --t) {
 				@keyframes fade-a-bit {
-					from { opacity: 1; }
-					to { opacity: 0.3; }
+					from { opacity: 0.3; }
+					to { opacity: 1; }
 				}
 
 				@keyframes fake-clip-it {
@@ -464,7 +464,7 @@
 
 						h3 {
 							animation: fade-a-bit 500ms ease both;
-							animation-trigger: --t play-forwards play-backwards;
+							animation-trigger: --t play-forwards reset;
 						}
 
 						p {
@@ -480,14 +480,14 @@
 								transform-origin: 0 100%;
 								background: white;
 								animation: fake-clip-it 500ms ease both;
-								animation-trigger: --t play-forwards play-backwards;
+								animation-trigger: --t play-forwards reset;
 							}
 						}
-						
+
 						/* Exclude the first one, because that one is always visible */
 						img:not(.feature:first-child img) {
 							animation: fade-in 500ms ease both;
-							animation-trigger: --t play-forwards play-backwards;
+							animation-trigger: --t play-forwards reset;
 						}
 					}
 				}
