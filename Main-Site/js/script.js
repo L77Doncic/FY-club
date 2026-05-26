@@ -113,19 +113,6 @@ var appMaster = {
         });
     },
 
-    stellar: function(){
-        $(window).stellar();
-    },
-
-    skillsChart: function(){
-        $('.chart').easyPieChart({
-            animate: 2000,
-            size: 180,
-            lineWidth:10,
-            barColor: "#22a3df"
-        });
-    },
-
     maps: function(){
         // When the window has finished loading create our google map below
         google.maps.event.addDomListener(window, 'load', init);
@@ -341,8 +328,47 @@ var appMaster = {
 };
 
 
+function showQRCode(imageSrc) {
+    var modal = document.getElementById('qrModal');
+    var qrImage = document.getElementById('qrImage');
+    var qrDescription = document.getElementById('qrDescription');
+    qrImage.src = imageSrc;
+
+    if (imageSrc.indexOf('wechat-qr') !== -1) {
+        qrDescription.textContent = '飞扬俱乐部官方公众号';
+    } else if (imageSrc.indexOf('qq-qr') !== -1) {
+        qrDescription.textContent = '2025飞扬会员群';
+    } else if (imageSrc.indexOf('wechat_mini_program-qr') !== -1) {
+        qrDescription.textContent = '飞扬俱乐部报修小程序';
+    } else {
+        qrDescription.textContent = '';
+    }
+
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeQRModal(event) {
+    var modal = document.getElementById('qrModal');
+    if (!event || event.target.classList.contains('qr-modal') || event.target.classList.contains('qr-close')) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeQRModal();
+    }
+});
+
 $(document).ready(function() {
-
     appMaster.scollToTop();
-
+    appMaster.preLoader();
+    appMaster.smoothScroll();
+    appMaster.animateScript();
+    appMaster.navSpy();
+    appMaster.revSlider();
+    appMaster.isoTop();
+    appMaster.canvasHack();
 });

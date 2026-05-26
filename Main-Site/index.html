@@ -49,8 +49,6 @@
     <link rel="stylesheet" href="css/styles.css" title="mainStyle">
     <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
     <script src="js/uaredirect.js" type="text/javascript" defer></script>
-	<link rel="preload" href="css/bootstrap.min.css" as="style">
-	<link rel="preload" href="css/styles.css" as="style">
 	<link rel="preload" as="image" href="img/main/bgp1.webp" imagesrcset="img/main/bgp1.webp" imagesizes="100vw">
     <style>
         /* 二维码弹窗样式 */
@@ -902,65 +900,12 @@
             </div>
         </footer>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/jquery.easypiechart.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/script.js"></script>
-
-<script>
-        function showQRCode(imageSrc) {
-            var modal = document.getElementById('qrModal');
-            var qrImage = document.getElementById('qrImage');
-            var qrDescription = document.getElementById('qrDescription');
-            qrImage.src = imageSrc;
-            
-            // 根据不同的二维码显示不同的说明文字
-            if (imageSrc.indexOf('wechat-qr') !== -1) {
-                qrDescription.textContent = '飞扬俱乐部官方公众号';
-            } else if (imageSrc.indexOf('qq-qr') !== -1) {
-                qrDescription.textContent = '2025飞扬会员群';
-            } else if (imageSrc.indexOf('wechat_mini_program-qr') !== -1) {
-                qrDescription.textContent = '飞扬俱乐部报修小程序';
-            } else {
-                qrDescription.textContent = '';
-            }
-            
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // 防止背景滚动
-        }
-
-        function closeQRModal(event) {
-            var modal = document.getElementById('qrModal');
-            // 如果点击的是关闭按钮或背景，关闭弹窗
-            if (!event || event.target.classList.contains('qr-modal') || event.target.classList.contains('qr-close')) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // 恢复滚动
-            }
-        }
-
-        // 按ESC键关闭弹窗
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeQRModal();
-            }
-        });
-
-        $(document).ready(function() {
-            appMaster.preLoader();
-            appMaster.smoothScroll();
-            appMaster.animateScript();
-            appMaster.navSpy();
-            appMaster.revSlider();
-            appMaster.stellar();
-            appMaster.skillsChart();
-            appMaster.isoTop();
-            appMaster.canvasHack();
-        });
-    </script>
+    <script defer src="js/jquery.min.js"></script>
+    <script defer src="js/bootstrap.min.js"></script>
+    <script defer src="js/isotope.pkgd.min.js"></script>
+    <script defer type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script defer type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script defer src="js/waypoints.min.js"></script>
+    <script defer src="js/script.js"></script>
 </body>
 </html>
