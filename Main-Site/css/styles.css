@@ -29,8 +29,7 @@ header.masthead h1 {
   font-weight: bold;
 }
 header.masthead .tp-bannertimer {
-  background: url("../rs-plugin/assets/timerdot2.png");
-  height: 3px;
+  display: none;
 }
 header.masthead .tp-caption {
   font-family: "Open Sans", Tahoma, Arial;
