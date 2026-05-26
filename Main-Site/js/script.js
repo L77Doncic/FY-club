@@ -337,52 +337,6 @@ var appMaster = {
         }
     },
 
-    ThemeSwitcher: function(){
-        $('.Switcher').on('click', function(){
-            $('.theme-switcher .colors').toggle('fast');
-            $(this).toggleClass('active');
-        });
-
-
-        var blueConfig = function(){
-            $('link[title=mainStyle]').attr('href', 'css/styles-blue.css');
-            $('.navbar-brand img').attr('src','img/logo-blue.png');
-            $('img.ipad-image').attr('src','img/samples/ipad-bl.png');
-            $('img.macbook-image').attr('src','img/samples/macbook-bl.png');
-        }
-        var orangeConfig = function(){
-            $('link[title=mainStyle]').attr('href', 'css/styles-orange.css');
-            $('.navbar-brand img').attr('src','img/logo-orange.png');
-            $('img.ipad-image').attr('src','img/samples/ipad-bl.png');
-            $('img.macbook-image').attr('src','img/samples/macbook-bl.png');
-        }
-        var redConfig = function(){
-            $('link[title=mainStyle]').attr('href', 'css/styles-red.css');
-            $('.navbar-brand img').attr('src','img/logo-red.png');
-            $('img.ipad-image').attr('src','img/samples/ipad-rd.png');
-            $('img.macbook-image').attr('src','img/samples/macbook-rd.png');
-        }
-
-        
-
-        $('.theme-switcher .colors a').on('click', function(){
-
-            var ThisColor = $(this).attr('class');
-
-            switch(ThisColor){
-                case 'blue':
-                    blueConfig();
-                    break;
-                case 'orange':
-                    orangeConfig();
-                    break;
-                case 'red':
-                    redConfig();
-                    break;
-            }
-
-        });
-    }
 
 };
 
@@ -390,6 +344,5 @@ var appMaster = {
 $(document).ready(function() {
 
     appMaster.scollToTop();
-    appMaster.ThemeSwitcher();
 
 });

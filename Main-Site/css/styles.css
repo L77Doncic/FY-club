@@ -1365,10 +1365,6 @@ canvas {
     padding-bottom: 8px;
   }
 
-  .theme-switcher {
-    display: none;
-  }
-
   .navbar-brand {
     margin-left: 20px;
   }
@@ -1389,39 +1385,4 @@ canvas {
   header.masthead h1, header.masthead h2, header.masthead h3 {
     color: white;
   }
-}
-.theme-switcher {
-  position: absolute;
-  margin-top: 20px;
-}
-.theme-switcher .colors {
-  display: none;
-  overflow: hidden;
-  float: left;
-}
-.theme-switcher a {
-  width: 30px;
-  height: 30px;
-  float: left;
-  display: inline-block;
-}
-.theme-switcher a.orange {
-  background: #ff7f00;
-}
-.theme-switcher a.blue {
-  background: #00bee7;
-}
-.theme-switcher a.red {
-  background: #fd2020;
-}
-.theme-switcher .Switcher {
-  color: #999999;
-  text-align: center;
-  line-height: 28px;
-  border: 1px solid #eeeeee;
-}
-.theme-switcher .Switcher:hover, .theme-switcher .Switcher.active {
-  color: white;
-  background: #555555;
-  border-color: #555555;
 }
