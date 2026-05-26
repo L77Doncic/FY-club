@@ -446,7 +446,7 @@
 			@media (width >= 930px) {
 				#features .feature .img-wrapper {
 					opacity: 0;
-					transition: opacity 0.4s ease;
+					transition: opacity 0.8s ease;
 				}
 				#features .feature.active .img-wrapper {
 					opacity: 1;
