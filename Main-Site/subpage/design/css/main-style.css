@@ -1959,7 +1959,7 @@ textarea.w-select {
   --swatch--ash-grey\<deleted\|variable-dec3fd67-9c25-d8c5-a38a-7241449f34ed\>: #acb7c1;
 }
 .w-layout-blockcontainer {
-  max-width: 940px;
+  max-width: none;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -5728,14 +5728,13 @@ figcaption {
   grid-row-gap: 1.5rem;
   will-change: transform;
   display: flex;
-  flex-wrap: wrap;
 }
 .about-modal_item {
   flex: none;
 }
 .about-modal_card {
   aspect-ratio: 4.4/6;
-  width: calc(25% - 1.125rem);
+  width: 23vw;
   padding: 1em;
   position: relative;
 }
