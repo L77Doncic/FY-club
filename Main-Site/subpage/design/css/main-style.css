@@ -559,7 +559,6 @@ textarea.w-select {
   height: 20px;
 }
 .w-container {
-  max-width: none;
   margin-left: auto;
   margin-right: auto;
 }
@@ -642,7 +641,6 @@ textarea.w-select {
 }
 @media screen and (max-width: 991px) {
   .w-container {
-    max-width: 728px;
   }
   .w-hidden-main {
     display: inherit !important;
@@ -748,9 +746,6 @@ textarea.w-select {
   }
 }
 @media screen and (max-width: 479px) {
-  .w-container {
-    max-width: none;
-  }
   .w-hidden-main,
   .w-hidden-medium,
   .w-hidden-small {
@@ -1959,7 +1954,6 @@ textarea.w-select {
   --swatch--ash-grey\<deleted\|variable-dec3fd67-9c25-d8c5-a38a-7241449f34ed\>: #acb7c1;
 }
 .w-layout-blockcontainer {
-  max-width: none;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -2024,14 +2018,8 @@ textarea.w-select {
   border-color: #3898ec;
 }
 @media screen and (max-width: 991px) {
-  .w-layout-blockcontainer {
-    max-width: 728px;
-  }
 }
 @media screen and (max-width: 767px) {
-  .w-layout-blockcontainer {
-    max-width: none;
-  }
 }
 body {
   background-color: var(--_theme---background);
