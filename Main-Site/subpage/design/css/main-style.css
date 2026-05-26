@@ -5729,6 +5729,10 @@ figcaption {
   will-change: transform;
   display: flex;
 }
+.section_about .padding-global {
+  padding-left: 0;
+  padding-right: 0;
+}
 .about-modal_item {
   flex: none;
 }
