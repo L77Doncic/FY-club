@@ -457,7 +457,7 @@
 					href = $a.attr('href'),
 					info = $a.attr('data-avatar');
 				// Not an image? Bail.
-					if (!href.match(/\.(jpg|gif|png|mp4)$/))
+					if (!href.match(/\.(jpg|gif|png|webp|mp4)$/))
 						return;
 				// Prevent default.
 					event.preventDefault();
