@@ -549,9 +549,10 @@
 				for (var i = 0; i < value.length; i+=3){
 					var nodes3 = $('<div class="group span-1 baseline"></div>')
 					for (var j = 0; j < 3 && i+j < value.length; j++){
+						var pic = value[i+j].pic_h + 'horizontal_thumb';
 						nodes3.append('<a href="' + value[i+j].pic_h + 'vertical.jpg" class="image avatar" data-avatar="' + encodeURI(JSON.stringify(value[i+j])) + '">\
 							<span class="avatar-name">' + value[i+j].name + '</span>\
-							<img class="lazyload" data-original="' + value[i+j].pic_h + 'horizontal_thumb.jpg" />\
+							<picture><source srcset="' + pic + '.webp" type="image/webp"><img class="lazyload" data-original="' + pic + '.jpg" /></picture>\
 						</a>')
 					}
 					$("#avatar-" + index).append(nodes3)
@@ -564,9 +565,10 @@
 				for (var i = 0; i < value.length; i+=2){
 					var nodes2 = $('<div class="group baseline"></div>')
 					for (var j = 0; j < 2 && i+j < value.length; j++){
+						var slideImg = value[i+j].img.replace('.jpg', '');
 						nodes2.append('<a href="' + value[i+j].img + '" class="image slide span-2" data-position="center" data-slide="' + encodeURI(JSON.stringify(value[i+j])) + '">\
 							<span class="slide-description">' + value[i+j].description + ' @ ' + value[i+j].time + '</span>\
-							<img class="lazyload" data-original="' + value[i+j].img + '" />\
+							<picture><source srcset="' + slideImg + '.webp" type="image/webp"><img class="lazyload" data-original="' + value[i+j].img + '" /></picture>\
 						</a>')
 					}
 					$("#slide-" + index).append(nodes2)
