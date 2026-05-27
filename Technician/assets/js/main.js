@@ -549,7 +549,7 @@
 				for (var i = 0; i < value.length; i+=3){
 					var nodes3 = $('<div class="group span-1 baseline"></div>')
 					for (var j = 0; j < 3 && i+j < value.length; j++){
-						nodes3.append('<a href="' + value[i+j].pic_h + 'vertical.jpg" class="image avatar" data-avatar="' + encodeURI(JSON.stringify(value[i+j])) + '">\
+						nodes3.append('<a href="' + value[i+j].pic_h + 'vertical.webp" class="image avatar" data-avatar="' + encodeURI(JSON.stringify(value[i+j])) + '">\
 							<span class="avatar-name">' + value[i+j].name + '</span>\
 							<img class="lazyload" data-original="' + value[i+j].pic_h + 'horizontal_thumb.webp" onerror="this.onerror=null;this.src=this.getAttribute(\'data-original\').replace(\'.webp\',\'.jpg\')" />\
 						</a>')
